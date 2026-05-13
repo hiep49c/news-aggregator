@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khoa Học & Công Nghệ — 19/05/2026</title>
+<style>
+:root{--bg:#0a0b10;--surface:#12141d;--surface2:#1a1d2a;--border:#2a2f42;--text:#e4e8f0;--muted:#8892a8;--blue:#5b9cf6;--purple:#a78bfa;--red:#f87171;--orange:#fb923c;--green:#4ade80;--yellow:#fbbf24;--gradient:linear-gradient(135deg,#4ade80,#5b9cf6)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px}
+.container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.3rem}
+h2{font-size:1.4rem;font-weight:700;color:var(--blue);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+h3{font-size:1.15rem;font-weight:600;color:var(--text);margin:2rem 0 .8rem}
+h4{font-size:.95rem;font-weight:600;color:var(--purple);margin:1.2rem 0 .5rem}
+p{margin:.6rem 0}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+ul,ol{margin:.5rem 0 .5rem 1.5rem}li{margin:.3rem 0}
+.meta{font-size:.82rem;color:var(--muted);margin-bottom:2rem}
+.toc{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.toc h3{margin:0 0 .8rem;font-size:1rem;color:var(--purple)}
+.toc ol{margin:0 0 0 1.2rem}.toc li{margin:.4rem 0;font-size:.88rem}.toc a{color:var(--muted)}.toc a:hover{color:var(--blue)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.2rem 0}
+.badge{display:inline-block;font-size:.7rem;font-weight:600;padding:.2rem .6rem;border-radius:6px;margin-right:.4rem;text-transform:uppercase}
+.badge-red{background:rgba(248,113,113,.15);color:var(--red)}
+.badge-orange{background:rgba(251,146,60,.15);color:var(--orange)}
+.badge-green{background:rgba(74,222,128,.15);color:var(--green)}
+.badge-blue{background:rgba(91,156,246,.15);color:var(--blue)}
+.badge-purple{background:rgba(167,139,250,.15);color:var(--purple)}
+.badge-yellow{background:rgba(251,191,36,.15);color:var(--yellow)}
+.brief{background:linear-gradient(135deg,rgba(74,222,128,.08),rgba(91,156,246,.08));border:1px solid rgba(74,222,128,.2);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.brief ol{margin-left:1.2rem}.brief li{margin:.5rem 0;font-weight:500}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
+th,td{padding:.6rem .8rem;border:1px solid var(--border);text-align:left}
+th{background:var(--surface2);font-weight:600;color:var(--purple)}
+.url-list{font-size:.82rem;margin:.5rem 0}.url-list a{color:var(--muted);word-break:break-all}.url-list a:hover{color:var(--blue)}
+.other-news{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.other-news ul{margin:.5rem 0 0 1.2rem}.other-news li{margin:.4rem 0;font-size:.9rem}
+@media(max-width:768px){.container{padding:1rem}h1{font-size:1.4rem}table{font-size:.78rem}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<h1>🔬 Báo Cáo Khoa Học & Công Nghệ — 19/05/2026</h1>
+<p class="meta">Quét: 19/05/2026 10:00 ICT | Phạm vi: 14/05 18:00 – 19/05 10:00 (5 ngày) | Số tin: 10<br>Nguồn: Space.com, Ars Technica, ScienceDaily, The Lancet, NPR, USA Today, Phys.org, NBC News, CNBC, IBEC</p>
+
+<nav class="toc">
+<h3>📑 Mục lục</h3>
+<ol>
+<li><a href="#brief">Tóm tắt nhanh</a></li>
+<li><a href="#starship">SpaceX Starship V3 — Flight 12</a></li>
+<li><a href="#io">Google I/O 2026 Science</a></li>
+<li><a href="#daraxonrasib">Daraxonrasib — Ung thư tụy</a></li>
+<li><a href="#alzheimer">Nanoparticle Alzheimer</a></li>
+<li><a href="#hydrogen">Catalyst Hydrogen sạch</a></li>
+<li><a href="#led">LED "Bất khả thi" Cambridge</a></li>
+<li><a href="#malaria">Vaccine sốt rét RTS,S</a></li>
+<li><a href="#kimchi">Kimchi vs Nanoplastic</a></li>
+<li><a href="#nvidia">NVIDIA & Data Center Power</a></li>
+<li><a href="#cerebras">Cerebras CBRS IPO</a></li>
+</ol>
+</nav>
+
+<div class="brief" id="brief">
+<h3>📌 Tóm tắt nhanh</h3>
+<ol>
+<li><strong>SpaceX Starship V3 hoãn 24h</strong> — Flight 12 ngày 20/05, tên lửa 408 ft</li>
+<li><strong>Google I/O hôm nay</strong> — XR glasses, Deep Research Max, science AI</li>
+<li><strong>Daraxonrasib</strong> — Thuốc ung thư tụy, sống gấp đôi (13.2 vs 6 tháng)</li>
+<li><strong>Alzheimer nanoparticle</strong> — Giảm 50-60% amyloid trong 1 giờ (chuột)</li>
+<li><strong>Hydrogen catalyst</strong> — Không platinum, Washington University</li>
+<li><strong>LED Cambridge</strong> — Antenna phân tử cấp điện hạt nano cách điện</li>
+<li><strong>Vaccine sốt rét</strong> — Lancet: giảm 13% tử vong trẻ em</li>
+<li><strong>Kimchi probiotic</strong> — Loại bỏ nanoplastic khỏi ruột</li>
+<li><strong>NVIDIA earnings 20/05</strong> — $79B, data center power demand</li>
+<li><strong>Cerebras IPO</strong> — AI chip alternative, +68% ngày đầu</li>
+</ol>
+</div>
+
+<h2 id="starship">1. 🔥 SpaceX Starship V3 — Flight 12 Hoãn Sang 20/05</h2>
+<div class="card">
+<span class="badge badge-red">Impact 9/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Hoãn 24h:</strong> 19/05 → 20/05, 6:30 PM EDT</li>
+<li><strong>Flight 12:</strong> Đầu tiên sau 7 tháng, đầu tiên cho V3</li>
+<li><strong>408 feet:</strong> Tên lửa cao nhất từng chế tạo</li>
+<li><strong>33 Raptor 3 engines</strong> trên Super Heavy booster</li>
+<li><strong>Block 3 vehicles,</strong> Pad 2 mới tại Starbase</li>
+<li><strong>Mục tiêu:</strong> Booster → Vịnh Mexico, Ship → Ấn Độ Dương</li>
+<li><strong>AI link:</strong> 1 triệu orbital data centers planned</li>
+</ul>
+<h4>Tác động</h4>
+<p>NASA Artemis phụ thuộc Starship. Nếu V3 thành công → reusable super-heavy launch. Orbital data centers = AI compute không giới hạn bởi power grid.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.space.com/news/live/spacex-starship-flight-12-launch-updates-may-18-2026">Space.com (Live)</a> · <a href="https://www.space.com/space-exploration/launches-spacecraft/what-time-is-spacex-starship-v3-launch-starship-flight-12-timeline">Space.com (Timeline)</a> · <a href="https://arstechnica.com/space/2026/05/the-us-space-enterprise-is-desperately-waiting-for-starship-will-it-finally-deliver/">Ars Technica</a> · <a href="https://behindtheblack.com/behind-the-black/points-of-information/12th-starship-superheavy-test-delayed-one-day-to-may-20-2026/">Behind The Black</a></p>
+</div>
+
+<h2 id="io">2. 🔥 Google I/O 2026 — Science & Tech Announcements</h2>
+<div class="card">
+<span class="badge badge-red">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Keynote:</strong> 19/05, 10 AM PT — "agentic era"</li>
+<li><strong>Android XR glasses:</strong> AR + Gemini 2.5 Pro</li>
+<li><strong>Deep Research Max:</strong> Autonomous research agent</li>
+<li><strong>TPU mới:</strong> In-house AI chip cho scientific computing</li>
+<li><strong>Gemini model mới:</strong> Dự đoán 3.2 hoặc 3.5</li>
+<li><strong>AI for Science tools</strong> kỳ vọng</li>
+</ul>
+<div class="url-list">
+<p>Nguồn: <a href="https://thenextweb.com/news/google-io-2026-gemini-intelligence-android-xr-glasses">TNW</a> · <a href="https://developers.googleblog.com/">Google Developers</a> · <a href="https://www.cnbc.com/2026/05/18/google-i-o-alphabet-ai-wall-street.html">CNBC</a></p>
+</div>
+
+<h2 id="daraxonrasib">3. 🔥 Daraxonrasib — Thuốc Ung Thư Tụy "Phép Màu"</h2>
+<div class="card">
+<span class="badge badge-red">Impact 9/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Daraxonrasib</strong> (RMC-6236) — RAS(ON) inhibitor</li>
+<li><strong>Cơ chế:</strong> Chặn KRAS mutation (gây 90%+ ung thư tụy)</li>
+<li><strong>Kết quả:</strong> Sống trung bình 13.2 tháng (vs 6 tháng hóa trị)</li>
+<li><strong>FDA:</strong> Expanded access từ 30/04/2026</li>
+<li><strong>Nhà phát triển:</strong> Revolution Medicines</li>
+<li><strong>Tiềm năng:</strong> Cũng nhắm 30% ung thư phổi + đại tràng</li>
+</ul>
+<h4>Tác động</h4>
+<p>Lần đầu có targeted therapy hiệu quả cho ung thư tụy. "Undruggable" KRAS bị chinh phục sau 40 năm. Ung thư tụy sẽ là #2 chết chóc nhất tại Mỹ đến 2030.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.usatoday.com/story/news/health/2026/05/14/pancreatic-cancer-drug-early-fda-access/90082539007/">USA Today</a> · <a href="https://www.npr.org/2026/05/12/nx-s1-5783797/pancreatic-cancer-breakthroughs-daraxonrasib-mrna">NPR</a> · <a href="https://www.mskcc.org/news/new-hope-for-pancreatic-cancer-with-targeted-kras-drug">MSK Cancer Center</a> · <a href="https://www.dana-farber.org/newsroom/news-releases/2026/rason-inhibitor-daraxonrasib-shows-promising-results-in-advanced-pancreatic-cancer-phase-12-study">Dana-Farber</a></p>
+</div>
+
+<h2 id="alzheimer">4. 🟠 Nanoparticle Đảo Ngược Alzheimer Ở Chuột</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-orange">Confidence MEDIUM</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Liệu pháp:</strong> 3 liều nanoparticle khôi phục hệ thống dọn amyloid</li>
+<li><strong>Kết quả:</strong> Giảm 50-60% amyloid trong 1 giờ</li>
+<li><strong>100% chuột:</strong> Đảo ngược mất trí nhớ, bình thường sau 6 tháng</li>
+<li><strong>Nghiên cứu:</strong> IBEC (Tây Ban Nha) + West China Hospital</li>
+<li><strong>Caveat:</strong> Animal study — human trials 2028-2030</li>
+</ul>
+<div class="url-list">
+<p>Nguồn: <a href="https://sharedsapience.substack.com/p/scientists-reverse-alzheimers-through-the-brains-cleanup-door-tcr-051826">Shared Sapience</a> · <a href="https://news.ssbcrack.com/breakthrough-in-alzheimers-treatment-using-engineered-nanoparticles-in-mice/">SSBCrack News</a></p>
+</div>
+
+<h2 id="hydrogen">5. 🟠 Catalyst Không Platinum Cho Hydrogen Sạch</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Nhà phát triển:</strong> Washington University in St. Louis</li>
+<li><strong>Vật liệu:</strong> Rhenium phosphide + molybdenum phosphide</li>
+<li><strong>Thay thế:</strong> Platinum (kim loại quý đắt đỏ)</li>
+<li><strong>Phương pháp:</strong> Water electrolysis</li>
+<li><strong>Ưu điểm:</strong> Bền, rẻ, dễ scale up</li>
+</ul>
+<h4>Tác động</h4>
+<p>Giảm rào cản chi phí lớn nhất cho green hydrogen. Cần cho decarbonization steel, shipping, aviation. Data centers cũng cần hydrogen fuel cells.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://tech.yahoo.com/science/articles/scientists-develop-platinum-free-catalyst-122005294.html">Yahoo Tech/Science</a> · <a href="https://www.devdiscourse.com/article/health/3913343-revolutionary-catalyst-for-clean-hydrogen-a-game-changer-in-renewable-energy">DevDiscourse</a></p>
+</div>
+
+<h2 id="led">6. 🟠 LED "Bất Khả Thi" — Cambridge Molecular Antennas</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Cavendish Laboratory,</strong> University of Cambridge</li>
+<li><strong>Đột phá:</strong> Cấp điện cho hạt nano cách điện</li>
+<li><strong>Cơ chế:</strong> "Molecular antennas" dẫn năng lượng vào nanoparticles</li>
+<li><strong>Vật liệu:</strong> Lanthanide-doped nanoparticles</li>
+<li><strong>Kết quả:</strong> NIR LED cực kỳ tinh khiết</li>
+<li><strong>Ứng dụng:</strong> Y tế, truyền thông quang, cảm biến</li>
+</ul>
+<div class="url-list">
+<p>Nguồn: <a href="https://scitechdaily.com/the-impossible-led-cambridge-team-successfully-powers-insulating-nanoparticles/">SciTechDaily</a> · <a href="https://www.eurekalert.org/news-releases/1106272">EurekAlert</a></p>
+</div>
+
+<h2 id="malaria">7. 🟠 Vaccine Sốt Rét RTS,S — Giảm 13% Tử Vong Trẻ Em</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Vaccine:</strong> RTS,S/AS01E — đầu tiên được WHO phê duyệt</li>
+<li><strong>Nghiên cứu:</strong> 4 năm tại Ghana, Kenya, Malawi</li>
+<li><strong>Kết quả:</strong> -13% tử vong mọi nguyên nhân, ngăn 1/8 ca tử vong</li>
+<li><strong>Trẻ dưới 5:</strong> Tử vong sốt rét giảm ~50%</li>
+<li><strong>Đăng tải:</strong> The Lancet (peer-reviewed)</li>
+<li><strong>WHO:</strong> "Malaria vaccines are working"</li>
+</ul>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.gavi.org/vaccineswork/major-study-confirms-impact-malaria-vaccine-saving-lives-and-reducing">GAVI</a> · <a href="https://medicalxpress.com/news/2026-05-malaria-vaccine-averts-child-deaths.html">Medical Xpress</a> · <a href="https://indianexpress.com/article/health-wellness/malaria-vaccine-child-mortality-lancet-study-india-elimination-10683903/">Indian Express</a></p>
+</div>
+
+<h2 id="kimchi">8. 🟡 Kimchi Probiotic Loại Bỏ Nanoplastic</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>World Institute of Kimchi,</strong> Hàn Quốc</li>
+<li><strong>Phát hiện:</strong> Vi khuẩn lactic acid bám vào nanoplastic</li>
+<li><strong>Cơ chế:</strong> Biosorption — bám bề mặt hạt nhựa</li>
+<li><strong>Animal study:</strong> Nhựa trong phân tăng gấp đôi</li>
+<li><strong>Tiềm năng:</strong> Probiotic supplement chống microplastic</li>
+</ul>
+<div class="url-list">
+<p>Nguồn: <a href="https://phys.org/news/2026-03/kimchi-derived-probiotic-excretion-intestinal.html">Phys.org</a> · <a href="https://scitechdaily.com/scientists-say-this-popular-food-could-help-your-body-get-rid-of-microplastics/">SciTechDaily</a> · <a href="https://news.ssbcrack.com/kimchi-probiotic-bacterium-may-aid-in-nanoplastic-removal-from-the-body/">SSBCrack</a></p>
+</div>
+
+<h2 id="nvidia">9. 🟡 NVIDIA Earnings — Data Center Power Demand</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Q1 FY27:</strong> 20/05 sau giờ đóng cửa</li>
+<li><strong>Revenue:</strong> $78.8-79B kỳ vọng (+75% YoY)</li>
+<li><strong>Market cap:</strong> ~$5.7 nghìn tỷ</li>
+<li><strong>Chips sold out 2026,</strong> backlog đến 2028</li>
+<li><strong>Sci-tech angle:</strong> Power demand → nuclear, solar, hydrogen</li>
+</ul>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.cnbc.com/2026/05/18/nvidia-reports-earnings-this-week-morgan-stanley-is-getting-more-bullish.html">CNBC</a> · <a href="https://finance.yahoo.com/markets/stocks/articles/expect-nvidias-earnings-wednesday-124038141.html">Yahoo Finance</a></p>
+</div>
+
+<h2 id="cerebras">10. 🟡 Cerebras CBRS — AI Chip Alternative</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>IPO:</strong> $185 → mở $350 → đóng $311 (+68%)</li>
+<li><strong>Huy động:</strong> $5.5B — lớn nhất 2026</li>
+<li><strong>WSE-3:</strong> Wafer-Scale Engine — chip đơn lớn nhất</li>
+<li><strong>Sci-tech:</strong> Phù hợp molecular dynamics, climate modeling</li>
+</ul>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.fool.com/investing/2026/05/14/cbrs-stock-ai-chip-stocks-nvda-stock-competitor/">Motley Fool</a> · <a href="https://finance.yahoo.com/markets/stocks/articles/cerebras-stock-faces-sharp-reality-153300332.html">Yahoo Finance</a></p>
+</div>
+
+<h2>📊 Delta So Với Báo Cáo 14/05</h2>
+<table>
+<tr><th>Chủ đề</th><th>14/05</th><th>19/05</th></tr>
+<tr><td>SpaceX V3</td><td>Dự kiến 19/05</td><td>🔄 Hoãn → 20/05</td></tr>
+<tr><td>Google I/O</td><td>Chờ 19/05</td><td>✅ Khai mạc hôm nay</td></tr>
+<tr><td>Daraxonrasib</td><td>—</td><td>✅ MỚI: FDA expanded access</td></tr>
+<tr><td>Alzheimer</td><td>—</td><td>✅ MỚI: Nanoparticle therapy</td></tr>
+<tr><td>Hydrogen</td><td>—</td><td>✅ MỚI: Platinum-free catalyst</td></tr>
+<tr><td>LED Cambridge</td><td>—</td><td>✅ MỚI: Molecular antennas</td></tr>
+<tr><td>Malaria vaccine</td><td>—</td><td>✅ MỚI: Lancet -13% mortality</td></tr>
+</table>
+
+<h2>🔗 Liên Kết Liên Ngành</h2>
+<div class="card">
+<ul>
+<li><strong>→ AI News:</strong> Google I/O, NVIDIA earnings, Cerebras IPO, SpaceX orbital data centers</li>
+<li><strong>→ VN News:</strong> Vaccine sốt rét → y tế VN. Hydrogen → năng lượng sạch. Data center → điện hạt nhân</li>
+<li><strong>→ World Conflicts:</strong> SpaceX → quân sự hóa không gian. NVIDIA → AI arms race</li>
+</ul>
+</div>
+
+<h2>📋 Các Tin Khác Đáng Chú Ý</h2>
+<div class="other-news">
+<ul>
+<li><strong>Cây tưởng tuyệt chủng 60 năm</strong> tái xuất tại Australia (18/05)</li>
+<li><strong>Bí ẩn thuận tay phải:</strong> Do đi 2 chân + não lớn (18/05)</li>
+<li><strong>Nhịn ăn kéo dài:</strong> Biến đổi mạnh sau 3 ngày (17/05)</li>
+<li><strong>Amlogenyx AM805:</strong> Gene therapy Alzheimer preclinical (13/05)</li>
+<li><strong>Helium shortage:</strong> Ảnh hưởng chip AI và MRI</li>
+</ul>
+</div>
+
+<p style="margin-top:2rem;font-size:.85rem;color:var(--muted)">Báo cáo tiếp theo: sau SpaceX V3 launch (20/05) + Google I/O science (19-20/05) + NVIDIA earnings (20/05)</p>
+
+</div>
+</body>
+</html>

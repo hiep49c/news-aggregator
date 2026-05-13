@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Bản Tin AI — 2026-05-13</title>
+<style>
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d2e;
+  --surface2: #232740;
+  --border: #2d3154;
+  --text: #e4e6f0;
+  --text-muted: #9ca3bf;
+  --accent: #6c8aff;
+  --accent2: #a78bfa;
+  --green: #34d399;
+  --yellow: #fbbf24;
+  --red: #f87171;
+  --orange: #fb923c;
+}
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  padding: 2rem 1rem;
+}
+.container { max-width: 900px; margin: 0 auto; }
+header {
+  text-align: center;
+  margin-bottom: 3rem;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+  border-radius: 16px;
+  border: 1px solid var(--border);
+}
+header h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: 0.5rem;
+}
+header .meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+.news-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin-bottom: 1.5rem;
+  transition: border-color 0.2s;
+}
+.news-card:hover { border-color: var(--accent); }
+.news-card h2 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.news-card .number {
+  display: inline-block;
+  background: var(--accent);
+  color: #fff;
+  width: 28px; height: 28px;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-right: 0.5rem;
+}
+.meta-table {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.3rem 1rem;
+  font-size: 0.85rem;
+  margin-bottom: 1rem;
+  padding: 0.8rem 1rem;
+  background: var(--surface2);
+  border-radius: 8px;
+}
+.meta-table .label { color: var(--text-muted); font-weight: 500; }
+.meta-table a { color: var(--accent); text-decoration: none; word-break: break-all; }
+.meta-table a:hover { text-decoration: underline; }
+.section-title {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--accent);
+  margin: 1.2rem 0 0.5rem;
+}
+.news-card p, .news-card ul { font-size: 0.92rem; color: var(--text-muted); margin-bottom: 0.5rem; }
+.news-card ul { padding-left: 1.2rem; }
+.news-card li { margin-bottom: 0.3rem; }
+.confidence {
+  display: inline-block;
+  padding: 0.2rem 0.7rem;
+  border-radius: 20px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-top: 0.8rem;
+}
+.confidence.high { background: rgba(52,211,153,0.15); color: var(--green); }
+.confidence.medium { background: rgba(251,191,36,0.15); color: var(--yellow); }
+.trends-section {
+  background: linear-gradient(135deg, var(--surface) 0%, var(--surface2) 100%);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2.5rem 0;
+}
+.trends-section h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent2);
+}
+.trends-section h3 {
+  font-size: 1rem;
+  margin: 1.2rem 0 0.5rem;
+  color: var(--text);
+}
+.trends-section ul { padding-left: 1.2rem; color: var(--text-muted); font-size: 0.92rem; }
+.trends-section li { margin-bottom: 0.4rem; }
+.top3 {
+  display: grid;
+  gap: 1rem;
+  margin: 2rem 0;
+}
+.top3-item {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+.top3-item .rank {
+  font-size: 2rem;
+  min-width: 40px;
+}
+.top3-item h3 { font-size: 1.1rem; margin-bottom: 0.4rem; }
+.top3-item p { font-size: 0.88rem; color: var(--text-muted); }
+footer {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+@media (max-width: 600px) {
+  body { padding: 1rem 0.5rem; }
+  header h1 { font-size: 1.5rem; }
+  .news-card { padding: 1.2rem; }
+}
+</style>
+</head>
+<body>
+<div class="container">
+<header>
+  <h1>📡 Bản Tin AI Hàng Ngày</h1>
+  <div class="meta">2026-05-13 · Phạm vi quét: 05/05 → 05/13 · 10 tin phân tích</div>
+</header>
+
+<!-- Tin 1 -->
+<div class="news-card">
+  <h2><span class="number">1</span> Microsoft MDASH: Hệ Thống Bảo Mật Đa Tác Tử Phát Hiện 16 Lỗ Hổng Mới</h2>
+  <div class="meta-table">
+    <span class="label">Nguồn</span><span>Microsoft Security Blog</span>
+    <span class="label">Ngày</span><span>2026-05-12</span>
+    <span class="label">URL</span><a href="https://www.microsoft.com/en-us/security/blog/2026/05/12/defense-at-ai-speed-microsofts-new-multi-model-agentic-security-system-finds-16-new-vulnerabilities/" target="_blank">microsoft.com/security/blog/...</a>
+  </div>
+  <div class="section-title">Tóm tắt</div>
+  <p>Microsoft phát hành MDASH — hệ thống điều phối 100+ agent AI chuyên biệt, phát hiện 16 lỗ hổng mới trong Windows networking stack (4 Critical RCE). Đạt 88.45% trên CyberGym benchmark — cao nhất bảng xếp hạng.</p>
+  <div class="section-title">Phân tích kỹ thuật</div>
+  <ul>
+    <li><strong>Kiến trúc:</strong> Pipeline 5 giai đoạn (Prepare → Scan → Validate → Dedup → Prove) với ensemble nhiều model và agent chuyên biệt.</li>
+    <li><strong>Đổi mới:</strong> Cơ chế "debate" đa tác tử — auditor phát hiện, debater phản biện, tăng độ tin cậy khi không bác bỏ được.</li>
+    <li><strong>Benchmark:</strong> 96% recall trên 5 năm MSRC cases (clfs.sys); 100% recall (tcpip.sys). 21/21 bug cài sẵn, zero false positive.</li>
+    <li><strong>Model-agnostic:</strong> Đổi model chỉ cần thay config.</li>
+  </ul>
+  <div class="section-title">Tại sao quan trọng</div>
+  <p>Hệ thống AI phát hiện lỗ hổng production-grade đầu tiên trên mã nguồn đóng. Chuyển AI security từ "nghiên cứu" sang "ship patch." Kiến trúc multi-agent debate là template cho verification domains khác.</p>
+  <div class="section-title">So sánh</div>
+  <ul>
+    <li>vs. DARPA AIxCC (2024): Cùng team, mở rộng từ OSS sang kernel proprietary code.</li>
+    <li>vs. Anthropic Mythos: Mythos nhận diện điểm yếu; MDASH đi xa hơn với proof construction end-to-end.</li>
+  </ul>
+  <span class="confidence high">🟢 Độ tin cậy: Cao</span>
+</div>
+
+<!-- Tin 2 -->
+<div class="news-card">
+  <h2><span class="number">2</span> Anthropic "Dreaming" — Agent Tự Cải Thiện Giữa Các Phiên</h2>
+  <div class="meta-table">
+    <span class="label">Nguồn</span><span>Reuters / Anthropic</span>
+    <span class="label">Ngày</span><span>2026-05-06</span>
+    <span class="label">URL</span><a href="https://www.reuters.com/business/retail-consumer/anthropic-unveils-dreaming-feature-help-its-ai-agents-self-improve-2026-05-06/" target="_blank">reuters.com/...</a>
+  </div>
+  <div class="section-title">Tóm tắt</div>
+  <p>Anthropic ra mắt "Dreaming" trong Claude Managed Agents — tiến trình nền chạy giữa các phiên, xem lại tối đa 100 phiên trước, trích xuất pattern, và xây dựng bộ nhớ dài hạn có cấu trúc. Bộ nhớ gốc giữ nguyên (non-destructive).</p>
+  <div class="section-title">Phân tích kỹ thuật</div>
+  <ul>
+    <li><strong>Cơ chế:</strong> Job bất đồng bộ — đọc memory store + session logs → pattern extraction → dedup → consolidated memory.</li>
+    <li><strong>Không phải training:</strong> Memory curation ở inference-time. Agent phiên sau load consolidated memory = có "kinh nghiệm."</li>
+    <li><strong>Hiệu quả:</strong> Giảm context window consumption bằng cách nén session histories dài.</li>
+  </ul>
+  <div class="section-title">Tại sao quan trọng</div>
+  <p>Implementation production đầu tiên của agent self-improvement giữa phiên mà không cần retrain. Giải quyết hạn chế cơ bản: LLM agent quên hết giữa các lần chạy. Nền tảng cho agent tích lũy chuyên môn.</p>
+  <span class="confidence high">🟢 Độ tin cậy: Cao</span>
+</div>
+
+<!-- Tin 3 -->
+<div class="news-card">
+  <h2><span class="number">3</span> OpenAI GPT-5.5 Instant — Model Mặc Định Mới Của ChatGPT</h2>
+  <div class="meta-table">
+    <span class="label">Nguồn</span><span>OpenAI</span>
+    <span class="label">Ngày</span><span>2026-05-05</span>
+    <span class="label">URL</span><a href="https://openai.com/index/gpt-5-5-instant/" target="_blank">openai.com/index/gpt-5-5-instant/</a>
+  </div>
+  <div class="section-title">Tóm tắt</div>
+  <p>GPT-5.5 Instant thay thế GPT-5.3 Instant làm model mặc định. Giảm 52.5% hallucination trên prompt nhạy cảm (y tế, luật, tài chính). Giảm 37.3% claim sai trên hội thoại khó. Câu trả lời ngắn gọn hơn. Thêm memory sources panel.</p>
+  <div class="section-title">Phân tích kỹ thuật</div>
+  <ul>
+    <li><strong>Hallucination:</strong> 52.5% improvement — bước nhảy lớn so với ~15-20% incremental trước đó.</li>
+    <li><strong>Phân tầng:</strong> Instant (tốc độ), Thinking (phân tích), Pro (cường độ tối đa).</li>
+    <li><strong>Safety:</strong> Model Instant đầu tiên xếp "High capability" về Cybersecurity.</li>
+  </ul>
+  <div class="section-title">Tại sao quan trọng</div>
+  <p>Giảm hallucination 52.5% trực tiếp mở đường enterprise adoption trong ngành regulated (y tế, luật, tài chính) — nơi rủi ro hallucination là rào cản chính.</p>
+  <span class="confidence high">🟢 Độ tin cậy: Cao</span>
+</div>
+
+<!-- Tin 4 -->
+<div class="news-card">
+  <h2><span class="number">4</span> Tái Cấu Trúc Quan Hệ OpenAI — Microsoft</h2>
+  <div class="meta-table">
+    <span class="label">Nguồn</span><span>OpenAI / Microsoft</span>
+    <span class="label">Ngày</span><span>2026-05-11</span>
+    <span class="label">URL</span><a href="https://openai.com/index/next-phase-of-microsoft-partnership/" target="_blank">openai.com/...</a>
+  </div>
+  <div class="section-title">Tóm tắt</div>
+  <p>OpenAI và Microsoft sửa đổi thỏa thuận: (1) OpenAI phục vụ sản phẩm trên mọi cloud — chấm dứt độc quyền Azure; (2) Microsoft giữ IP license đến 2032; (3) Revenue sharing cap $38B; (4) Azure vẫn là cloud "chính" với quyền ship trước.</p>
+  <div class="section-title">Tại sao quan trọng</div>
+  <p>Thay đổi cấu trúc lớn nhất trong partnership thống trị ngành AI. OpenAI trưởng thành thành platform company độc lập. Doanh nghiệp dùng OpenAI models trên cloud hiện có — giảm ma sát adoption.</p>
+  <span class="confidence high">🟢 Độ tin cậy: Cao</span>
+</div>
+
+<!-- Tin 5 -->
+<div class="news-card">
+  <h2><span class="number">5</span> OpenAI Deployment Company — Đơn Vị Tư Vấn AI $4 Tỷ</h2>
+  <div class="meta-table">
+    <span class="label">Nguồn</span><span>Reuters / OpenAI</span>
+    <span class="label">Ngày</span><span>2026-05-11</span>
+    <span class="label">URL</span><a href="https://www.reuters.com/business/openai-creates-new-unit-with-4-billion-investment-aid-corporate-ai-push-2026-05-11/" target="_blank">reuters.com/...</a>
+  </div>
+  <div class="section-title">Tóm tắt</div>
+  <p>OpenAI thành lập "DeployCo" — công ty con $4B đầu tư, định giá $10B. Đối tác: TPG, Goldman Sachs, SoftBank, McKinsey, Bain (19 firm). Mua Tomoro (~150 forward-deployed engineers). Mô hình: nhúng kỹ sư AI vào tổ chức khách hàng.</p>
+  <div class="section-title">Tại sao quan trọng</div>
+  <p>OpenAI tích hợp dọc vào enterprise services — cạnh tranh Accenture, McKinsey. Giải quyết "last mile": doanh nghiệp có API nhưng thiếu năng lực triển khai.</p>
+  <span class="confidence high">🟢 Độ tin cậy: Cao</span>
+</div>
