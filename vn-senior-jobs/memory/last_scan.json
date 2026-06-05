@@ -1,11 +1,24 @@
 {
-  "last_scan_timestamp": "2026-06-05T15:30:00+07:00",
+  "last_scan_timestamp": "2026-06-05T17:00:00+07:00",
   "last_scan_date": "2026-06-05",
-  "run_count": 2,
+  "run_count": 3,
   "stories_found": 10,
-  "top_story": "Lao động 40+ tuổi VN chịu tỷ lệ layoff cao nhất (19%) do AI pressure — tín hiệu trực tiếp cho senior 37+ (VnExpress, 06/2026)",
-  "summary": "Lần 2: restructure hoàn toàn từ it-career (global+VN) → vn-senior-jobs (VN only, senior+ only). Loại bỏ Challenger US, Meta layoff, Jensen Huang. Thêm: lao động 40+ VN layoff 19%, Korean fintech hub VN, ILO GenAI 11.5M workers VN, FPT CTO mới + AI-first, đề xuất 40h/tuần, pay growth senior mạnh nhất, top comp NAB/Grab/VinAI, bán dẫn VN 7,000 KS FDI $14.2B. Lương SA VN ₫56-74M/tháng (T1). 89% employer VN lo salary pressure.",
-  "next_scan_priority": "ITviec/TopDev 2025-2026 salary report bản mới; Korean fintech hub VN cụ thể (công ty + hiring volume); tiến trình đề xuất 40h/tuần; bán dẫn VN hiring scale (Synopsys/Faraday/NVIDIA); over-40 layoff trend tiếp diễn?; Momo/VNPay/Tiki senior hiring",
-  "entities_tracked": ["FPT", "VNG", "VinAI", "NAB Vietnam", "Grab VN", "Momo", "VNPay", "Synopsys VN", "Faraday Technology VN", "NVIDIA VN", "ITviec", "TopDev", "VietnamWorks/Navigos", "Korcham"],
-  "note": "Lần 2 — module renamed it-career → vn-senior-jobs. Scope narrowed: VN only, senior+ only. Report fully restructured. Previous global content (Challenger, Meta, Jensen Huang) removed."
+  "top_story": "Qualcomm mua lại mảng GenAI của VinAI (MovianAI) — exit lớn nhất ngành tech VN; NAB VN tuyển thêm 1,000+ người (AFR/Reuters 05/2026)",
+  "summary": "Lần 3: Mở rộng mục Review theo rule mới. Thêm: (1) VinAI/Qualcomm acquisition MovianAI 04/2025 — verified TechCrunch/Forbes/VietnamNet; (2) NAB VN 2,200+ engineers + Fortune #34 SEA + plans 1,000 more hires; (3) FPT Software OT pattern confirmed multi-platform (Glassdoor 69+ reviews 'low salary', TeamBlind, Indeed); (4) Grab rebuilding AI culture — 90% engineers AI daily, output +40%; (5) Title inflation VN +23% (Vietcetera); (6) Voz fetch FAIL — noted explicitly. Section 3 expanded significantly với real community content từ đa nguồn.",
+  "next_scan_priority": "Voz thread content (cần user cung cấp); ITviec 2025-2026 salary report bản mới; VinAI post-Qualcomm acquisition status; NAB VN 1,000 hires timeline; Grab VN Senior Principal Engineer hiring; Korean fintech hub cụ thể",
+  "entities_tracked": ["FPT", "VNG", "VinAI", "MovianAI", "Qualcomm VN", "NAB Vietnam", "Grab VN", "Momo", "VNPay", "Synopsys VN", "Faraday Technology VN", "NVIDIA VN", "GFT Technologies VN", "CyberLogitec VN", "ITviec", "TopDev", "VietnamWorks/Navigos", "Korcham", "Vingroup"],
+  "urls_added_this_run": [
+    "https://techcrunch.com/2025/04/01/qualcomm-acquires-generative-ai-division-of-vietnamese-startup-vinai",
+    "https://vietnamnet.vn/en/qualcomm-acquires-vinai-s-generative-ai-unit-to-boost-r-d-in-vietnam-2386956.html",
+    "https://www.vietnam.vn/en/vingroup-bat-dau-tai-cau-truc-vinfast-lap-cong-ty-moi-von-5-200-ty",
+    "https://theinvestor.vn/sk-group-fully-divests-from-vietnams-top-private-conglomerate-vingroup-d16679.html",
+    "https://vietcetera.com/en/emerging-trend-of-job-title-inflation-in-vietnam-sees-limited-success-in-attracting-and-retaining-talent",
+    "https://e.vnexpress.net/news/tech/nab-vietnam-named-to-fortune-100-best-companies-to-work-in-southeast-asia-4992040.html",
+    "https://www.peoplematters.in/news/strategic-hr/nab-plans-1000-more-india-vietnam-hires-as-australian-job-cuts-continue-49922",
+    "https://vietcetera.com/en/inside-nab-vietnam-where-global-banking-meets-the-countrys-brightest-tech-minds",
+    "https://e.vnexpress.net/news/tech/tech-news/engineer-makes-over-career-after-shock-layoff-at-45-4868205.html",
+    "http://engineering.einnews.com/article/915374641/hNxv7nmEZq4SN1mt",
+    "https://www.teamblind.com/company/FPT-Software/review/"
+  ],
+  "note": "Lần 3 — Mở rộng mục Review theo rule mới 'Hướng Dẫn Thu Thập Review & Tin Cộng Đồng'. Voz fetch fail (ghi rõ). Thêm VinAI/Qualcomm acquisition (VERIFIED), NAB Fortune/expansion data, FPT OT pattern multi-platform, Grab AI rebuild, title inflation VN."
 }
