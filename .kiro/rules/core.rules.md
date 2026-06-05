@@ -75,6 +75,25 @@ Tên riêng:
 
 → KHÔNG cần giải thích.
 
+## Tên công ty / tổ chức — Quy tắc viết tắt
+
+Khi nhắc đến công ty/tổ chức trong bảng hoặc nội dung:
+- Lần đầu xuất hiện: PHẢI ghi **tên đầy đủ** + viết tắt trong ngoặc.
+- Sau lần đầu: có thể dùng tên viết tắt.
+
+Ví dụ:
+- ✅ National Australia Bank Vietnam (NAB VN)
+- ✅ Grab Vietnam (Grab VN)
+- ✅ VNG Corporation (VNG)
+- ✅ International Labour Organization (ILO)
+- ❌ NAB VN (lần đầu, không có tên đầy đủ)
+- ❌ VNG (lần đầu, không giải thích)
+
+Lưu ý:
+- Tên đã phổ biến toàn cầu (Google, Apple, Microsoft, NVIDIA) → không cần mở rộng.
+- Tên đã là tên đầy đủ (VinAI Research, FPT Corporation) → giữ nguyên.
+- Trong bảng: ưu tiên format "Tên đầy đủ (viết tắt)" ở cột tên.
+
 ---
 
 # Core Philosophy
