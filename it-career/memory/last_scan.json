@@ -1,0 +1,11 @@
+{
+  "last_scan_timestamp": "2026-06-05T11:30:00+07:00",
+  "last_scan_date": "2026-06-05",
+  "run_count": 1,
+  "stories_found": 12,
+  "top_story": "Tháng 5/2026: ngành công nghệ Mỹ cắt 38,242 việc làm — tháng nặng nhất gần 2 năm; AI là lý do được viện dẫn nhiều nhất (Challenger, 04/06)",
+  "summary": "Cold start it-career. Layoff tech toàn cầu tăng tốc (Mỹ YTD 123,653, +66% YoY; AI ~40% nguyên nhân tháng 5) vs phản biện Jensen Huang 'complete nonsense'. VN: thừa coder entry-level, thiếu cấp cao; IT vẫn trả cao nhất (Solution Architect 5+ năm ~56.3M VND/thang). Khủng hoảng entry-level (-80%/quy ở công ty AI-heavy). Bán dẫn VN cần 50,000 KS tới 2030 (hiện ~6,000). Remote 46.3% trong startup, hybrid tăng. Review ITviec Tier 4 confidence LOW.",
+  "next_scan_priority": "Báo cáo Challenger tháng 6; báo cáo lương IT VN mới (ITviec/TopDev/Navigos 2026) để nâng confidence benchmark; diễn biến tuyển dụng bán dẫn VN; hiring freeze lan rộng; tác động layoff global tới văn phòng VN/SEA",
+  "entities_tracked": ["Meta", "NVIDIA / Jensen Huang", "Salesforce", "FPT Software", "ITviec", "TopDev/TopCV", "VietnamWorks/Navigos", "Challenger Gray & Christmas", "NIC (bán dẫn VN)"],
+  "note": "Cold start — lần quét đầu tiên của module it-career. Không có lịch sử trước đó để so sánh delta. Cửa sổ quét 29/05–05/06/2026 (7 ngày). Một số benchmark lương VN là dữ liệu tham chiếu nền công bố trước cửa sổ, đã ghi rõ confidence."
+}

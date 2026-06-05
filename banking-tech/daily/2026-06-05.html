@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Banking Tech — Java Web & AI in Banking — 05/06/2026</title>
+<style>
+:root{--bg:#0a0b10;--surface:#12141d;--surface2:#1a1d2a;--border:#2a2f42;--text:#e4e8f0;--muted:#8892a8;--blue:#5b9cf6;--purple:#a78bfa;--red:#f87171;--orange:#fb923c;--green:#4ade80;--yellow:#fbbf24;--gradient:linear-gradient(135deg,#5b9cf6,#a78bfa)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px}
+.container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.3rem}
+h2{font-size:1.4rem;font-weight:700;color:var(--blue);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+h3{font-size:1.15rem;font-weight:600;color:var(--text);margin:2rem 0 .8rem}
+h4{font-size:.95rem;font-weight:600;color:var(--purple);margin:1.2rem 0 .5rem}
+p{margin:.6rem 0}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+ul,ol{margin:.5rem 0 .5rem 1.5rem}li{margin:.3rem 0}
+.meta{font-size:.82rem;color:var(--muted);margin-bottom:2rem}
+.toc{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.toc h3{margin:0 0 .8rem;font-size:1rem;color:var(--purple)}
+.toc ol{margin:0 0 0 1.2rem}.toc li{margin:.4rem 0;font-size:.88rem}.toc a{color:var(--muted)}.toc a:hover{color:var(--blue)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.2rem 0}
+.badge{display:inline-block;font-size:.7rem;font-weight:600;padding:.2rem .6rem;border-radius:6px;margin-right:.4rem;text-transform:uppercase}
+.badge-red{background:rgba(248,113,113,.15);color:var(--red)}
+.badge-orange{background:rgba(251,146,60,.15);color:var(--orange)}
+.badge-green{background:rgba(74,222,128,.15);color:var(--green)}
+.badge-blue{background:rgba(91,156,246,.15);color:var(--blue)}
+.badge-purple{background:rgba(167,139,250,.15);color:var(--purple)}
+.badge-yellow{background:rgba(251,191,36,.15);color:var(--yellow)}
+.brief{background:linear-gradient(135deg,rgba(91,156,246,.08),rgba(167,139,250,.08));border:1px solid rgba(91,156,246,.2);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.brief ol{margin-left:1.2rem}.brief li{margin:.5rem 0;font-weight:500}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
+th,td{padding:.6rem .8rem;border:1px solid var(--border);text-align:left}
+th{background:var(--surface2);font-weight:600;color:var(--purple)}
+.url-list{font-size:.82rem;margin:.5rem 0}.url-list a{color:var(--muted);word-break:break-all}.url-list a:hover{color:var(--blue)}
+.other-news{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.other-news ul{margin:.5rem 0 0 1.2rem}.other-news li{margin:.4rem 0;font-size:.9rem}
+.topnav{position:sticky;top:0;z-index:100;background:rgba(18,20,29,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);margin:0 -1.5rem 1.5rem;padding:.6rem 1.5rem;display:flex;gap:.5rem;overflow-x:auto;white-space:nowrap}
+.topnav a{flex:0 0 auto;font-size:.76rem;color:var(--muted);padding:.35rem .7rem;border-radius:6px;background:var(--surface);border:1px solid var(--border);text-decoration:none;transition:all .15s}
+.topnav a:hover{color:var(--text);border-color:var(--blue)}
+h2[id],div[id],.brief[id]{scroll-margin-top:64px}
+@media(max-width:768px){.topnav{margin:0 -1rem 1rem;padding:.5rem 1rem}}
+@media(max-width:768px){.container{padding:1rem}h1{font-size:1.4rem}table{font-size:.78rem}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<nav class="topnav">
+<a href="#brief">📌 Tóm tắt</a>
+<a href="#exec">Executive Summary — 10 ý chính</a>
+<a href="#springai">Spring AI 2.0: M8 27/05, GA mốc 28/05</a>
+<a href="#quarkus">Quarkus 3.36: Signals, SBOM, SPIFFE</a>
+<a href="#javaplatform">JDK 27, WildFly 40, Micronaut 5.0 GA</a>
+<a href="#springcve">Spring: sức ép CVE & EOL Boot 3.5</a>
+<a href="#logos">BIS Project Logos: quan sát LLM agent</a>
+<a href="#euaiact">EU AI Act 02/08: credit/fraud/AML rủi ro cao</a>
+<a href="#sr262">Mỹ: SR 26-2 thay SR 11-7, nhắc GenAI</a>
+<a href="#agentic">Agentic banking: Citi, JPMorgan, 11%→26%</a>
+<a href="#vietnam">Việt Nam: lừa đảo 2025 &gt; 8.000 tỷ đồng</a>
+<a href="#other">Các tin khác đáng chú ý</a>
+<a href="#meta">Meta Trends</a>
+<a href="#watch">Strategic Watchlist</a>
+<a href="#failed">⚠️ Nguồn không truy cập được</a>
+<a href="#delta">Δ Delta (cold start)</a>
+</nav>
+
+<h1>🏦 Banking Tech — Java Web &amp; AI in Banking — 05/06/2026</h1>
+<p class="meta">Quét: 05/06/2026 09:30 ICT | Phạm vi: 27/05 – 05/06/2026 (~10 ngày) | Lần quét: 1 (cold start) | Số tin chính: 9 (4 Java Web + 5 AI in Banking) + 6 tin khác<br>
+Nguồn: Spring Blog, Quarkus.io, InfoQ, WildFly, HeroDevs, GitHub · BIS, American Banker, Databricks, Hogan Lovells, Unit21, Axios, PYMNTS, Citi, JPMorgan, Mastercard, ACAMS · VietnamNet, VietnamPlus, VietnamNews/BizHub, Dan Tri</p>
+
+<div class="card" style="border-color:rgba(251,191,36,.4)">
+<span class="badge badge-yellow">Cold start</span>
+<p style="margin:.4rem 0 0">⚠️ <strong>Cold start — không có lịch sử quét trước đó.</strong> Đây là lần quét đầu tiên của module <code>banking-tech</code>. <code>processed_links</code> rỗng, không có báo cáo trước để so sánh delta. Cửa sổ quét mặc định 7 ngày được mở rộng nhẹ lên ~10 ngày (từ 27/05) để gom đủ các mốc release của hệ sinh thái Java cuối tháng 5 và đảm bảo ≥8 tin chất lượng trên cả hai trục.</p>
+</div>
+
+<nav class="toc">
+<h3>📑 Mục lục</h3>
+<ol>
+<li><a href="#brief">Tóm tắt nhanh</a></li>
+<li><a href="#exec">Executive Summary</a></li>
+<li><a href="#springai">Spring AI 2.0 — M8 &amp; GA</a></li>
+<li><a href="#quarkus">Quarkus 3.36</a></li>
+<li><a href="#javaplatform">JDK 27 / WildFly 40 / Micronaut 5.0</a></li>
+<li><a href="#springcve">Sức ép CVE &amp; EOL Spring</a></li>
+<li><a href="#logos">BIS Project Logos</a></li>
+<li><a href="#euaiact">EU AI Act 02/08/2026</a></li>
+<li><a href="#sr262">SR 26-2 (Mỹ)</a></li>
+<li><a href="#agentic">Agentic banking — Citi/JPM</a></li>
+<li><a href="#vietnam">Việt Nam — AI hai mặt</a></li>
+<li><a href="#other">Các tin khác đáng chú ý</a></li>
+<li><a href="#meta">Meta Trends</a></li>
+<li><a href="#watch">Strategic Watchlist</a></li>
+<li><a href="#failed">Nguồn không truy cập được</a></li>
+<li><a href="#delta">Δ Delta</a></li>
+</ol>
+</nav>
+
+<div class="brief" id="brief">
+<h3>📌 Tóm tắt nhanh</h3>
+<ol>
+<li><strong>BIS khởi động Project Logos</strong> — quan sát LLM agent đóng vai quản lý danh mục trong thị trường mô phỏng → regulator nghiên cứu rủi ro AI tự hành trước khi quy mô hóa</li>
+<li><strong>Đếm ngược EU AI Act 02/08/2026</strong> — credit scoring, fraud, AML rủi ro cao phải đạt explainability, human oversight, audit log; phạt tối đa €35M hoặc 7% doanh thu</li>
+<li><strong>Spring AI 2.0.0-M8 (27/05)</strong> — GA đặt mốc 28/05; yêu cầu Spring Boot 4.0 → ép migration nền tảng</li>
+<li><strong>Quarkus 3.36</strong> — Quarkus Signals, embedded SBOM, OIDC SPIFFE; bản vá 3.36.1 (03/06)</li>
+<li><strong>Mỹ siết model risk: SR 26-2</strong> thay SR 11-7; lần đầu nhắc đích danh GenAI &amp; agentic AI</li>
+<li><strong>Agentic AI vào ngân hàng</strong> — Citi ra nền tảng agent; adoption doanh nghiệp lớn 11% → 26%</li>
+<li><strong>Việt Nam: AI hai mặt</strong> — eKYC/chấm điểm tín dụng phổ biến, nhưng lừa đảo trực tuyến 2025 &gt; 8.000 tỷ đồng (~303,7 triệu USD)</li>
+<li><strong>JDK 27 (JEP &amp; lịch) + WildFly 40, Micronaut 5.0 GA (21/05)</strong> — nền tảng Java enterprise giữ nhịp phát hành</li>
+</ol>
+</div>
+
+<h2 id="exec">🧭 Executive Summary</h2>
+<div class="card">
+<ol>
+<li><strong>Regulator đi trước thị trường về AI agent</strong> — BIS Project Logos + bài phát biểu ổn định tài chính cho thấy ngân hàng trung ương chủ động dựng môi trường thí nghiệm.</li>
+<li><strong>2026 là năm "deadline tuân thủ" AI tài chính</strong> — EU AI Act (02/08) + SR 26-2 (Mỹ, hiệu lực 17/04) dồn áp lực explainability / human oversight / audit trail.</li>
+<li><strong>RegTech trở thành đầu tư bắt buộc</strong>, không còn tùy chọn — nhất là với AI cho credit scoring, AML, fraud.</li>
+<li><strong>Agentic banking rời thí điểm</strong> — Citi (nền tảng agent nội bộ), JPMorgan (agentic commerce) chuẩn hóa hạ tầng để mở rộng có kiểm soát.</li>
+<li><strong>Hệ sinh thái Java hội tụ AI-native</strong> — Spring AI 2.0, LangChain4j, Google ADK for Java, Quarkus Agent MCP server → Java là nền tảng hạng nhất cho AI doanh nghiệp.</li>
+<li><strong>Spring AI 2.0 buộc nâng nền tảng</strong> — yêu cầu Spring Boot 4.0 (Jakarta EE 11, Jackson 3, JSpecify) → ngân hàng ở Boot 3.x phải lập lộ trình migration.</li>
+<li><strong>Quarkus mạnh về hiệu năng &amp; supply-chain security</strong> — tree-shaking, PGO native, embedded SBOM, OIDC SPIFFE.</li>
+<li><strong>Gian lận do AI vượt tốc độ phòng thủ</strong> — synthetic identity, deepfake, bộ "đồ nghề AI" ~300 USD vượt eKYC.</li>
+<li><strong>Việt Nam là ca điển hình "AI hai mặt"</strong> — ứng dụng cao nhưng thiệt hại lớn; SBV đã siết quy định dùng AI ngân hàng.</li>
+<li><strong>Lịch JDK 27 + loạt GA (WildFly 40, Micronaut 5.0)</strong> xác nhận nhịp phát hành ổn định của nền tảng Java enterprise.</li>
+</ol>
+</div>
+
+<h2 id="springai">☕ 1. Spring AI 2.0 Vào Giai Đoạn Cuối — M8 (27/05), GA Mốc 28/05</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-purple">Java Web</span>
+</div>
+<h4>Tóm tắt</h4>
+<p>Spring AI — framework đưa nguyên tắc thiết kế của hệ sinh thái Spring (portability, modular design, POJO) vào lĩnh vực AI — phát hành milestone thứ 8 (2.0.0-M8) trên Maven Central ngày 27/05, sau chuỗi M5→M6→M7 dày đặc. Milestone GA của 2.0 trên GitHub đặt hạn 28/05/2026.</p>
+<h4>Điểm mới &amp; phân tích</h4>
+<ul>
+<li>Chuỗi milestone rất nhanh (M5 27/04, M6 08/05, M7 23/05, M8 27/05) → đội Spring AI đang "khóa" tính năng để chốt GA.</li>
+<li><strong>Yêu cầu Spring Boot 4.0</strong> làm nền (Jakarta EE 11, Jackson 3 mặc định, null-safety JSpecify) → "dùng Spring AI 2.0" = "migration nền tảng".</li>
+<li>HeroDevs cảnh báo "EOL crunch" với đội đang ở Spring Boot 3.5 (hết hỗ trợ OSS).</li>
+<li>Roadmap: Session API (bộ nhớ ngắn hạn event-sourced, có context compaction) nhắm Spring AI 2.1 (11/2026); khi đó <code>ChatMemory</code> bị deprecate.</li>
+</ul>
+<h4>Ảnh hưởng thực tế</h4>
+<p>Ngân hàng xây chatbot/RAG/agent nội bộ cần lập lộ trình Boot 3.x → 4.0 trước khi áp dụng; đội bảo mật theo dõi EOL Boot 3.5 để tránh chạy nền tảng không còn vá lỗi.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://spring.io/blog/2026/05/27/spring-ai-2-0-0-M8-available-now">Spring Blog (M8)</a> · <a href="https://spring.io/blog/2026/05/23/spring-ai-1-0-8-1-1-7-2-0-0-M7-available-now">Spring Blog (M7)</a> · <a href="https://github.com/spring-projects/spring-ai/milestone/24">GitHub milestone 2.0</a> · <a href="https://spring.io/blog/2026/04/15/spring-ai-session-management">Session API</a> · <a href="https://www.herodevs.com/blog-posts/cve-2026-22729-cve-2026-22730-and-the-spring-boot-3-5-eol-crunch-facing-spring-ai-teams">HeroDevs (EOL crunch)</a></p>
+</div>
+
+<h2 id="quarkus">☕ 2. Quarkus 3.36 — Signals, Embedded SBOM, OIDC SPIFFE</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-purple">Java Web</span>
+</div>
+<h4>Tóm tắt</h4>
+<p>Quarkus — framework Java "supersonic subatomic" tối ưu khởi động nhanh và native image — phát hành 3.36 với extension thử nghiệm <strong>Quarkus Signals</strong>, <strong>embedded dependency SBOM</strong> (bản kê khai thành phần phần mềm nhúng), <strong>xác thực OIDC SPIFFE</strong> cho client, và keystore/truststore tùy ý. Bản vá 3.36.1 ra 03/06.</p>
+<h4>Điểm mới &amp; phân tích</h4>
+<ul>
+<li><strong>Quarkus Signals:</strong> các thành phần tương tác lỏng lẻo (loosely coupled) qua phát/nhận signal — mô hình reactive nhẹ.</li>
+<li><strong>Embedded SBOM:</strong> nhúng kê khai thành phần vào artifact → truy vết chuỗi cung ứng, quan trọng cho tài chính bị siết supply-chain security (hợp DORA ở EU).</li>
+<li><strong>OIDC SPIFFE:</strong> chuẩn nhận dạng workload cho xác thực dịch vụ-tới-dịch vụ trong zero-trust.</li>
+<li>Nối tiếp chuỗi hiệu năng: JAR tree-shaking (3.35), PGO cho native, tích hợp Project Leyden (3.32).</li>
+</ul>
+<h4>Ảnh hưởng thực tế</h4>
+<p>Native image + tree-shaking giảm dung lượng/chi phí vận hành ở quy mô; embedded SBOM tự động hóa báo cáo thành phần khi audit; SPIFFE hỗ trợ zero-trust giữa vi dịch vụ.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://quarkus.io/blog/quarkus-3-36-released/">Quarkus 3.36</a> · <a href="https://quarkus.io/blog/quarkus-3-36-1-released/">Quarkus 3.36.1</a> · <a href="https://quarkus.io/blog/quarkus-3-35-released/">Quarkus 3.35</a> · <a href="https://quarkus.io/guides/signals">Guide: Signals</a></p>
+</div>
+
+<h2 id="javaplatform">☕ 3. Nền Tảng Java: JDK 27 (JEP &amp; Lịch), WildFly 40, Micronaut 5.0 GA</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-purple">Java Web</span>
+</div>
+<h4>Tóm tắt</h4>
+<p>Hệ sinh thái Java enterprise giữ nhịp phát hành đều: <strong>WildFly 40</strong> và <strong>Micronaut 5.0</strong> lên GA (21/05); loạt JEP (JDK Enhancement Proposal) cho <strong>JDK 27</strong> được điểm trong roundup InfoQ tuần 18/05 &amp; 25/05; lịch JDK 27 đã chốt từ tháng 4.</p>
+<h4>Điểm mới &amp; phân tích</h4>
+<ul>
+<li><strong>WildFly 40:</strong> application server triển khai chuẩn Jakarta EE + MicroProfile mới nhất — đường nâng cấp cho hệ thống legacy.</li>
+<li><strong>Micronaut 5.0:</strong> bản major framework microservices AOT, đối thủ Spring Boot/Quarkus.</li>
+<li><strong>JDK 27</strong> (LTS kế tiếp dự kiến) đang định hình feature set qua JEP — quan trọng cho kế hoạch nâng cấp 5–10 năm của ngân hàng.</li>
+<li>Roundup 25/05 còn điểm Hazelcast, Hibernate, Koog, JHipster, dự án Endive.</li>
+</ul>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.infoq.com/news/2026/06/java-news-roundup-may25-2026/">InfoQ roundup 25/05</a> · <a href="https://www.infoq.com/news/2026/05/java-news-roundup-may18-2026/">InfoQ roundup 18/05</a> · <a href="https://www.wildfly.org/news/2026/05/21/WildFly-40-is-released/">WildFly 40 released</a></p>
+</div>
+
+<h2 id="springcve">☕ 4. Sức Ép CVE &amp; EOL Trong Hệ Sinh Thái Spring (Tháng 4–5/2026)</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-orange">PARTIALLY VERIFIED</span>
+<span class="badge badge-yellow">Confidence MEDIUM</span>
+<span class="badge badge-purple">App Security</span>
+</div>
+<h4>Tóm tắt</h4>
+<p>Bên cạnh tính năng mới, Spring liên tục vá bảo mật: Spring Security 6.5.10, 7.0.5 và 7.1.0-RC1 (21/04). Tóm tắt từ HeroDevs đề cập nhiều CVE ảnh hưởng Spring Boot/Spring AI tháng 4–5 (gồm định danh như CVE-2026-22729/22730 và sức ép EOL Spring Boot 3.5).</p>
+<h4>Phân tích &amp; lưu ý</h4>
+<p>Với ngân hàng dùng Spring làm khung chủ đạo, quản trị CVE và vòng đời là rủi ro vận hành trực tiếp — chạy nền tảng EOL vi phạm nhiều khung kiểm soát. ⚠️ <strong>Anti-hallucination:</strong> chi tiết định danh CVE/số lượng lấy từ nguồn Tier 3 (HeroDevs) — PHẢI đối chiếu NVD &amp; Spring Security advisories chính thức trước khi quyết định vá.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://spring.io/blog/2026/04/21/spring-security-releases/">Spring Security releases</a> · <a href="https://www.herodevs.com/blog-posts/cve-2026-22729-cve-2026-22730-and-the-spring-boot-3-5-eol-crunch-facing-spring-ai-teams">HeroDevs (CVE/EOL)</a> · <a href="https://www.herodevs.com/blog-posts/spring-boot-versions-eol-dates-and-latest-releases-april-2026">HeroDevs (versions/EOL)</a></p>
+</div>
+
+<h2 id="logos">🤖 5. BIS Khởi Động Project Logos — Quan Sát LLM Agent Trong Thị Trường Mô Phỏng</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-red">Severity MEDIUM</span>
+</div>
+<h4>Tóm tắt</h4>
+<p>BIS công bố <strong>Project Logos</strong>, giúp ngân hàng trung ương quan sát và phân tích hành vi của các <strong>LLM agent</strong> (tác nhân AI dựa trên mô hình ngôn ngữ lớn) khi đóng vai nhà quản lý danh mục (portfolio manager) trong môi trường thị trường tài chính mô phỏng.</p>
+<h4>Điểm mới &amp; phân tích</h4>
+<ul>
+<li>Sáng kiến của regulator toàn cầu nhằm <strong>chủ động nghiên cứu rủi ro</strong> AI tự hành, thay vì phản ứng sau sự cố.</li>
+<li>Nối tiếp chuỗi nghiên cứu BIS: bài phát biểu "financial stability implications of AI" (26/01); working paper "AI agents for cash management" (agent gen-AI duy trì đệm thanh khoản, ưu tiên thanh toán khẩn).</li>
+<li>Cơ chế rủi ro: nếu nhiều agent cùng "lý trí kiểu sách giáo khoa" và phản ứng đồng nhất → có thể khuếch đại biến động (herding — hành vi bầy đàn) khi thị trường căng thẳng.</li>
+</ul>
+<h4>Ảnh hưởng thực tế</h4>
+<p>Ngân hàng/quỹ chuẩn bị cho khả năng có hướng dẫn giám sát về AI agent trong giao dịch/quản lý danh mục. Mở cơ hội cho RegTech giám sát hành vi agent. <strong>Liên ngành (→ ai-news):</strong> khớp xu hướng "agentic era" nhưng ở góc rủi ro tài chính.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.bis.org/about/bisih/topics/suptech_regtech/logos.htm">BIS Project Logos</a> · <a href="https://www.bis.org/speeches/sp260126.htm">BIS speech (AI &amp; financial stability)</a> · <a href="https://www.bis.org/publ/work1310.htm">BIS working paper (AI agents cash mgmt)</a></p>
+</div>
+
+<h2 id="euaiact">🤖 6. Đếm Ngược EU AI Act 02/08/2026 — Credit Scoring, Fraud, AML Vào Diện "Rủi Ro Cao"</h2>
+<div class="card">
+<span class="badge badge-red">Impact 9/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-red">Severity HIGH</span>
+</div>
+<h4>Tóm tắt</h4>
+<p>EU AI Act (Regulation (EU) 2024/1689) tới mốc <strong>02/08/2026</strong>: hệ thống AI <strong>rủi ro cao</strong> — gồm credit scoring (chấm điểm tín dụng), fraud detection và AML monitoring khi đáp ứng tiêu chí — phải hoàn tất đánh giá phù hợp (conformity assessment), đăng ký, vận hành với quản trị rủi ro, quản trị dữ liệu, logging và human oversight (giám sát con người).</p>
+<h4>Điểm mới &amp; phân tích</h4>
+<ul>
+<li>AI Act phân 4 tầng rủi ro; Điều 5 cấm thực hành "không chấp nhận được" (social scoring của cơ quan công, sinh trắc thời gian thực nơi công cộng).</li>
+<li><strong>Phạt tối đa €35 triệu hoặc 7% doanh thu toàn cầu</strong> — cao hơn GDPR.</li>
+<li>Đề xuất gia hạn sang 12/2027 <strong>đã thất bại</strong> ở đàm phán trilogue tháng 4/2026 → giữ mốc 08/2026.</li>
+<li>AI Act được thiết kế bổ trợ DORA, CRR, PSD2 — tránh mâu thuẫn với quy định ngân hàng/thanh toán.</li>
+</ul>
+<h4>Ảnh hưởng thực tế</h4>
+<p>Explainability, human oversight, auditability chuyển từ "nên có" thành "bắt buộc pháp lý". Đội tuân thủ hoàn tất DPIA/FRIA; đội ML triển khai explainability + logging; kiến trúc sư thiết kế "human-in-the-loop" vào pipeline tín dụng/AML.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://digital-strategy.ec.europa.eu/en/policies/regulatory-framework-ai">European Commission</a> · <a href="https://www.hoganlovells.com/en/publications/ai-regulation-in-financial-services-navigating-the-eu-ai-act-in-a-layered-regulatory-landscape">Hogan Lovells</a> · <a href="https://www.unit21.ai/blog/eu-ai-act-2026-faqs-what-fraud-and-aml-teams-need-to-know">Unit21</a> · <a href="https://legiscope.com/blog/eu-ai-act-timeline-deadlines.html">Legiscope</a></p>
+</div>
+
+<h2 id="sr262">🤖 7. Mỹ Thay Khung Model Risk: SR 26-2 Thay SR 11-7, Nhắc Đích Danh GenAI &amp; Agentic AI</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-orange">Severity MED–HIGH</span>
+</div>
+<h4>Tóm tắt</h4>
+<p>Fed, OCC và FDIC ban hành <strong>SR 26-2 (OCC Bulletin 2026-13)</strong> — hướng dẫn quản trị rủi ro mô hình (model risk management) sửa đổi, <strong>thay thế SR 11-7</strong> tồn tại 15 năm. Khung mới chuyển từ tư duy "checklist" sang "phán đoán rủi ro của chuyên gia" (principles-driven).</p>
+<h4>Điểm mới &amp; phân tích</h4>
+<ul>
+<li>Lần đầu khung chính thức <strong>nhắc đích danh</strong> "generative AI và agentic AI là mô hình mới, biến động nhanh".</li>
+<li>Chuyển sang nguyên tắc, ít quy tắc cứng → linh hoạt hơn nhưng đặt gánh nặng "phán đoán" lên ngân hàng.</li>
+<li>American Banker (cuối 5) lưu ý khung mới "để ngỏ nhiều câu hỏi" về áp dụng cụ thể cho GenAI/agentic.</li>
+<li>Cơ chế gọng kìm hai bờ Đại Tây Dương: EU prescriptive (quy định chi tiết theo tầng) vs Mỹ principles-based (nguyên tắc + phán đoán).</li>
+</ul>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.americanbanker.com/opinion/regulators-guidance-on-model-risk-leaves-many-questions-unanswered">American Banker</a> · <a href="https://www.databricks.com/blog/model-risk-management-2026-bankers-guide-revised-interagency-guidance">Databricks</a> · <a href="https://www.yields.io/insights/whats-new-in-the-2026-model-risk-management-regulatory-landscape">Yields.io</a> · <a href="https://www.forbes.com/sites/daraabasiita/2026/05/19/in-small-business-credit-the-ai-question-isnt-settled-and-the-operators-disagree/">Forbes (SME credit)</a></p>
+</div>
+
+<h2 id="agentic">🤖 8. Agentic Banking Rời Thí Điểm — Citi Ra Nền Tảng Agent, Adoption Tăng Tốc</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Tóm tắt</h4>
+<p>Ngân hàng lớn chuẩn hóa hạ tầng agentic AI: <strong>Citi</strong> ra nền tảng nội bộ cho nhân viên tự tạo agent trong hệ thống bảo mật, mở rộng toàn hãng. <strong>JPMorgan Payments</strong> hợp tác Mirakl Nexus đưa agentic commerce tới merchant. Phân tích JPMorgan: tỷ lệ triển khai agentic AI ở doanh nghiệp &gt;$1 tỷ doanh thu <strong>tăng từ 11% lên 26%</strong> (2025 → 02/2026).</p>
+<h4>Điểm mới &amp; phân tích</h4>
+<ul>
+<li>Citi chuyển từ "thử nghiệm rời rạc" sang <strong>nền tảng agent tập trung, có kiểm soát</strong> — chìa khóa mở rộng an toàn.</li>
+<li>Citi Wealth ra "Citi Sky" — thành viên AI luôn trực, xây trên Google Cloud + DeepMind.</li>
+<li>Bước ngoặt nằm ở <strong>hạ tầng quản trị agent ở quy mô</strong> (bảo mật, resiliency, controls), không phải "có agent".</li>
+<li>⚠️ Lưu ý: con số 11%→26% là cross-industry (mọi doanh nghiệp lớn), không riêng ngân hàng.</li>
+</ul>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.axios.com/2026/04/30/exclusive-citi-moves-into-agentic-ai">Axios</a> · <a href="https://www.pymnts.com/artificial-intelligence-2/2026/citi-debuts-platform-to-bring-ai-agents-to-banking-work">PYMNTS</a> · <a href="https://www.citigroup.com/global/news/press-release/2026/citi-wealth-unveils-citi-sky-ai-powered-member-google-cloud-deepmind-technologies">Citi (Citi Sky)</a> · <a href="https://www.americanbanker.com/payments/news/jpmorgan-payments-agentic-commerce-play-ripples-australian-deal">American Banker (JPM)</a></p>
+</div>
+
+<h2 id="vietnam">🇻🇳 9. Việt Nam: AI Vừa Là Khiên Vừa Là Giáo — Lừa Đảo Trực Tuyến 2025 Vượt 8.000 Tỷ Đồng</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-red">Severity HIGH</span>
+</div>
+<h4>Tóm tắt</h4>
+<p>Tại Việt Nam, AI đã dùng rộng trong ngân hàng cho phân tích tín dụng, eKYC (định danh điện tử khách hàng), quản trị rủi ro, cá nhân hóa dịch vụ, xử lý giao dịch thời gian thực. Nhưng AI cũng tiếp sức tội phạm: thiệt hại lừa đảo trực tuyến 2025 <strong>vượt 8.000 tỷ đồng (~303,7 triệu USD)</strong> theo Bộ Công an. Trọng tâm phòng thủ dịch từ "chặn giao dịch" sang "bảo vệ người dùng".</p>
+<h4>Điểm mới &amp; phân tích</h4>
+<ul>
+<li>Mô hình lừa đảo phổ biến: nền tảng đầu tư "AI" giả, app trông chuyên nghiệp, dữ liệu lợi nhuận bịa, "mentor" tự xưng → dụ nạp tiền.</li>
+<li>Chuyên gia kêu gọi an ninh mạng chủ động (proactive) trong kỷ nguyên tội phạm dùng AI.</li>
+<li>SBV đã siết quy định dùng AI trong ngân hàng, <strong>yêu cầu thông báo khách hàng trước</strong> (từ 3/2026).</li>
+<li>Cơ chế rủi ro: tỷ lệ smartphone cao + eKYC phổ biến → bề mặt tấn công lớn; kẻ gian dùng AI cá nhân hóa &amp; tự động hóa lừa đảo quy mô.</li>
+</ul>
+<h4>Ảnh hưởng thực tế</h4>
+<p>Ngân hàng VN đầu tư mô hình chống gian lận hành vi + sinh trắc học; bám quy định SBV về minh bạch dùng AI. <strong>Liên ngành (→ vn-news):</strong> gắn chủ đề an ninh mạng &amp; niềm tin số đang nóng.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://vietnamnet.vn/en/proactive-cybersecurity-essential-in-age-of-ai-powered-crime-experts-2521939.html">VietnamNet</a> · <a href="https://vietnamnet.vn/en/protecting-users-crucial-in-building-digital-trust-experts-2522331.html">VietnamNet (digital trust)</a> · <a href="https://bizhub.vietnamnews.vn/ai-era-fraud-pushes-digital-finance-from-transaction-blocking-to-user-protection-post403493.html">VietnamNews/BizHub</a> · <a href="https://dtinews.dantri.com.vn/vietnam-today/state-bank-of-vietnam-tightens-rules-on-ai-in-banking-20260326194837944.htm">Dan Tri (SBV)</a></p>
+</div>
+
+<h2 id="other">📋 Các Tin Khác Đáng Chú Ý</h2>
+<div class="other-news">
+<ul>
+<li><strong>Đe dọa fraud AI ngày càng rẻ (Impact 6):</strong> American Banker — bộ "đồ nghề AI" dưới ~300 USD đủ vượt xác minh danh tính ngân hàng. ACAMS cảnh báo synthetic identity + giả mạo AI bào mòn eKYC. <a href="https://www.americanbanker.com/news/300-ai-toolkits-let-criminals-bypass-bank-security">American Banker</a> · <a href="https://www.acams.org/en/opinion/key-lines-defense-against-synthetic-identity-fraud-identity-theft-and-account-takeover">ACAMS</a></li>
+<li><strong>Mastercard: AI giảm false positive (Impact 6):</strong> 83% lãnh đạo ngành nói AI giảm cảnh báo sai &amp; churn (nguồn doanh nghiệp — đọc như claim có lợi ích thương mại). <a href="https://www.mastercard.com/global/en/news-and-trends/Insights/2026/ai-is-helping-banks-save-millions-by-transforming-payment-fraud-prevention.html">Mastercard</a></li>
+<li><strong>AI vs rules-based trong AML/TM (Impact 5):</strong> xu hướng 2026 chuyển từ giám sát dựa-luật tĩnh sang AI/hybrid; khảo sát American Banker 2025: 62% ngân hàng/credit union ưu tiên fraud detection. <a href="https://www.kychub.com/blog/ai-in-transaction-monitoring-by-2026/">KYC Hub</a> · <a href="https://www.finextra.com/blogposting/29589/ai-vs-rules-based-transaction-monitoring-why-a-hybrid-approach-wins">Finextra</a></li>
+<li><strong>Spring Boot 4.1.0-RC1 (Impact 5):</strong> 113 cải tiến/sửa lỗi — báo hiệu 4.1 GA tới gần (Spring gRPC, OpenTelemetry, file rotation Log4j). <a href="https://spring.io/authors/wilkinsona/">Spring Blog</a></li>
+<li><strong>GenAI ở ngân hàng trung ương (Impact 5):</strong> SUERF — central bank triển khai GenAI cho phân tích kinh tế/tiền tệ, thống kê, giám sát tài chính, oversight thanh toán. <a href="https://www.suerf.org/publications/suerf-policy-notes-and-briefs/generative-artificial-intelligence-in-central-banking/">SUERF</a></li>
+<li><strong>Helidon 4.4.0 (Impact 4):</strong> bám nhịp OpenJDK, Java Verified Portfolio, hỗ trợ agentic AI cho LangChain4j → microservices Java tiếp tục "AI-native". <a href="https://www.infoq.com/feed/java/news">InfoQ Java</a></li>
+</ul>
+</div>
+
+<h2 id="meta">🧠 Meta Trends</h2>
+<div class="card">
+<ol>
+<li><strong>Hội tụ "Java + AI-native" (structural).</strong> Spring AI 2.0, LangChain4j, Google ADK for Java, Quarkus Agent MCP server, Helidon + LangChain4j → Java là nền tảng hạng nhất cho AI doanh nghiệp; con đường ít rủi ro nhất để ngân hàng (core banking trên JVM) tích hợp AI.</li>
+<li><strong>2026 = năm gọng kìm quy định AI tài chính.</strong> EU AI Act (02/08, prescriptive) + SR 26-2 (17/04, principles-based) định nghĩa lại MLOps ngân hàng quanh explainability, human oversight, auditability. RegTech thành đầu tư bắt buộc.</li>
+<li><strong>Agentic banking vượt thung lũng POC.</strong> Trọng tâm dịch từ "năng lực mô hình" sang "hạ tầng quản trị agent ở quy mô"; bằng chứng: Citi platform, JPM agentic commerce, adoption 11%→26%. BIS Project Logos bám sát rủi ro hệ thống.</li>
+<li><strong>Cuộc đua vũ trang gian lận AI.</strong> Synthetic identity + deepfake + bộ công cụ AI giá rẻ xói mòn eKYC truyền thống → đẩy đầu tư sang phòng thủ AI hành vi, sinh trắc học, mô hình "bảo vệ người dùng" (rõ ở Việt Nam).</li>
+<li><strong>Supply-chain &amp; lifecycle security thành tiêu chuẩn.</strong> Embedded SBOM (Quarkus), sức ép CVE/EOL (Spring) → tài chính buộc chứng minh thành phần phần mềm &amp; duy trì nền tảng được hỗ trợ (hợp DORA).</li>
+</ol>
+</div>
+
+<h2 id="watch">🔭 Strategic Watchlist</h2>
+<div class="card">
+<ul>
+<li><strong>Spring AI 2.0 GA chính thức</strong> (mốc 28/05) + ghi chú yêu cầu Spring Boot 4.0; hướng dẫn migration cho ngân hàng ở 3.x.</li>
+<li><strong>Spring Boot 4.1 GA</strong> — sau RC1; tác động kế hoạch nâng cấp.</li>
+<li><strong>EU AI Act 02/08/2026</strong> — implementing acts, code of practice cho high-risk; theo dõi mọi nỗ lực gia hạn phút chót.</li>
+<li><strong>SR 26-2 (Mỹ)</strong> — hướng dẫn bổ sung làm rõ áp dụng cho GenAI/agentic.</li>
+<li><strong>BIS Project Logos</strong> — kết quả thí nghiệm đầu: LLM agent có herding/khuếch đại biến động không.</li>
+<li><strong>SBV (Việt Nam)</strong> — văn bản chính thức siết AI ngân hàng; xác nhận chi tiết qua sbv.gov.vn.</li>
+<li><strong>JDK 27</strong> — chốt feature set qua JEP; lộ trình LTS hệ thống ngân hàng.</li>
+<li><strong>Hệ số adoption agentic AI</strong> — khảo sát quý tiếp theo (riêng ngành banking, tách cross-industry).</li>
+</ul>
+</div>
+
+<h2 id="failed">⚠️ Nguồn Không Truy Cập Được</h2>
+<div class="card">
+<p>Công cụ <code>web_fetch</code> không trích xuất được nội dung đầy đủ từ 2 URL (lỗi extract), nhưng metadata/snippet từ tìm kiếm đủ xác minh, và các tin liên quan đã cross-check bằng nguồn khác:</p>
+<ul>
+<li><code>bis.org/.../logos.htm</code> — fetch full lỗi; dùng snippet BIS + speech/working paper BIS để cross-verify (tin #5 giữ VERIFIED).</li>
+<li><code>infoq.com/.../java-news-roundup-may25-2026</code> — fetch full lỗi; dùng tiêu đề/snippet InfoQ + nguồn official (WildFly, Quarkus) để cross-verify (tin #3 giữ VERIFIED).</li>
+</ul>
+<p>Không có nguồn Tier 1–2 nào fail ở mức ảnh hưởng quyết định đăng tin. Tỷ lệ fail &lt; 50% → tiếp tục theo quy trình.</p>
+</div>
+
+<h2 id="delta">Δ Delta — Thay Đổi So Với Báo Cáo Trước</h2>
+<div class="card">
+<p>⚠️ <strong>Cold start — không có báo cáo <code>banking-tech</code> trước đó để so sánh.</strong> Đây là baseline (mốc tham chiếu) cho module; các lần quét sau sẽ so delta với báo cáo này.</p>
+<table>
+<tr><th>Chủ đề</th><th>Baseline 05/06/2026 (để đối chiếu lần sau)</th></tr>
+<tr><td>Spring AI</td><td>2.0.0-M8 (27/05), GA đặt mốc 28/05 — <em>lần sau xác nhận GA</em></td></tr>
+<tr><td>Quarkus</td><td>3.36 / 3.36.1 (03/06) — <em>lần sau theo dõi 3.37+</em></td></tr>
+<tr><td>EU AI Act</td><td>Đếm ngược tới 02/08/2026 (chưa hiệu lực high-risk)</td></tr>
+<tr><td>US model risk</td><td>SR 26-2 đã hiệu lực (17/04), chờ làm rõ GenAI/agentic</td></tr>
+<tr><td>BIS Project Logos</td><td>Vừa khởi động — <em>chưa có kết quả thí nghiệm</em></td></tr>
+<tr><td>Agentic adoption (DN &gt;$1 tỷ)</td><td>11% → 26%</td></tr>
+<tr><td>Việt Nam</td><td>Thiệt hại lừa đảo 2025 &gt; 8.000 tỷ đồng; SBV siết quy định AI</td></tr>
+</table>
+</div>
+
+<p style="margin-top:2rem;font-size:.85rem;color:var(--muted)">Báo cáo tiếp theo ưu tiên: (1) xác nhận Spring AI 2.0 GA + hướng dẫn migration Boot 4.0; (2) chuẩn bị EU AI Act trước 02/08; (3) kết quả đầu tiên của BIS Project Logos; (4) văn bản SBV chính thức về AI ngân hàng; (5) Spring Boot 4.1 GA và JEP JDK 27.<br>
+Lưu ý phương pháp: Mọi tiêu đề, phiên bản, số liệu và URL lấy từ kết quả tìm kiếm web thực tế (05/06/2026). Claim từ nguồn Tier 3–4 đã được đánh dấu để đối chiếu nguồn gốc. Không có dữ liệu nào được bịa.</p>
+
+</div>
+</body>
+</html>

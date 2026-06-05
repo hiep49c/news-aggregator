@@ -1,0 +1,24 @@
+{
+  "last_scan_timestamp": "2026-06-05T09:30:00+07:00",
+  "last_scan_date": "2026-06-05",
+  "run_count": 1,
+  "stories_found": 9,
+  "top_story": "BIS khởi động Project Logos (quan sát LLM agent quản lý danh mục) + đếm ngược EU AI Act 02/08/2026 cho AI rủi ro cao (credit scoring/fraud/AML) + Spring AI 2.0.0-M8 (GA mốc 28/05, yêu cầu Spring Boot 4.0)",
+  "summary": "Cold start banking-tech (run 1). 9 tin chính (4 Java Web + 5 AI in Banking) + 6 tin khác, cửa sổ 27/05-05/06/2026. Java Web: Spring AI 2.0.0-M8 (27/05) GA mốc 28/05 yêu cầu Boot 4.0; Quarkus 3.36 (Signals, embedded SBOM, OIDC SPIFFE) + 3.36.1; WildFly 40 & Micronaut 5.0 GA (21/05), JDK 27 JEP; sức ep CVE/EOL Spring Boot 3.5. AI in Banking: BIS Project Logos quan sát LLM agent; EU AI Act 02/08/2026 (phạt 35M EUR/7%); Mỹ SR 26-2 thay SR 11-7 (nhắc GenAI/agentic); agentic banking Citi/JPMorgan, adoption DN lon 11%->26%; Việt Nam AI hai mặt, lừa đảo 2025 >8.000 ty dong, SBV siết quy định AI.",
+  "next_scan_priority": [
+    "Xác nhận Spring AI 2.0 GA chính thức + hướng dẫn migration Spring Boot 4.0",
+    "Chuẩn bị EU AI Act trước mốc high-risk 02/08/2026 (implementing acts, code of practice)",
+    "Kết quả thí nghiệm đầu tiên của BIS Project Logos (herding/khuếch đại biến động)",
+    "Văn bản SBV chính thức siết AI trong ngân hàng Việt Nam",
+    "Spring Boot 4.1 GA (sau RC1) + chốt feature set JDK 27",
+    "Làm rõ SR 26-2 cho GenAI/agentic (Fed/OCC/FDIC)"
+  ],
+  "tracks": {
+    "java_web": 4,
+    "ai_in_banking": 5,
+    "other_news": 6
+  },
+  "scan_window": "2026-05-27 to 2026-06-05 (~10 ngày, cold start mở rộng từ 7 ngày)",
+  "cold_start": true,
+  "note": "Lần quét đầu tiên của module — baseline. Không có lịch sử trước để so delta. web_fetch lỗi extract trên 2 URL (BIS Logos, InfoQ roundup) nhưng đã cross-verify bằng snippet + nguồn official."
+}

@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khoa Học & Công Nghệ — 05/06/2026</title>
+<style>
+:root{--bg:#0a0b10;--surface:#12141d;--surface2:#1a1d2a;--border:#2a2f42;--text:#e4e8f0;--muted:#8892a8;--blue:#5b9cf6;--purple:#a78bfa;--red:#f87171;--orange:#fb923c;--green:#4ade80;--yellow:#fbbf24;--gradient:linear-gradient(135deg,#5b9cf6,#a78bfa)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px}
+.container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.3rem}
+h2{font-size:1.4rem;font-weight:700;color:var(--blue);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+h3{font-size:1.15rem;font-weight:600;color:var(--text);margin:2rem 0 .8rem}
+h4{font-size:.95rem;font-weight:600;color:var(--purple);margin:1.2rem 0 .5rem}
+p{margin:.6rem 0}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+ul,ol{margin:.5rem 0 .5rem 1.5rem}li{margin:.3rem 0}
+.meta{font-size:.82rem;color:var(--muted);margin-bottom:2rem}
+.topnav{position:sticky;top:0;z-index:100;background:rgba(18,20,29,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);margin:0 -1.5rem 1.5rem;padding:.6rem 1.5rem;display:flex;gap:.5rem;overflow-x:auto;white-space:nowrap}
+.topnav a{flex:0 0 auto;font-size:.76rem;color:var(--muted);padding:.35rem .7rem;border-radius:6px;background:var(--surface);border:1px solid var(--border);text-decoration:none;transition:all .15s}
+.topnav a:hover{color:var(--text);border-color:var(--blue)}
+h2[id],div[id],.brief[id]{scroll-margin-top:64px}
+@media(max-width:768px){.topnav{margin:0 -1rem 1rem;padding:.5rem 1rem}}
+.toc{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.toc h3{margin:0 0 .8rem;font-size:1rem;color:var(--purple)}
+.toc ol{margin:0 0 0 1.2rem}.toc li{margin:.4rem 0;font-size:.88rem}.toc a{color:var(--muted)}.toc a:hover{color:var(--blue)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.2rem 0}
+.badge{display:inline-block;font-size:.7rem;font-weight:600;padding:.2rem .6rem;border-radius:6px;margin-right:.4rem;text-transform:uppercase}
+.badge-red{background:rgba(248,113,113,.15);color:var(--red)}
+.badge-orange{background:rgba(251,146,60,.15);color:var(--orange)}
+.badge-green{background:rgba(74,222,128,.15);color:var(--green)}
+.badge-blue{background:rgba(91,156,246,.15);color:var(--blue)}
+.badge-purple{background:rgba(167,139,250,.15);color:var(--purple)}
+.badge-yellow{background:rgba(251,191,36,.15);color:var(--yellow)}
+.brief{background:linear-gradient(135deg,rgba(91,156,246,.08),rgba(167,139,250,.08));border:1px solid rgba(91,156,246,.2);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.brief ol{margin-left:1.2rem}.brief li{margin:.5rem 0;font-weight:500}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
+th,td{padding:.6rem .8rem;border:1px solid var(--border);text-align:left}
+th{background:var(--surface2);font-weight:600;color:var(--purple)}
+.url-list{font-size:.82rem;margin:.5rem 0}.url-list a{color:var(--muted);word-break:break-all}.url-list a:hover{color:var(--blue)}
+.other-news{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.other-news ul{margin:.5rem 0 0 1.2rem}.other-news li{margin:.4rem 0;font-size:.9rem}
+@media(max-width:768px){.container{padding:1rem}h1{font-size:1.4rem}table{font-size:.78rem}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<nav class="topnav">
+<a href="#brief">📌 Tóm tắt</a>
+<a href="#starship">Starship V3 bay được nhưng FAA grounds sau mishap booster</a>
+<a href="#majorana">Microsoft Majorana 2 — qubit topo bền gấp 1.000 lần</a>
+<a href="#groot">NVIDIA Isaac GR00T — robot hình người tham chiếu mở</a>
+<a href="#fusion">Làn sóng fusion gọi vốn lớn &amp; chuẩn bị IPO</a>
+<a href="#exoplanet">Bằng chứng mạnh nhất về từ trường ngoại hành tinh</a>
+<a href="#laser">Laser femtosecond đầu tiên thu nhỏ lên chip (EPFL)</a>
+<a href="#sodium">Cụm đột phá pin natri — chuyển sang grid-scale</a>
+<a href="#mhc">Lật ngược giáo điều miễn dịch ung thư (MHC I)</a>
+<a href="#obex">Obexelimab vượt giả dược Phase III INDIGO</a>
+<a href="#vietnam">TP.HCM nam châm FDI công nghệ — 6,6 tỷ USD</a>
+<a href="#delta">Δ So với 19/05</a>
+<a href="#crosslink">Liên kết liên ngành</a>
+<a href="#other">Các tin khác</a>
+</nav>
+
+<h1>🔬 Báo Cáo Khoa Học &amp; Công Nghệ — 05/06/2026</h1>
+<p class="meta">Quét: 05/06/2026 10:30 ICT | Phạm vi: 29/05 00:00 – 05/06 10:30 (7 ngày — cap do lần quét trước 19/05 cách &gt;7 ngày) | Số tin: 10<br>Nguồn: Microsoft, Nature, Nature Astronomy, Nature Immunology, ESO/VLT, Space.com, Spaceflight Now, Teslarati, TechCrunch, CNBC, Phys.org, EPFL, TechXplore, LBNL, KFF Health News, Baylor College of Medicine, SciTechDaily, University of Oxford, SiliconAngle, The Quantum Insider, VNA, SGGP, VietnamNet</p>
+
+<nav class="toc">
+<h3>📑 Mục lục</h3>
+<ol>
+<li><a href="#brief">Tóm tắt nhanh</a></li>
+<li><a href="#starship">SpaceX Starship V3 — bay được, FAA grounds</a></li>
+<li><a href="#majorana">Microsoft Majorana 2 — qubit topo</a></li>
+<li><a href="#groot">NVIDIA Isaac GR00T — robot hình người</a></li>
+<li><a href="#fusion">Làn sóng fusion gọi vốn &amp; IPO</a></li>
+<li><a href="#exoplanet">Từ trường ngoại hành tinh — ESO VLT</a></li>
+<li><a href="#laser">Laser femtosecond trên chip — EPFL</a></li>
+<li><a href="#sodium">Cụm đột phá pin natri</a></li>
+<li><a href="#mhc">Miễn dịch ung thư — MHC I / CD4+</a></li>
+<li><a href="#obex">Obexelimab — Phase III INDIGO</a></li>
+<li><a href="#vietnam">TP.HCM — FDI công nghệ 6,6 tỷ USD</a></li>
+</ol>
+</nav>
+
+<div class="brief" id="brief">
+<h3>📌 Tóm tắt nhanh</h3>
+<ol>
+<li><strong>SpaceX Starship V3 bay được nhưng bị FAA "grounds"</strong> — Flight 12 (22/05) lên không gian, thả vệ tinh giả, reentry tốt; Booster 19 mishap → điều tra bắt buộc</li>
+<li><strong>Microsoft Majorana 2</strong> — Qubit topo bền gấp 1.000 lần (tuổi thọ TB 20 giây), đổi nhôm→chì, mục tiêu lượng tử scalable 2029 (còn hoài nghi)</li>
+<li><strong>NVIDIA Isaac GR00T</strong> — Robot hình người tham chiếu mở: thân Unitree H2 Plus + tay Sharpa + Jetson Thor; cơ hội "nhiều nghìn tỷ USD"</li>
+<li><strong>Làn sóng fusion</strong> — Focused Energy +$240M, Pacific Fusion 440 GW/80ns hướng net gain 2030, General Fusion chuẩn bị IPO Nasdaq</li>
+<li><strong>Từ trường ngoại hành tinh</strong> — ESO VLT + Gemini đo gió 7 "sao Mộc nóng", lần đầu định lượng từ tính (Nature Astronomy)</li>
+<li><strong>Laser femtosecond trên chip</strong> — EPFL: 1,05 nJ / 147 fs trên chip quang tử cỡ đồng xu (Nature)</li>
+<li><strong>Cụm pin natri</strong> — NUS &gt;2.000h, high-entropy, ORION rắn (LBNL) → chuyển sang kinh tế &amp; grid-scale</li>
+<li><strong>Lật giáo điều miễn dịch ung thư</strong> — Mất MHC I khiến tế bào dễ bị CD4+ T cell diệt qua ferroptosis (Nature Immunology)</li>
+<li><strong>Obexelimab</strong> — Kháng thể đơn dòng vượt giả dược Phase III INDIGO (bệnh IgG4-related)</li>
+<li><strong>TP.HCM nam châm FDI công nghệ</strong> — 6,6 tỷ USD (bán dẫn, AI, data center); VN hút &gt;15,2 tỷ USD FDI Q1 (+42,9%)</li>
+</ol>
+</div>
+
+<h2 id="starship">1. 🔥 SpaceX Starship V3 Bay Thành Công Một Phần — FAA "Grounds" Sau Mishap Booster</h2>
+<div class="card">
+<span class="badge badge-red">Impact 9/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-purple">Space</span>
+</div>
+<h4>Bối cảnh</h4>
+<p>Tiếp nối trực tiếp top story 19/05 (V3 hoãn 19→20/05). Flight 12 là chuyến bay đầu tiên của Starship V3 (Block 3) với Raptor 3, đầu tiên sau 7 tháng và lần đầu phóng từ Pad 2, Starbase, Texas. Sự kiện ngay trước cửa sổ quét nhưng đưa vào như delta follow-up để khép vòng theo dõi.</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Phóng 22/05:</strong> Cả 33 động cơ Raptor đánh lửa; 1 động cơ Super Heavy tắt sớm trong ascent, vẫn ổn định qua Max-Q</li>
+<li><strong>Tầng trên (Ship 39):</strong> Đạt SECO trên 5/6 Raptor 3, <strong>thả vệ tinh giả</strong>, reentry với tấm chắn nhiệt cải tiến — phần thành công rõ nhất</li>
+<li><strong>Booster 19:</strong> Performance off-nominal, crash xuống đại dương khi thử landing burn; in-space relight bị huỷ</li>
+<li><strong>FAA (27/05):</strong> Kết luận hiệu suất Booster 19 là <strong>mishap</strong>, yêu cầu SpaceX dẫn dắt điều tra → Starship bị grounded</li>
+</ul>
+<h4>Tác động</h4>
+<p>Đây là <strong>major breakthrough một phần</strong>, không phải thất bại: V3 chứng minh được khả năng lên không gian, deploy payload và reentry. Bottleneck còn lại là độ tin cậy động cơ và thu hồi Super Heavy (TRL ~6). Grounding kéo dài timeline Artemis III. Tham vọng orbital data center của SpaceX (liên quan AI compute) phụ thuộc trực tiếp vào cadence Starship.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.space.com/space-exploration/launches-spacecraft/spacex-starship-v3-megarocket-first-test-flight">Space.com</a> · <a href="https://www.space.com/space-exploration/launches-spacecraft/faa-grounds-spacexs-starship-v3-megarocket-after-flight-12-mishap">Space.com (FAA grounds)</a> · <a href="https://spaceflightnow.com/2026/05/27/faa-requires-spacex-led-mishap-investigation-before-resumption-of-starship-launches/">Spaceflight Now</a> · <a href="https://www.teslarati.com/spacex-starship-v3-flight-12/">Teslarati</a></p>
+</div>
+
+<h2 id="majorana">2. 🔥 Microsoft Majorana 2 — Qubit Topo Bền Gấp 1.000 Lần, Mục Tiêu Lượng Tử Scalable 2029</h2>
+<div class="card">
+<span class="badge badge-red">Impact 9/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-purple">Quantum</span>
+</div>
+<h4>Bối cảnh</h4>
+<p>Microsoft theo đuổi <strong>topological qubit</strong> (qubit topo) — mã hoá thông tin lượng tử vào trạng thái vật chất kỳ lạ để chống nhiễu ở mức phần cứng. Tuyên bố topo 2025 từng gây tranh cãi vì bằng chứng chưa thuyết phục; Majorana 2 là câu trả lời.</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Độ tin cậy:</strong> Qubit bền gấp 1.000 lần thế hệ trước; <strong>tuổi thọ trung bình 20 giây</strong>, có lúc vượt 1 phút (so với millisecond/microsecond trước đây)</li>
+<li><strong>Vật liệu cốt lõi:</strong> Material stack mới <strong>thay nhôm bằng chì (lead)</strong>; thao tác ở thang microsecond</li>
+<li><strong>AI for science:</strong> Microsoft Discovery (agentic AI) tăng tốc khám phá vật liệu cho chip</li>
+<li><strong>Timeline:</strong> Kỳ vọng máy tính lượng tử scalable vào <strong>2029</strong> — rút ngắn một nửa lộ trình</li>
+<li><strong>Hoài nghi:</strong> Giới chuyên môn lưu ý cần peer-review độc lập sau tranh cãi 2025</li>
+</ul>
+<h4>Tác động</h4>
+<p>Nếu được xác nhận độc lập, đây là <strong>major breakthrough</strong> về stability — yếu tố quyết định giảm overhead sửa lỗi. Hiện nên xem là <strong>signal mạnh nhưng chưa phải paradigm shift đã chứng minh</strong> (TRL 3–4). Bottleneck: scale lên hàng nghìn qubit + benchmark độc lập. Cuộc đua lượng tử Mỹ–Trung và IBM/Google/Microsoft tiếp tục nóng.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://news.microsoft.com/source/features/innovation/majorana-2-microsoft-discovery-agentic-ai">Microsoft News</a> · <a href="https://thequantuminsider.com/2026/06/02/microsoft-reports-advances-in-majorana-2-following-debate-over-last-years-topological-claims/">The Quantum Insider</a> · <a href="https://siliconangle.com/2026/06/02/microsofts-new-majorana-2-quantum-chip-claims-dramatic-breakthrough-qubit-stability/">SiliconAngle</a> · <a href="https://www.livescience.com/technology/quantum/microsofts-new-quantum-chip-is-1-000-times-more-reliable-than-its-predecessor-but-why-is-this-new-chip-so-controversial">Live Science</a></p>
+</div>
+
+<h2 id="groot">3. 🔥 NVIDIA Isaac GR00T — Robot Hình Người Tham Chiếu Mở (Thân Trung Quốc, "Não" Mỹ)</h2>
+<div class="card">
+<span class="badge badge-red">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-purple">Robotics</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Sản phẩm:</strong> NVIDIA Isaac GR00T Reference Humanoid Robot — thiết kế tham chiếu mở đầu tiên trên nền Jetson Thor + nền tảng Isaac GR00T (GTC Taipei 01/06)</li>
+<li><strong>Cấu hình:</strong> Thân <strong>Unitree H2 Plus</strong> (~1,8 m / 150 lb), <strong>bàn tay 5 ngón Sharpa</strong>, compute <strong>Jetson Thor</strong>, phần mềm/model Isaac GR00T mã nguồn mở</li>
+<li><strong>Người dùng đầu:</strong> Ai2, ETH Zurich, Stanford Robotics Center, UC San Diego (ARCLab)</li>
+<li><strong>Jensen Huang:</strong> Robot hình người công nghiệp là cơ hội <strong>"nhiều nghìn tỷ USD"</strong>, "automation 3.0"</li>
+<li><strong>Địa chính trị:</strong> NVIDIA chọn Unitree (Trung Quốc) thay vì Tesla → lo ngại an ninh mạng/chuỗi cung</li>
+</ul>
+<h4>Tác động</h4>
+<p>Đây là <strong>platform play</strong> hơn là đột phá khoa học — chuẩn hoá stack hạ rào cản R&amp;D humanoid cho academia. Nền tảng ở TRL 6–7 cho nghiên cứu; humanoid thương mại quy mô lớn vẫn TRL 4–6 (chi phí, độ bền, dexterity là bottleneck). Củng cố thế độc quyền NVIDIA từ data center sang robotics, đồng thời phơi bày phụ thuộc phần cứng vào Trung Quốc.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.cnbc.com/2026/06/01/nvidia-unitree-humanoid-robotics-system-researchers.html">CNBC</a> · <a href="https://www.mobileworldlive.com/industry/nvidia-chief-pushes-industrial-humanoid-robot-opportunity/">Mobile World Live</a> · <a href="https://www.cnbc.com/2026/06/03/humanoid-robots-trillion-dollar-ai-market.html">CNBC (thị trường)</a></p>
+</div>
+
+<h2 id="fusion">4. 🟠 Làn Sóng Fusion: Gọi Vốn Lớn + Chuẩn Bị IPO</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-yellow">Energy</span>
+</div>
+<h4>Bối cảnh</h4>
+<p>Cross-research synthesis: nhiều sự kiện fusion cùng tuần chỉ về một xu hướng lớn — fusion chuyển từ vật lý lý thuyết sang <strong>kỹ thuật công nghiệp và thị trường vốn</strong>.</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Focused Energy:</strong> Gọi <strong>240 triệu USD Series A</strong> cho fusion bằng laser, dựa trên cách tiếp cận NIF (thí nghiệm duy nhất tạo năng lượng ròng dương)</li>
+<li><strong>Pacific Fusion:</strong> Prototype nén <strong>440 GW vào xung 80 ns</strong> (156 module pulser); tuyên bố hướng <strong>net facility gain 2030</strong>, thương mại giữa 2030s</li>
+<li><strong>General Fusion:</strong> "Coming-out tour" hội nghị nhà đầu tư tháng 6, chuẩn bị <strong>niêm yết Nasdaq</strong></li>
+<li><strong>ANS Annual Conference (Denver):</strong> Lãnh đạo NRC, ITER, DOE kêu gọi đẩy nhanh triển khai hạt nhân</li>
+</ul>
+<h4>Tác động</h4>
+<p><strong>Anti-hype:</strong> "Net facility gain 2030" và "thương mại giữa 2030s" vẫn là mục tiêu công ty — chưa thiết bị nào phát điện ròng lên lưới. Cần phân biệt <strong>scientific gain (Q&gt;1 tại NIF)</strong> với <strong>engineering/grid gain</strong> (khoảng cách rất lớn). Phần lớn TRL 3–5; bottleneck: repetition rate, độ bền vật liệu, kinh tế module. Cầu điện AI là chất xúc tác chính của dòng vốn.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://techcrunch.com/2026/06/02/focused-energy-raises-whopping-240m-series-a-for-laser-powered-fusion-tech/">TechCrunch (Focused Energy)</a> · <a href="https://techcrunch.com/2026/06/02/pacific-fusions-latest-prototype-packs-440-gigawatts-into-an-80-nanosecond-burst/">TechCrunch (Pacific Fusion)</a> · <a href="https://www.cantechletter.com/newswires/the-1-billion-bet-to-take-fusion-public/">Cantech Letter (General Fusion)</a></p>
+</div>
+
+<h2 id="exoplanet">5. 🟠 Bằng Chứng Mạnh Nhất Về Từ Trường Ngoại Hành Tinh — ESO VLT Đo Gió 7 "Sao Mộc Nóng"</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-purple">Astronomy</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Thiết bị:</strong> ESO Very Large Telescope (VLT) + Gemini North</li>
+<li><strong>Đối tượng:</strong> Đo tốc độ gió khí quyển trên <strong>7 "sao Mộc nóng" (ultra-hot Jupiters)</strong></li>
+<li><strong>Kết quả:</strong> Mô hình gió quan sát được <strong>chỉ giải thích tốt nhất nếu có từ trường chi phối</strong> → lần đầu có phép đo robust về từ tính ngoại hành tinh</li>
+<li><strong>Công bố:</strong> Nature Astronomy; có đóng góp của nhóm vật lý Đại học Oxford</li>
+</ul>
+<h4>Tác động</h4>
+<p>Major fundamental result trong astrophysics, không có path thương mại hoá trực tiếp. Mở phương pháp gián tiếp khảo sát từ quyển ngoại hành tinh — mảnh ghép quan trọng đánh giá khả năng giữ khí quyển và "tính ở được" dài hạn. Cần xác nhận trên mẫu lớn hơn và bằng kỹ thuật độc lập (tín hiệu vô tuyến).</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://phys.org/news/2026-06-strange-hot-jupiters-reveal-strongest.html">Phys.org</a> · <a href="https://www.ox.ac.uk/news/2026-06-02-strange-winds-reveal-strongest-hints-yet-of-magnetic-activity-in-exoplanets">University of Oxford</a> · <a href="https://thedebrief.org/exoplanet-magnetism-revealed-in-new-study-researchers-call-a-key-step-in-decoding-the-survival-of-planets/">The Debrief</a></p>
+</div>
+
+<h2 id="laser">6. 🟠 Laser Femtosecond Đầu Tiên Thu Nhỏ Lên Chip — EPFL (Nature)</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-purple">Photonics</span>
+</div>
+<h4>Bối cảnh</h4>
+<p>Laser femtosecond (xung cỡ phần triệu tỷ giây) là công cụ nền tảng cho đồng hồ nguyên tử, đo lường siêu nhanh, quang phổ và viễn thông quang — nhưng thường cồng kềnh cỡ mặt bàn.</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Nhóm:</strong> GS Tobias J. Kippenberg, EPFL</li>
+<li><strong>Đột phá:</strong> Laser cực nhanh tích hợp đầu tiên sánh ngang laser để bàn, trên <strong>chip quang tử cỡ đồng xu</strong></li>
+<li><strong>Thông số:</strong> Năng lượng xung <strong>1,05 nanojoule</strong>, độ dài xung tới <strong>147 femtosecond</strong>, tần số lặp ~176 MHz</li>
+<li><strong>Cơ chế:</strong> Mode-locking "photorefraction-assisted soliton" / dao động Mamyshev, chạy từ nguồn điện áp thấp</li>
+<li><strong>Công bố:</strong> Nature — "holy grail của integrated photonics"</li>
+</ul>
+<h4>Tác động</h4>
+<p><strong>Engineering breakthrough</strong> — giải bài toán scale-down, path thương mại hoá rõ ràng hơn (TRL 4–5). Bottleneck: công suất, độ ổn định khi đóng gói, tích hợp silicon photonics quy mô lớn. Ứng dụng: chẩn đoán y tế, đồng hồ nguyên tử nhỏ gọn, LIDAR, viễn thông quang. Củng cố vị thế châu Âu trong integrated photonics.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://phys.org/news/2026-06-ultrafast-laser-chip-scale-potentially.html">Phys.org</a> · <a href="https://thedebrief.org/a-holy-grail-of-integrated-photonics-epfl-researchers-reveal-tiny-yet-powerful-ultrafast-laser-on-a-chip/">The Debrief</a> · <a href="https://interestingengineering.com/innovation/HIGH-POWER-ULTRAFAST-LASER-ON-MICROCHIP">Interesting Engineering</a></p>
+</div>
+
+<h2 id="sodium">7. 🟠 Cụm Đột Phá Pin Natri — Chuyển Trọng Tâm Sang Kinh Tế &amp; Grid-Scale</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-yellow">Energy Storage</span>
+</div>
+<h4>Bối cảnh</h4>
+<p>Cross-research synthesis: ít nhất 4 tiến bộ pin natri cùng tuần hội tụ về một narrative — ngành lưu trữ năng lượng chuyển từ "đua mật độ năng lượng" sang <strong>kinh tế, an toàn và grid-scale</strong>, giảm phụ thuộc lithium.</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>NUS (Singapore):</strong> Pin natri all-solid-state an toàn hơn nhờ phụ gia giá rẻ giúp ion di chuyển và <strong>chặn dendrite</strong>; ổn định <strong>&gt;2.000 giờ</strong> (Advanced Functional Materials)</li>
+<li><strong>High-entropy:</strong> Nhóm Ấn Độ–Mỹ chế tạo vật liệu high-entropy ổn định, sạc nhanh → hạ chi phí lưu trữ tái tạo</li>
+<li><strong>LBNL — ORION:</strong> Điện phân rắn "thermoformable" (organo–ionic) tạo hình bằng nhiệt → dễ scale (ACS Energy Letters)</li>
+<li><strong>Sn-FB QSE:</strong> Điện phân quasi-solid-state cho pin natri kim loại, số chuyển Na⁺ gần đơn vị, độ dẫn ion cao</li>
+</ul>
+<h4>Tác động</h4>
+<p><strong>Kết luận tổng hợp:</strong> Pin natri không cạnh tranh EV cao cấp về mật độ, nhưng <strong>thắng ở grid storage</strong> nhờ nguyên liệu dồi dào, an toàn, chi phí thấp. Đa số TRL 4–6; bottleneck chuyển từ hoá học cơ bản sang sản xuất hàng loạt và độ bền chu kỳ. Giảm phụ thuộc lithium là mục tiêu an ninh năng lượng — <strong>🔗 VN News:</strong> VN có thể tham gia lắp ráp/đóng gói pin grid-scale cho điện mặt trời.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://techxplore.com/news/2026-05-safer-solid-state-sodium-battery.html">TechXplore</a> · <a href="https://interestingengineering.com/energy/sodium-solid-state-battery-gcn-breakthrough">Interesting Engineering (NUS)</a> · <a href="https://foundry.lbl.gov/2026/05/27/when-solid-electrolytes-flow-orion-and-the-future-of-thermoformable-sodium-batteries/">LBNL Foundry (ORION)</a> · <a href="https://researchmatters.in/news/scientists-engineer-high-entropy-material-cheaper-and-efficient-sodium-batteries">Research Matters</a></p>
+</div>
+
+<h2 id="mhc">8. 🟠 Lật Ngược Giáo Điều Miễn Dịch Ung Thư — Mất MHC I Khiến Tế Bào Dễ Bị CD4+ T Cell Diệt</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-purple">Cancer Immunology</span>
+</div>
+<h4>Bối cảnh</h4>
+<p>Giáo điều miễn dịch nhiều thập kỷ: CD8+ T cell nhận diện qua <strong>MHC class I</strong>, CD4+ qua MHC class II. Tế bào ung thư thường <strong>giảm MHC I để "tàng hình"</strong> trước CD8+. Nghiên cứu của Baylor College of Medicine (nhóm Reddy) thách thức phân đôi này. Paper gốc 24/03; ScienceDaily đưa lại trong "Top Science News" 04/06 nên rơi vào cửa sổ quét.</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Phát hiện:</strong> Khi ung thư <strong>mất biểu hiện MHC I</strong>, lại <strong>dễ bị CD4+ T cell tiêu diệt hơn</strong> — vai trò chưa từng ghi nhận của MHC I trong miễn dịch qua CD4+</li>
+<li><strong>Cơ chế:</strong> Không có MHC I, tế bào ung thư nhạy cảm hơn với <strong>ferroptosis</strong> (chết tế bào do sắt &amp; stress oxy hoá) do CD4+ kích hoạt</li>
+<li><strong>Mô hình:</strong> Chuột (graft-versus-host, khối u) và tế bào người; đăng Nature Immunology</li>
+</ul>
+<h4>Tác động</h4>
+<p>Major fundamental insight — có thể giải thích vì sao một số bệnh nhân kháng liệu pháp miễn dịch hiện hành. Còn xa lâm sàng (TRL 2–3); cần chuyển thành chiến lược nhắm CD4+/MHC I. Mở hướng liệu pháp mới và ứng dụng trong ghép tuỷ xương. <strong>🔗 AI News:</strong> AI drug discovery có thể tăng tốc sàng lọc phân tử khai thác cơ chế này.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://scitechdaily.com/scientists-discover-a-completely-unexpected-way-t-cells-kill-cancer/">SciTechDaily</a> · <a href="https://www.nature.com/articles/s41590-026-02480-z">Nature Immunology</a> · <a href="https://blogs.bcm.edu/2026/03/31/from-the-labs-unexpected-cancer-vulnerability-points-at-potential-novel-treatments/">Baylor College of Medicine</a></p>
+</div>
+
+<h2 id="obex">9. 🟡 Obexelimab Vượt Giả Dược Trong Phase III INDIGO — Bệnh IgG4-Related</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-orange">PARTIALLY VERIFIED</span>
+<span class="badge badge-yellow">Confidence MEDIUM</span>
+<span class="badge badge-purple">Medicine</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Thuốc:</strong> Obexelimab — kháng thể đơn dòng đang thử nghiệm cho <strong>bệnh liên quan IgG4</strong>, rối loạn viêm-xơ hoá hiếm gặp ảnh hưởng nhiều cơ quan</li>
+<li><strong>Kết quả:</strong> Vượt trội đáng kể so với giả dược trong thử nghiệm <strong>Phase III INDIGO</strong> (bản tin tổng hợp KFF Health News)</li>
+<li><strong>Bối cảnh:</strong> Cạnh tranh với thuốc duy nhất hiện được phê duyệt riêng cho tình trạng này</li>
+</ul>
+<h4>Tác động</h4>
+<p><strong>Thận trọng:</strong> mới một nguồn tổng hợp; cần công bố peer-reviewed và số liệu endpoint cụ thể để nâng confidence. TRL 7–8 (gần thương mại hoá nếu dẫn tới hồ sơ FDA). Bổ sung lựa chọn cho nhóm bệnh hiếm vốn ít phương án; xu hướng kháng thể đơn dòng nhắm tế bào B tiếp tục mở rộng chỉ định.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://kffhealthnews.org/morning-breakout/health-policy-research-060426/">KFF Health News</a></p>
+</div>
+
+<h2 id="vietnam">10. 🟡 TP.HCM Thành Nam Châm FDI Công Nghệ Châu Á — 6,6 Tỷ USD (Bán Dẫn, AI, Data Center)</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<span class="badge badge-yellow">Vietnam Deep-Tech</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Quy mô:</strong> TP.HCM hút <strong>6,6 tỷ USD</strong> FDI công nghệ những tháng đầu 2026, điểm đến hàng đầu châu Á</li>
+<li><strong>Lĩnh vực:</strong> Cụm dự án bán dẫn, AI và <strong>data center</strong> (vd Evolution DC VN HCMC — &gt;508 triệu USD, 52 MW IT load, hướng net-zero 2045)</li>
+<li><strong>Vĩ mô:</strong> Q1/2026 VN hút <strong>&gt;15,2 tỷ USD FDI (+42,9% YoY)</strong>; Hàn–Việt tăng hợp tác hạt nhân &amp; công nghệ cao; 6 đại học VN vào top 10% CWUR 2026</li>
+</ul>
+<h4>Tác động (góc khoa học–công nghệ)</h4>
+<p>VN mạnh ở <strong>back-end</strong> bán dẫn (lắp ráp, kiểm thử, đóng gói — Intel, Amkor) và data center; front-end còn phụ thuộc nước ngoài. Data center bùng nổ kéo nhu cầu <strong>điện sạch</strong> (mặt trời + lưu trữ pin natri/grid + dài hạn hạt nhân) — liên kết tin số 4, 7. Bottleneck lớn nhất: nhân lực kỹ thuật cao và hạ tầng điện.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://tech.einnews.com/article/917245544/-r7i-fGd_nQqZuKt">EIN News/VNA</a> · <a href="https://en.sggp.org.vn/hcmc-ramps-up-high-tech-investment-attraction-post126814.html">SGGP</a> · <a href="https://vietnamnet.vn/en/ho-chi-minh-city-sees-surge-in-fdi-for-hi-tech-data-infrastructure-2510787.html">VietnamNet</a></p>
+</div>
+
+<h2 id="delta">📊 Delta So Với Báo Cáo 19/05</h2>
+<table>
+<tr><th>Chủ đề</th><th>19/05</th><th>05/06</th></tr>
+<tr><td>SpaceX Starship V3</td><td>Hoãn → dự kiến 20/05</td><td>🔄 Phóng 22/05: bay được, deploy, reentry tốt; Booster 19 mishap → FAA grounds</td></tr>
+<tr><td>Quantum computing</td><td>—</td><td>✅ MỚI: Majorana 2, qubit bền 1.000×, mục tiêu 2029</td></tr>
+<tr><td>Robotics</td><td>—</td><td>✅ MỚI: NVIDIA Isaac GR00T + Unitree (01/06)</td></tr>
+<tr><td>Fusion / năng lượng</td><td>Hydrogen catalyst</td><td>✅ MỚI: Focused Energy $240M, Pacific Fusion, General Fusion IPO</td></tr>
+<tr><td>Astronomy</td><td>—</td><td>✅ MỚI: Từ trường 7 ngoại hành tinh (ESO VLT)</td></tr>
+<tr><td>Photonics/Physics</td><td>LED Cambridge</td><td>✅ MỚI: Laser femtosecond trên chip (EPFL)</td></tr>
+<tr><td>Pin / lưu trữ</td><td>—</td><td>✅ MỚI: Cụm pin natri → grid-scale economics</td></tr>
+<tr><td>Miễn dịch ung thư</td><td>Daraxonrasib</td><td>✅ MỚI: MHC I / CD4+ / ferroptosis</td></tr>
+<tr><td>Vietnam deep-tech</td><td>—</td><td>✅ MỚI: TP.HCM 6,6 tỷ USD FDI</td></tr>
+</table>
+
+<h2 id="crosslink">🔗 Liên Kết Liên Ngành</h2>
+<div class="card">
+<ul>
+<li><strong>→ AI News:</strong> Microsoft Discovery (AI for science) tăng tốc Majorana 2; NVIDIA Isaac GR00T (physical AI); cầu điện data center thúc đẩy fusion + pin natri; AI drug discovery khai thác ferroptosis–CD4+</li>
+<li><strong>→ VN News:</strong> TP.HCM 6,6 tỷ USD FDI bán dẫn/AI/data center; nhu cầu điện sạch (pin natri grid-scale, hạt nhân Hàn–Việt); đào tạo nhân lực deep-tech</li>
+<li><strong>→ World Conflicts:</strong> NVIDIA chọn Unitree (TQ) → rủi ro chuỗi cung &amp; an ninh mạng robot; đua lượng tử Mỹ–Trung (Majorana 2); quân sự hoá không gian (Starship)</li>
+</ul>
+</div>
+
+<h2 id="other">📋 Các Tin Khác Đáng Chú Ý</h2>
+<div class="other-news">
+<ul>
+<li><strong>CAR-T &amp; protein NFIL3:</strong> NFIL3 khiến CAR-T "kiệt sức", mất khả năng diệt ung thư — mục tiêu mới (ScienceDaily, 02/06) — <a href="https://www.sciencedaily.com/news/health_medicine/genes/">link</a></li>
+<li><strong>Lượng tử lên sàn:</strong> Quantinuum lỗ gần 200 triệu USD, doanh thu giảm Q1, nhà đầu tư vẫn đổ xô — "public market moment" (Wired, 04/06) — <a href="https://www.wired.com/story/quantum-computing-is-having-its-public-market-moment-quantinuum/">link</a></li>
+<li><strong>Xanadu QROM:</strong> Đột phá thuật toán Quantum Read-Only Memory hạ chi phí ứng dụng lượng tử (21/05) — <a href="https://www.prnewswire.com/news-releases/xanadu-breakthrough-lowers-the-cost-of-quantum-applications-302778615.html">link</a></li>
+<li><strong>JWST &amp; những ngôi sao đầu tiên:</strong> James Webb có thể lần đầu phát hiện thế hệ sao đầu tiên của vũ trụ (Scientific American) — <a href="https://www.scientificamerican.com/article/jwst-could-finally-spot-the-very-first-stars-in-the-universe/">link</a></li>
+</ul>
+</div>
+
+<h2>⚠️ Nguồn Không Truy Cập Được</h2>
+<div class="card">
+<p>Trang Space.com (bài FAA grounds) trả về lỗi trích xuất qua fetch trực tiếp; thông tin được xác minh chéo qua Spaceflight Now, Teslarati và snippet tìm kiếm của chính Space.com. Không có nguồn Tier 1–2 nào fail &gt;50%.</p>
+</div>
+
+<p style="margin-top:2rem;font-size:.85rem;color:var(--muted)">Báo cáo tiếp theo: kết quả điều tra mishap Starship Flight 12 &amp; lịch bay lại; peer-review độc lập Majorana 2; dữ liệu chi tiết Phase III INDIGO (obexelimab); tiến triển net facility gain Pacific Fusion; triển khai pin natri grid-scale.</p>
+
+</div>
+</body>
+</html>

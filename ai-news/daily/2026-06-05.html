@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tin AI — 05/06/2026</title>
+<style>
+:root{--bg:#0a0b10;--surface:#12141d;--surface2:#1a1d2a;--border:#2a2f42;--text:#e4e8f0;--muted:#8892a8;--blue:#5b9cf6;--purple:#a78bfa;--red:#f87171;--orange:#fb923c;--green:#4ade80;--yellow:#fbbf24;--gradient:linear-gradient(135deg,#5b9cf6,#a78bfa)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px}
+.container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.3rem}
+h2{font-size:1.4rem;font-weight:700;color:var(--blue);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+h3{font-size:1.15rem;font-weight:600;color:var(--text);margin:2rem 0 .8rem}
+h4{font-size:.95rem;font-weight:600;color:var(--purple);margin:1.2rem 0 .5rem}
+p{margin:.6rem 0}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+ul,ol{margin:.5rem 0 .5rem 1.5rem}li{margin:.3rem 0}
+.meta{font-size:.82rem;color:var(--muted);margin-bottom:2rem}
+.topnav{position:sticky;top:0;z-index:100;background:rgba(18,20,29,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);margin:0 -1.5rem 1.5rem;padding:.6rem 1.5rem;display:flex;gap:.5rem;overflow-x:auto;white-space:nowrap}
+.topnav a{flex:0 0 auto;font-size:.76rem;color:var(--muted);padding:.35rem .7rem;border-radius:6px;background:var(--surface);border:1px solid var(--border);text-decoration:none;transition:all .15s}
+.topnav a:hover{color:var(--text);border-color:var(--blue)}
+h2[id],div[id],.brief[id]{scroll-margin-top:64px}
+@media(max-width:768px){.topnav{margin:0 -1rem 1rem;padding:.5rem 1rem}}
+.toc{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.toc h3{margin:0 0 .8rem;font-size:1rem;color:var(--purple)}
+.toc ol{margin:0 0 0 1.2rem}.toc li{margin:.4rem 0;font-size:.88rem}.toc a{color:var(--muted)}.toc a:hover{color:var(--blue)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.2rem 0}
+.badge{display:inline-block;font-size:.7rem;font-weight:600;padding:.2rem .6rem;border-radius:6px;margin-right:.4rem;text-transform:uppercase}
+.badge-red{background:rgba(248,113,113,.15);color:var(--red)}
+.badge-orange{background:rgba(251,146,60,.15);color:var(--orange)}
+.badge-green{background:rgba(74,222,128,.15);color:var(--green)}
+.badge-blue{background:rgba(91,156,246,.15);color:var(--blue)}
+.badge-purple{background:rgba(167,139,250,.15);color:var(--purple)}
+.badge-yellow{background:rgba(251,191,36,.15);color:var(--yellow)}
+.brief{background:linear-gradient(135deg,rgba(91,156,246,.08),rgba(167,139,250,.08));border:1px solid rgba(91,156,246,.2);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.brief ol{margin-left:1.2rem}.brief li{margin:.5rem 0;font-weight:500}
+.warn{background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.25);border-radius:12px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.9rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
+th,td{padding:.6rem .8rem;border:1px solid var(--border);text-align:left}
+th{background:var(--surface2);font-weight:600;color:var(--purple)}
+.url-list{font-size:.82rem;margin:.5rem 0}.url-list a{color:var(--muted);word-break:break-all}.url-list a:hover{color:var(--blue)}
+.other-news{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.other-news ul{margin:.5rem 0 0 1.2rem}.other-news li{margin:.4rem 0;font-size:.9rem}
+@media(max-width:768px){.container{padding:1rem}h1{font-size:1.4rem}table{font-size:.78rem}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<nav class="topnav">
+<a href="#brief">📌 Tóm tắt nhanh — 12 tin AI nổi bật 29/05–05/06</a>
+<a href="#anthropic">1. Anthropic chốt $65B tại $965B — vượt OpenAI</a>
+<a href="#eo">2. Trump ký EO AI — review 30 ngày, benchmark NSA</a>
+<a href="#nvidia">3. NVIDIA GTC Taipei — Vera Rubin + Nemotron 3 Ultra</a>
+<a href="#minimax">4. MiniMax M3 — open-weight 1M context + đa phương thức</a>
+<a href="#opus">5. Claude Opus 4.8 — SWE-Bench Pro 69.2%</a>
+<a href="#rosalind">6. GPT-Rosalind + Rosalind Biodefense</a>
+<a href="#aws">7. OpenAI models + Codex GA trên AWS</a>
+<a href="#cognition">8. Cognition (Devin) $1B tại $26B — tự viết 89% code</a>
+<a href="#dreaming">9. ChatGPT "Dreaming" — memory nền, mở free tier</a>
+<a href="#inference">10. Inference chip war — Intel Crescent Island</a>
+<a href="#gemini">11. Gemini 3.5 Flash — Flash vượt flagship cũ</a>
+<a href="#policy">12. OpenAI lệch pha Nhà Trắng về AI safety</a>
+<a href="#meta">🧭 Meta Trends</a>
+<a href="#watch">🔭 Strategic Watchlist</a>
+<a href="#delta">📊 Delta so với 19/05</a>
+<a href="#links">🔗 Liên kết liên ngành</a>
+<a href="#khac">📋 Các tin khác đáng chú ý</a>
+<a href="#failsrc">⚠️ Nguồn không truy cập được</a>
+</nav>
+
+<h1>📊 Báo Cáo Tin Tức AI — 05/06/2026</h1>
+<p class="meta">Quét: 05/06/2026 11:45 ICT | Phạm vi: 29/05–05/06/2026 (7 ngày — quét trước 19/05 đã >7 ngày nên cap lại) | Lần quét: 1 | Số tin chính: 12<br>Nguồn: Reuters, CNBC, TechCrunch, Fortune, Ars Technica, Politico, IBM, CFR, The Register, NVIDIA, OpenAI, Anthropic, AWS/Amazon, The Decoder, SiliconAngle, DataCenterKnowledge, Intel, 9to5Mac, Engadget</p>
+
+<div class="warn">
+⚠️ <strong>Lưu ý cửa sổ:</strong> 3 tin (Anthropic chốt round, Claude Opus 4.8, Cognition) phát hành 27–28/05 — <em>vừa ngoài cửa sổ 7 ngày</em> — được đưa vào như <strong>bối cảnh tiếp nối</strong> vì là kết quả của luồng tin đã theo dõi từ 19/05 và là frontier release gần nhất.<br>
+⚠️ <strong>Chất lượng dữ liệu:</strong> Các benchmark do nhà phát hành tự công bố (MiniMax M3, Opus 4.8, Gemini 3.5 Flash, NVIDIA Vera Rubin, inference chip) được đánh dấu confidence MEDIUM và chỉ dùng chỉ hướng — chưa thay cho đánh giá độc lập (NIST/Artificial Analysis).
+</div>
+
+<nav class="toc">
+<h3>📑 Mục lục</h3>
+<ol>
+<li><a href="#brief">Tóm tắt nhanh</a></li>
+<li><a href="#anthropic">Anthropic chốt $65B tại $965B</a></li>
+<li><a href="#eo">Trump ký EO AI</a></li>
+<li><a href="#nvidia">NVIDIA GTC Taipei — Vera Rubin</a></li>
+<li><a href="#minimax">MiniMax M3</a></li>
+<li><a href="#opus">Claude Opus 4.8</a></li>
+<li><a href="#rosalind">GPT-Rosalind + Biodefense</a></li>
+<li><a href="#aws">OpenAI + Codex trên AWS</a></li>
+<li><a href="#cognition">Cognition (Devin) $1B</a></li>
+<li><a href="#dreaming">ChatGPT "Dreaming"</a></li>
+<li><a href="#inference">Inference chip war</a></li>
+<li><a href="#gemini">Gemini 3.5 Flash</a></li>
+<li><a href="#policy">OpenAI vs Nhà Trắng về safety</a></li>
+<li><a href="#meta">Meta Trends</a></li>
+<li><a href="#watch">Strategic Watchlist</a></li>
+<li><a href="#delta">Delta so với 19/05</a></li>
+<li><a href="#links">Liên kết liên ngành</a></li>
+<li><a href="#khac">Các tin khác đáng chú ý</a></li>
+<li><a href="#failsrc">⚠️ Nguồn không truy cập được</a></li>
+</ol>
+</nav>
+
+<div class="brief" id="brief">
+<h3>📌 Tóm tắt nhanh</h3>
+<ol>
+<li>🔴 <strong>Anthropic chốt $65B, định giá $965B</strong> — vượt OpenAI, gần mốc $1.000 tỷ, round tư nhân cuối trước IPO (28/05)</li>
+<li>🔴 <strong>Trump ký sắc lệnh AI</strong> — review frontier model 30 ngày (giảm từ 90), NSA lập benchmark mật, hợp tác tự nguyện (02/06)</li>
+<li>🔴 <strong>NVIDIA GTC Taipei @ Computex</strong> — Vera Rubin full production, Nemotron 3 Ultra (550B open), RTX Spark đưa AI vào PC (01/06)</li>
+<li>🟠 <strong>MiniMax M3</strong> — open-weight đầu tiên gộp coding frontier + 1M token + đa phương thức; sparse attention MSA, 59% SWE-Bench Pro (01/06)</li>
+<li>🟠 <strong>Claude Opus 4.8</strong> — SWE-Bench Pro 69.2%, fast mode rẻ 1/3, ít bỏ sót lỗi code gấp 4 lần (28/05)</li>
+<li>🟠 <strong>GPT-Rosalind + Rosalind Biodefense</strong> — model life-sciences mở rộng truy cập cho chính phủ (29/05 + 03/06)</li>
+<li>🟠 <strong>OpenAI models + Codex GA trên AWS</strong> — GPT-5.5/5.4/Codex lên Amazon Bedrock, giá khớp first-party (01/06)</li>
+<li>🟠 <strong>Cognition (Devin) gọi $1B tại $26B</strong> — Devin tự viết ~89% code của chính Cognition (27/05)</li>
+<li>🟡 <strong>ChatGPT "Dreaming"</strong> — memory nền tự tổng hợp hồ sơ người dùng, đưa xuống free tier (04/06)</li>
+<li>🟡 <strong>Inference chip war tăng nhiệt</strong> — Intel Crescent Island, disaggregated inference @ Computex (01–02/06)</li>
+<li>🟡 <strong>Gemini 3.5 Flash</strong> — Flash-tier vượt flagship 3.1 Pro; <strong>Ramp gọi $750M tại $44B</strong> (04/06)</li>
+<li>🟡 <strong>OpenAI lệch pha Nhà Trắng về safety</strong> — muốn đánh giá bắt buộc nhưng do cơ quan dân sự giám sát (03/06)</li>
+</ol>
+</div>
+
+<h2 id="anthropic">1. 🔥 Anthropic Chốt $65B Tại $965B — Vượt OpenAI, Gần Mốc Nghìn Tỷ</h2>
+<div class="card">
+<span class="badge badge-red">Impact 9/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 28/05/2026 (bối cảnh tiếp nối từ báo cáo 19/05) · <strong>Category:</strong> Funding / AI Industry / Competition</p>
+<h4>Bối cảnh</h4>
+<p>Báo cáo 19/05 ghi nhận Anthropic "đang chốt round $30B tại $900B" theo nguồn Financial Times. Round nay đã chính thức đóng với quy mô lớn hơn nhiều — nâng cấp tin đồn thành sự kiện hoàn tất (delta lớn).</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Series H $65B</strong> đóng ở định giá post-money <strong>$965B</strong> — vượt OpenAI, lần đầu Anthropic là AI startup giá trị nhất thế giới</li>
+<li><strong>Đồng dẫn dắt:</strong> Altimeter, Dragoneer, Greenoaks, Sequoia, Capital Group, Coatue, D1 Capital...</li>
+<li><strong>Tổ chức tham gia:</strong> Baillie Gifford, Blackstone, Brookfield, D.E. Shaw, DST Global, Fidelity</li>
+<li><strong>Định vị:</strong> có thể là vòng gọi vốn tư nhân cuối trước IPO</li>
+</ul>
+<h4>Phân tích</h4>
+<p>Con số nhảy từ "$30B/$900B" (tin đồn 15/05) lên "$65B/$965B" (chốt 28/05) trong ~2 tuần cho thấy demand vượt xa nguồn cung cổ phần. Dàn quỹ truyền thống (Fidelity, Blackstone, Brookfield) tham gia → AI lab chuyển từ tài sản venture sang <strong>tài sản tổ chức (institutional asset)</strong> tiền-IPO.</p>
+<h4>Tác động</h4>
+<p>OpenAI chịu áp lực IPO/định giá; cạnh tranh vốn và enterprise customers gay gắt hơn. Anthropic có vốn mở rộng compute + đội ngũ, củng cố Claude trong doanh nghiệp. <strong>🔗 VN News:</strong> dòng vốn AI → cơ hội AI talent VN.</p>
+<h4>Đánh giá</h4>
+<p>Nếu IPO thành công, đây là phép thử định giá AI lab trên thị trường công khai (yêu cầu minh bạch lợi nhuận/compute). Risk: $965B đòi hỏi tăng trưởng doanh thu khổng lồ để biện minh.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.cnbc.com/2026/05/28/anthropic-open-ai-startup-value.html">CNBC</a> · <a href="https://techcrunch.com/2026/05/28/anthropic-raises-65-billion-nears-1t-valuation-ahead-of-ipo/">TechCrunch</a> · <a href="https://upstox.com/news/business-news/latest-updates/anthropic-becomes-world-s-most-valuable-ai-startup-with-65-billion-funding-round/article-194471/">Upstox</a></p>
+</div>
+</div>
+
+<h2 id="eo">2. 🔥 Trump Ký Sắc Lệnh AI — Review Frontier Model 30 Ngày, Benchmark Mật NSA</h2>
+<div class="card">
+<span class="badge badge-red">Impact 9/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 02/06/2026 · <strong>Category:</strong> AI Safety / Regulation / Governance</p>
+<h4>Bối cảnh</h4>
+<p>Trump từng từ chối ký một bản EO ngày 21/05. Ngày 02/06 ông ký bản sửa đổi <em>"Promoting Advanced Artificial Intelligence Innovation and Security"</em>.</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Cửa sổ review rút xuống 30 ngày</strong> (từ 90) để chính phủ đánh giá model trước phát hành</li>
+<li><strong>NSA lập benchmark mật (classified)</strong> xác định ngưỡng "covered frontier model" — đo năng lực cyber</li>
+<li><strong>Hợp tác tự nguyện:</strong> nhà phát triển AI được <em>yêu cầu</em> (không bắt buộc) cấp early access</li>
+<li><strong>Trọng tâm cyber:</strong> bảo vệ hệ thống liên bang + tạo điều kiện tiếp cận model cho phòng thủ</li>
+</ul>
+<h4>Phân tích (Fact vs Analysis)</h4>
+<ul>
+<li><strong>Fact:</strong> EO ký 02/06, review 30 ngày, NSA chủ trì benchmark mật, cơ chế tự nguyện — xác nhận chéo CNBC, IBM, CFR, Fortune, The Register.</li>
+<li><strong>Analysis:</strong> Ars Technica chỉ ra lỗ hổng thực thi — đội an ninh kỹ thuật liên bang bị cắt giảm (DOGE) → năng lực kiểm thử trong 30 ngày là dấu hỏi; "tự nguyện" + thời hạn ngắn → đòn bẩy quản lý yếu. CFR coi đây là bước dịch về phía giám sát liên bang.</li>
+</ul>
+<h4>Tác động</h4>
+<p>AI labs có quy trình tiền-phát-hành mới (nhưng tự nguyện). Benchmark cyber có thể thành tham chiếu mua sắm công. <strong>🔗 World Conflicts:</strong> benchmark cyber mật ↔ AI cyber arms race + kiểm soát xuất khẩu.</p>
+<h4>Đánh giá</h4>
+<p>Mô hình "review tự nguyện + ngưỡng mật" tạo tiền lệ quản trị nhẹ, khác EU AI Act. Risk: thiếu năng lực kiểm thử → EO mang tính biểu tượng hơn ràng buộc.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.cnbc.com/2026/06/02/trump-executive-order-ai.html">CNBC</a> · <a href="https://www.ibm.com/think/news/trump-white-house-executive-order-classified-benchmark-advanced-ai-models">IBM</a> · <a href="https://www.cfr.org/articles/assessing-trumps-executive-order-on-ai-oversight">CFR</a> · <a href="https://arstechnica.com/tech-policy/2026/06/trumps-ai-executive-order-may-not-prevent-dangerous-deployments/">Ars Technica</a> · <a href="https://fortune.com/2026/06/02/trump-ai-order-reversal-frontier-model-review/">Fortune</a></p>
+</div>
+</div>
+
+<h2 id="nvidia">3. 🔥 NVIDIA GTC Taipei @ Computex — Vera Rubin Full Production + Nemotron 3 Ultra + RTX Spark</h2>
+<div class="card">
+<span class="badge badge-red">Impact 9/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 01/06/2026 · <strong>Category:</strong> AI Hardware / Chips / Open Models</p>
+<h4>Bối cảnh</h4>
+<p>Báo cáo 19/05 dừng ở NVIDIA earnings 20/05. Tại GTC Taipei trong Computex 2026 (01/06), Jensen Huang chuyển trọng tâm từ "chip" sang "AI infrastructure company" toàn stack.</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Vera Rubin platform</strong> vào full production, đúng lịch ship mùa thu; ra mắt <strong>DSX OS</strong> quản lý "AI factory"</li>
+<li><strong>Vera CPU</strong> (Arm-based) + nền tảng tích hợp compute + networking ở quy mô rack</li>
+<li><strong>Nemotron 3 Ultra:</strong> open model <strong>550B (MoE)</strong> cho agent dài hơi, reasoning khó — model mở lớn nhất NVIDIA từng phát hành</li>
+<li><strong>RTX Spark superchip:</strong> AI agent chạy cục bộ trên laptop/PC từ Microsoft, Dell, HP, ASUS, Lenovo, MSI</li>
+<li><strong>NVIDIA Agent Toolkit:</strong> open-source models + secure runtime + CUDA-X cho enterprise</li>
+</ul>
+<h4>Phân tích</h4>
+<p>NVIDIA thực thi chiến lược <strong>"bán cả nhà máy, không chỉ bán cuốc xẻng"</strong>: GPU → platform (Vera Rubin) → hệ điều hành (DSX OS) → model mở (Nemotron) → chip PC (RTX Spark). Mục tiêu khóa khách hàng vào toàn stack, mở rộng TAM từ data center sang edge.</p>
+<h4>Tác động</h4>
+<p>Enterprise: "AI factory hóa" hạ tầng. Developer: Nemotron mở + Agent Toolkit → self-host agent dài hơi. PC: RTX Spark mở mặt trận AI PC. <strong>🔗 Sci-Tech/VN News:</strong> điện data center, chuỗi cung ứng bán dẫn.</p>
+<h4>Đánh giá</h4>
+<p>Vera Rubin tuyên bố giảm ~10x chi phí token inference, ~4x số GPU để train MoE so với Blackwell (số NVIDIA công bố — cần benchmark độc lập). Nếu đúng, là động lực tiếp cho inference economics.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://blogs.nvidia.com/blog/nvidia-gtc-taipei-computex-2026-news/">NVIDIA</a> · <a href="https://www.datacenterknowledge.com/data-center-chips/nvidia-says-vera-rubin-vera-cpu-on-track-launches-dsx-os-to-run-ai-factories">DataCenterKnowledge</a> · <a href="https://www.networkworld.com/article/4146173/nvidia-announces-vera-rubin-platform-signaling-a-shift-to-full-stack-ai-infrastructure.html">NetworkWorld</a> · <a href="https://www.cnbc.com/2026/05/31/nvidias-new-chip-to-power-fresh-line-of-windows-laptops-by-dell-hp.html">CNBC</a> · <a href="https://fortune.com/2026/06/01/jensen-huang-nvidia-pc-reinvention-ai-chips/">Fortune</a></p>
+</div>
+</div>
+
+<h2 id="minimax">4. 🔥 MiniMax M3 — Open-Weight Đầu Tiên Gộp Coding Frontier + 1M Context + Đa Phương Thức</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED (phát hành)</span>
+<span class="badge badge-purple">Confidence MEDIUM (benchmark)</span>
+<p><strong>Ngày:</strong> 01/06/2026 · <strong>Category:</strong> Models / Open Source / Inference Architecture</p>
+<h4>Bối cảnh</h4>
+<p>Tháng 5 đã là "kỷ lục open-weight" (Gemma 4, DeepSeek V4, Kimi K2.6 — báo cáo 19/05). Đầu tháng 6 làn sóng open-weight TQ tiếp tục với MiniMax M3 (lab Thượng Hải).</p>
+<h4>Điểm mới quan trọng</h4>
+<ul>
+<li><strong>Kiến trúc MiniMax Sparse Attention (MSA):</strong> chỉ xử lý khối dữ liệu liên quan → giảm compute ~1/20, tăng tốc input >9x (theo MiniMax)</li>
+<li><strong>Context 1M token</strong> + <strong>đa phương thức native</strong> + coding frontier — tuyên bố open-weight đầu tiên gộp cả 3</li>
+<li><strong>Benchmark (nhà phát hành):</strong> 59% SWE-Bench Pro — vượt GPT-5.5, Gemini 3.1 Pro; ngay sau Opus 4.7; ~66% Terminal-Bench 2.1</li>
+<li>Có qua API; weights công bố sau ít ngày</li>
+</ul>
+<h4>Phân tích</h4>
+<p>MSA là điểm đáng chú ý nhất: cuộc đua chuyển sang <strong>kinh tế attention</strong> — đạt context 1M token mà không để compute bùng nổ. Hướng kiến trúc sparse/linear attention đang được nhiều lab theo đuổi.</p>
+<h4>Tác động</h4>
+<p>Developer/startup: open-weight + 1M context + chi phí thấp → self-host agent dài hơi khả thi hơn. Closed labs: áp lực giá tiếp tục. <strong>Lưu ý:</strong> benchmark do MiniMax tự công bố → cần đánh giá độc lập.</p>
+<h4>Đánh giá</h4>
+<p>Khoảng cách open vs closed co lại ở coding/agentic. So sánh chéo: Nemotron 3 Ultra được Artificial Analysis xếp đầu open model Mỹ nhưng <strong>vẫn sau frontier TQ (Kimi K2.6)</strong> — củng cố "open-weight frontier do TQ dẫn dắt".</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://the-decoder.com/minimax-m3-open-weight-model-with-a-million-token-context-challenges-proprietary-leaders/">The Decoder</a> · <a href="https://officechai.com/ai/minimax-releases-minimax-m3-is-competitive-with-frontier-models-on-many-benchmarks/">OfficeChai</a> · <a href="https://www.siliconflow.com/blog/minimax-m3-now-on-siliconflow-frontier-coding-1m-context-and-native-multimodality">SiliconFlow</a> · <a href="https://www.implicator.ai/nvidias-nemotron-3-ultra-leads-us-open-models-but-trails-chinas-kimi-k2-6/">Implicator.ai</a></p>
+</div>
+</div>
+
+<h2 id="opus">5. 🟠 Claude Opus 4.8 — SWE-Bench Pro 69.2%, Fast Mode Rẻ 1/3, Nhịp Ra Model Kỷ Lục</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-purple">Confidence HIGH / MEDIUM (benchmark)</span>
+<p><strong>Ngày:</strong> 28/05/2026 (bối cảnh tiếp nối) · <strong>Category:</strong> Models / Reasoning / Coding</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Phát hành 28/05</strong>, chỉ ~41 ngày sau Opus 4.7 — nhịp version nhanh nhất Anthropic từng chạy</li>
+<li><strong>Giá giữ nguyên:</strong> $5 / $25 per 1M token; <strong>fast mode giảm còn ~1/3</strong> chi phí so với 4.7</li>
+<li><strong>Benchmark:</strong> SWE-Bench Verified ~88.6%; <strong>SWE-Bench Pro 69.2%</strong> (từ 64.3%) — dẫn trước GPT-5.5 (58.6%) và Gemini 3.1 Pro (54.2%)</li>
+<li><strong>"Honesty as a feature":</strong> ít bỏ sót lỗi code không gắn cờ <strong>gấp 4 lần</strong> so với 4.7</li>
+<li><strong>Dynamic workflows:</strong> hỗ trợ hàng trăm subagent song song</li>
+</ul>
+<h4>Phân tích</h4>
+<p>(1) Nhịp ra model nén lại (41 ngày) → cạnh tranh frontier chuyển sang chu kỳ phát hành cực ngắn. (2) Fast mode rẻ 1/3 ở cùng giá niêm yết là đòn inference economics — hạ chi phí phục vụ chứ không chỉ tăng điểm benchmark.</p>
+<h4>Tác động</h4>
+<p>Developer: lý do thực tế để migrate (coding/agentic mạnh hơn, fast mode rẻ hơn). Enterprise: "ít bỏ sót lỗi code" bán trực tiếp cho review/CI. Lưu ý: một số benchmark do hãng/bên tổng hợp công bố — coi là chỉ hướng.</p>
+<h4>Đánh giá</h4>
+<p>Cùng MiniMax M3 (open) và Gemini 3.5 Flash, bức tranh là <strong>coding/agentic là chiến trường chính 2026</strong>, với giá inference giảm là vũ khí ngang ngửa năng lực.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.vellum.ai/blog/claude-opus-4-8-benchmarks-explained">Vellum</a> · <a href="https://llm-stats.com/blog/research/claude-opus-4-8-launch">LLM-Stats</a> · <a href="https://www.buildfastwithai.com/blogs/claude-opus-4-8-review-benchmarks-dynamic-workflows-2026">BuildFastWithAI</a> · <a href="https://computingforgeeks.com/claude-opus-4-8-released-features-benchmarks/">ComputingForGeeks</a></p>
+</div>
+</div>
+
+<h2 id="rosalind">6. 🟠 OpenAI GPT-Rosalind + Rosalind Biodefense — AI Life-Sciences Cho Chính Phủ</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 29/05 + cập nhật 03/06/2026 · <strong>Category:</strong> Models / AI Safety / Biodefense / Research</p>
+<h4>Bối cảnh</h4>
+<p>GPT-Rosalind là model reasoning chuyên ngành life-sciences của OpenAI (giới thiệu 4/2026 cho drug discovery, genomics, protein). Đầu tháng 6 OpenAI mở rộng qua Rosalind Biodefense và cập nhật năng lực.</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Rosalind Biodefense (29/05):</strong> mở trusted access cho đối tác chính phủ Mỹ + đồng minh phục vụ public health, biosurveillance, chuẩn bị đại dịch, medical countermeasure</li>
+<li><strong>Cập nhật GPT-Rosalind (03/06):</strong> cải thiện drug discovery, genomics, wet-lab; giảm compute cho genomics; lần đầu mở research preview cho tổ chức đủ điều kiện toàn cầu</li>
+<li>Có dạng research preview trong ChatGPT, Codex, API cho khách hàng đủ điều kiện</li>
+</ul>
+<h4>Phân tích (lưỡng dụng / dual-use)</h4>
+<p>Ví dụ điển hình AI lưỡng dụng: năng lực tăng tốc phát triển thuốc cũng có thể bị lạm dụng cho mối nguy sinh học. OpenAI đóng khung quanh "biodefense" + "trusted access" + đối tác chính phủ là chiến lược quản trị rủi ro — gắn năng lực mạnh với kiểm soát truy cập.</p>
+<h4>Tác động</h4>
+<p>Researcher/biotech: công cụ reasoning chuyên sâu cho R&D, mở rộng truy cập toàn cầu có điều kiện. Trùng thời điểm EO Trump (tin #2) → AI an ninh sinh học vào tầm ngắm quản lý. <strong>🔗 Sci-Tech:</strong> drug discovery AI.</p>
+<h4>Đánh giá</h4>
+<p>Phân khúc "vertical frontier model" đang định hình, khác chiến lược model tổng quát. Risk: kiểm soát truy cập là then chốt; rò rỉ năng lực biodefense là kịch bản rủi ro cao nhất.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://openai.com/index/strengthening-societal-resilience-with-rosalind-biodefense/">OpenAI — Rosalind Biodefense</a> · <a href="https://openai.com/index/introducing-new-capabilities-to-gpt-rosalind/">OpenAI — GPT-Rosalind update</a> · <a href="https://www.techtimes.com/articles/317754/20260604/gpt-rosalind-drug-discovery-update-openai-cuts-genomics-compute-expands-global-access.htm">TechTimes</a> · <a href="https://interestingengineering.com/science/openai-us-government-national-labs-biosecurity">Interesting Engineering</a></p>
+</div>
+</div>
+
+<h2 id="aws">7. 🟠 OpenAI Models + Codex GA Trên AWS — GPT-5.5/5.4 Lên Amazon Bedrock</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 01/06/2026 · <strong>Category:</strong> Enterprise Adoption / Cloud / Distribution</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>GPT-5.5, GPT-5.4 và Codex</strong> GA trên <strong>Amazon Bedrock</strong> từ 01/06 — sau 1 tháng limited preview</li>
+<li><strong>Giá Bedrock khớp first-party</strong> của OpenAI, không phụ phí; usage tính vào cam kết chi tiêu AWS</li>
+<li>Chạy ở region thương mại lẫn <strong>GovCloud</strong> (giới hạn region Mỹ lúc ra mắt)</li>
+<li>Đi kèm Managed Agents</li>
+</ul>
+<h4>Phân tích</h4>
+<p>Bước phân phối (distribution) chiến lược: OpenAI vốn gắn chặt Azure/Microsoft, nay xuất hiện trên AWS — cloud lớn nhất. "Giá khớp, tính vào cam kết AWS" hạ rào cản chuyển từ thử nghiệm sang triển khai cho hàng triệu khách hàng AWS.</p>
+<h4>Tác động</h4>
+<p>Enterprise: giảm ma sát adoption — dùng model OpenAI ngay trong môi trường AWS đã có governance. Cloud: Microsoft không còn là cửa độc quyền cho model OpenAI; đa-cloud hóa. Developer: Codex + Managed Agents → tích hợp agent vào hạ tầng dễ hơn.</p>
+<h4>Đánh giá</h4>
+<p>Phân phối đa-cloud là tín hiệu thị trường model trưởng thành: model thành <strong>commodity layer</strong> bán qua mọi kênh cloud, cạnh tranh dồn về giá, độ trễ, tích hợp.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://openai.com/index/openai-on-aws/">OpenAI</a> · <a href="https://aws.amazon.com/blogs/aws/get-started-with-openai-gpt-5-5-gpt-5-4-models-and-codex-on-amazon-bedrock/">AWS Blog</a> · <a href="https://www.aboutamazon.com/news/aws/bedrock-openai-models">About Amazon</a> · <a href="https://the-decoder.com/openai-models-now-available-on-amazon-web-services/">The Decoder</a></p>
+</div>
+</div>
+
+<h2 id="cognition">8. 🟠 Cognition (Devin) Gọi $1B Tại $26B — Devin Tự Viết ~89% Code</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 27/05/2026 (bối cảnh tiếp nối) · <strong>Category:</strong> Funding / AI Agents / Coding</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Series D >$1B</strong> tại định giá <strong>$26B</strong> (pre-money $25B), dẫn dắt Lux Capital, General Catalyst, 8VC — hơn gấp đôi định giá ~$10B tháng 9</li>
+<li><strong>Devin tự viết ~89% code của chính Cognition</strong> (từ ~13% tháng 12/2025) — recursive coding loop</li>
+<li><strong>Doanh thu từ $37M lên $492M trong 12 tháng</strong> (theo TNW); khách hàng gồm Goldman Sachs, Mercedes-Benz, chính phủ Mỹ</li>
+<li>CEO Scott Wu (29/05): AI coding agent <strong>không nên thay thế con người</strong> mà "sở hữu task end-to-end"</li>
+</ul>
+<h4>Phân tích</h4>
+<p>"Devin viết 89% code của Cognition" là minh chứng mạnh nhất cho <strong>recursive self-improvement ở tầng sản phẩm</strong> (khác recursive tầng model như Recursive Superintelligence — báo cáo 19/05). Doanh thu ~13x trong 12 tháng (nếu đúng) → agentic coding chuyển từ demo sang doanh thu thực.</p>
+<h4>Tác động</h4>
+<p>Developer/Enterprise: agentic coding vào production ở khách hàng lớn → thay đổi cấu trúc đội kỹ thuật. <strong>🔗 IT Career:</strong> trực tiếp liên quan "nén entry-level". Startup: định giá agentic coding tăng nóng.</p>
+<h4>Đánh giá</h4>
+<p>Nếu "89%" là chỉ báo chung, vai trò developer dịch về <strong>giám sát/kiến trúc</strong> hơn gõ code. Risk: quá phụ thuộc agent + đảm bảo chất lượng (xem Opus 4.8 "ít bỏ sót lỗi").</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://techcrunch.com/2026/05/27/ai-coding-startup-cognition-raises-1b-at-25b-pre-money-valuation/">TechCrunch</a> · <a href="https://cognition.ai/blog/series-d">Cognition (chính thức)</a> · <a href="https://thenextweb.com/news/cognition-just-raised-1-billion-at-a-26-billion-valuation-and-90-of-its-own-code-is-written-by-its-ai">TNW</a> · <a href="https://siliconangle.com/2026/05/27/vibe-coding-startup-cognition-doubles-valuation-new-1b-round/">SiliconAngle</a></p>
+</div>
+</div>
+
+<h2 id="dreaming">9. 🟡 ChatGPT "Dreaming" — Memory Nền Tự Tổng Hợp Hồ Sơ Người Dùng, Mở Free Tier</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 04/06/2026 · <strong>Category:</strong> Product / Memory / Consumer AI</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>"Dreaming":</strong> tiến trình nền tự động review, lọc, tổng hợp lịch sử chat — không cần lệnh "remember this"</li>
+<li>Thay vì fact rời dạng bullet, ChatGPT dựng <strong>hồ sơ văn xuôi (prose profile)</strong> chia nhóm: công việc, sở thích, du lịch...</li>
+<li><strong>Memory summary page:</strong> xem/sửa/bổ sung + chỉ dẫn chủ đề nên/không nên nhắc</li>
+<li><strong>Mở rộng xuống free tier</strong> (Plus/Pro Mỹ trước, sau đó Free/Go và toàn cầu)</li>
+</ul>
+<h4>Phân tích</h4>
+<p>Dreaming chuyển memory từ "kho fact" sang "mô hình người dùng tổng hợp liên tục" — nâng cá nhân hóa nhưng đặt <strong>câu hỏi quyền riêng tư</strong>: hệ thống tự dựng "dossier" ở chế độ nền. Đưa xuống free tier mở rộng tới hàng trăm triệu người.</p>
+<h4>Tác động</h4>
+<p>Người dùng: trải nghiệm liền mạch hơn, cần để ý trang memory summary. Privacy: "narrative dossier" tự động → cần minh bạch + quyền xóa. Đối thủ (Gemini, Claude) chịu áp lực UX memory.</p>
+<h4>Đánh giá</h4>
+<p>Memory chất lượng cao là "moat" giữ chân người dùng. Lưu ý: "Dreaming V3" và "giảm compute ~80%/còn 1/5" từ nguồn thứ cấp — <strong>chưa xác nhận bởi OpenAI</strong>, coi là chưa kiểm chứng.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://9to5mac.com/2026/06/04/openai-says-chatgpts-memory-feature-is-getting-smarter-and-coming-to-free-users/">9to5Mac</a> · <a href="https://the-decoder.com/chatgpt-now-saves-narrative-dossiers-about-you-sorted-by-work-hobbies-and-travel-preferences/">The Decoder</a> · <a href="https://www.engadget.com/2187811/chatgpt-s-memory-is-getting-better-especially-if-you-re-on-the-free-tier/">Engadget</a></p>
+</div>
+</div>
+
+<h2 id="inference">10. 🟡 Inference Chip War Tăng Nhiệt — Intel Crescent Island, Disaggregated Inference @ Computex</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-orange">PARTIALLY VERIFIED</span>
+<span class="badge badge-purple">Confidence MEDIUM–HIGH</span>
+<p><strong>Ngày:</strong> 01–02/06/2026 · <strong>Category:</strong> AI Hardware / Inference Optimization / Chips</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Inference thành "profit center" mới</strong> — chipmaker đua tối ưu latency, điện năng, cost-per-token (DataCenterKnowledge)</li>
+<li><strong>Intel @ Computex:</strong> giới thiệu <em>disaggregated inference cloud</em> (Vector Core Compute) chạy trên Xeon + SambaNova RDU + NVIDIA Blackwell; <strong>Crescent Island</strong> — GPU inference mới, ship giới hạn cuối 2026 (theo FT)</li>
+<li><strong>Startup inference chip</strong> (Taalas HC1, MatX, d-Matrix Corsair) cạnh tranh cost-per-token và token/s</li>
+<li>Đối trọng: NVIDIA Vera Rubin tuyên bố giảm ~10x chi phí token inference (tin #3)</li>
+</ul>
+<h4>Phân tích</h4>
+<p>Xác nhận xu hướng core.rules.md gọi tên: <strong>"cạnh tranh AI chuyển từ training sang inference economics"</strong>. Khi model frontier (Opus 4.8, Gemini 3.5 Flash, MiniMax M3) đều đẩy giá phục vụ xuống, phần cứng inference chuyên dụng thành đòn bẩy lợi nhuận.</p>
+<h4>Tác động</h4>
+<p>Enterprise: thêm lựa chọn ngoài GPU NVIDIA → đàm phán chi phí inference tốt hơn. NVIDIA: vẫn dẫn dắt nhưng mặt trận inference cạnh tranh hơn. <strong>Lưu ý:</strong> nhiều con số (48x B200, giảm 90%...) do nhà sản xuất công bố → MEDIUM cho số liệu, HIGH cho xu hướng.</p>
+<h4>Đánh giá</h4>
+<p>Disaggregated inference + chip chuyên dụng có thể tái định hình kiến trúc data center AI, hạ rào cản cho người triển khai không phụ thuộc một nhà cung cấp.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.datacenterknowledge.com/data-center-chips/inference-becomes-the-next-ai-chip-battleground">DataCenterKnowledge</a> · <a href="https://newsroom.intel.com/artificial-intelligence/intel-announces-new-ai-innovations-at-computex">Intel Newsroom</a> · <a href="https://letsdatascience.com/news/intel-plans-crescent-island-ai-gpu-launch-57f95fd4">LetsDataScience (FT)</a> · <a href="https://www.turingpost.com/p/taalas">Turing Post</a></p>
+</div>
+</div>
+
+<h2 id="gemini">11. 🟡 Gemini 3.5 Flash — Flash-Tier Vượt Flagship Cũ (Tiếp Nối Google I/O)</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-purple">Confidence HIGH / MEDIUM (benchmark)</span>
+<p><strong>Ngày:</strong> 19/05/2026 (xác nhận benchmark & GA) · <strong>Category:</strong> Models / Reasoning / Coding</p>
+<h4>Bối cảnh & diễn biến</h4>
+<p>Báo cáo 19/05 chỉ ghi "Google I/O khai mạc, Gemini mới chưa confirm". Nay xác nhận: <strong>Gemini 3.5 Flash</strong> ra mắt và GA ngay 19/05 — model đầu tiên họ 3.5, agentic/coding mạnh nhất dòng Flash từ trước tới nay.</p>
+<ul>
+<li><strong>Benchmark (Google công bố):</strong> 76.2% Terminal-Bench 2.1, 83.6% MCP Atlas, 84.2% CharXiv Reasoning — vượt Gemini 3.1 Pro ở coding/agentic</li>
+<li><strong>Tốc độ ~4x</strong> so với frontier model cùng phân khúc; <strong>context 1M token</strong></li>
+<li><strong>Giá $1.50 / $9 per 1M token</strong> — rẻ hơn Gemini 3.1 Pro</li>
+<li>Thành <strong>default</strong> trong app Gemini và AI Mode của Google Search toàn cầu; Gemini 3.5 Pro dự kiến tháng sau</li>
+</ul>
+<h4>Phân tích</h4>
+<p>Đột phá định vị: <strong>tier "Flash" rẻ/nhanh nay vượt flagship đời trước (3.1 Pro)</strong>. Biểu hiện rõ của inference economics — Google đẩy năng lực Pro-level xuống mức giá/độ trễ Flash để chiếm thị phần API và search.</p>
+<h4>Tác động & đánh giá</h4>
+<p>Developer: model rẻ + nhanh + agentic mạnh → mặc định kinh tế cho nhiều workload. Ép giá trực diện GPT-5.5 và Claude (Opus 4.8 fast mode rẻ 1/3). Lưu ý: bảng benchmark do Google công bố — đối chiếu độc lập trước khi coi tuyệt đối.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://llm-stats.com/blog/research/gemini-3.5-flash-launch">LLM-Stats</a> · <a href="https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-3-5/">Google Blog</a> · <a href="https://cloud.google.com/blog/products/ai-machine-learning/innovations-from-google-io-26-on-google-cloud">Google Cloud</a> · <a href="https://www.datacamp.com/blog/gemini-3-5-flash">DataCamp</a></p>
+</div>
+</div>
+
+<h2 id="policy">12. 🟡 OpenAI Lệch Pha Nhà Trắng Về AI Safety — Muốn Cơ Quan Dân Sự Giám Sát</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-purple">Confidence MEDIUM–HIGH</span>
+<p><strong>Ngày:</strong> 03/06/2026 · <strong>Category:</strong> AI Safety / Regulation / Policy</p>
+<h4>Diễn biến</h4>
+<ul>
+<li>Trong policy paper mới (03/06), <strong>OpenAI kêu gọi liên bang yêu cầu đánh giá bắt buộc (mandatory evaluations)</strong> model tiên tiến về rủi ro</li>
+<li>Nhưng OpenAI muốn <strong>trách nhiệm giám sát thuộc cơ quan dân sự (civilian agencies)</strong> — khác EO Trump (02/06) đặt benchmark mật ở <strong>NSA</strong></li>
+</ul>
+<h4>Phân tích</h4>
+<p>Đây là <strong>bất đồng về thể chế, không phải nguyên tắc</strong>: OpenAI ủng hộ đánh giá bắt buộc (mạnh hơn "tự nguyện" của EO) nhưng phản đối kênh mật NSA chủ trì. Lý do khả dĩ: lo ngại minh bạch, IP, tiền lệ giám sát quân sự với công nghệ dân sự. Tách rõ: đây là <strong>đề xuất chính sách</strong>, chưa phải luật.</p>
+<h4>Tác động & đánh giá</h4>
+<p>Định hình tranh luận khung quản lý — dân sự vs an ninh; căng thẳng ngành ↔ Nhà Trắng về <em>ai</em> kiểm soát đánh giá frontier model. <strong>🔗 World Conflicts:</strong> kiểm soát năng lực cyber của model ↔ an ninh quốc gia. Cuộc giằng co "dân sự vs NSA" sẽ định hình mô hình quản trị AI Mỹ nhiều năm.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.politico.com/news/2026/06/03/openai-white-house-ai-safety-rules-00948478">Politico</a> · <a href="https://www.cnbc.com/2026/06/02/trump-executive-order-ai.html">CNBC</a> · <a href="https://arstechnica.com/tech-policy/2026/06/trumps-ai-executive-order-may-not-prevent-dangerous-deployments/">Ars Technica</a></p>
+</div>
+</div>
+
+<h2 id="meta">🧭 Meta Trends (Xu Hướng Lớn)</h2>
+<div class="card">
+<ol>
+<li><strong>Cạnh tranh dịch chuyển dứt khoát sang inference economics.</strong> Opus 4.8 (fast mode rẻ 1/3), Gemini 3.5 Flash ($1.50/$9, Flash vượt flagship cũ), MiniMax M3 (MSA giảm compute ~1/20), NVIDIA Vera Rubin (~10x token cost), Intel Crescent Island + disaggregated inference — cùng một narrative: <strong>cost-per-token là vũ khí cạnh tranh ngang ngửa năng lực</strong>. Tăng tốc xu hướng đã chớm ở báo cáo 19/05.</li>
+<li><strong>Open-weight frontier do Trung Quốc dẫn dắt.</strong> MiniMax M3, Kimi K2.6 đứng trên Nemotron 3 Ultra (open model Mỹ tốt nhất nhưng vẫn sau, theo Artificial Analysis). Khoảng cách open vs closed co lại nhanh ở coding/agentic.</li>
+<li><strong>Agentic coding vào production thật.</strong> Cognition (Devin viết 89% code, doanh thu ~13x), Codex GA trên AWS, Opus 4.8 dynamic workflows. Agent đang tạo doanh thu và thay đổi cấu trúc đội kỹ thuật (liên kết IT Career).</li>
+<li><strong>Vốn AI vẫn nóng nhưng phân hóa.</strong> Anthropic $65B/$965B, Cognition $1B/$26B, Ramp $750M/$44B. Đồng thời startup tiền-ChatGPT bị "disrupted or dead" — vốn dồn về tài sản AI, rút khỏi mô hình cũ.</li>
+<li><strong>Quản trị AI bước vào giai đoạn thể chế hóa.</strong> EO Trump (30 ngày, benchmark mật NSA, tự nguyện) vs OpenAI (muốn bắt buộc nhưng do cơ quan dân sự). Tranh luận chuyển từ "có quản lý hay không" sang <strong>ai quản lý và bằng cơ chế nào</strong>.</li>
+<li><strong>Vertical frontier model nổi lên.</strong> GPT-Rosalind (life sciences/biodefense) cho thấy hướng model chuyên ngành gắn kiểm soát truy cập — đặt vấn đề lưỡng dụng (dual-use) lên trung tâm.</li>
+</ol>
+</div>
+
+<h2 id="watch">🔭 Strategic Watchlist (Cần Theo Dõi Tiếp)</h2>
+<div class="card">
+<ul>
+<li><strong>Anthropic IPO:</strong> thời điểm + định giá công khai sau round $965B — phép thử định giá AI lab trên thị trường đại chúng.</li>
+<li><strong>Benchmark độc lập cho MiniMax M3 &amp; Nemotron 3 Ultra:</strong> xác nhận/bác bỏ con số SWE-Bench Pro do nhà phát hành công bố (NIST/Artificial Analysis).</li>
+<li><strong>Gemini 3.5 Pro:</strong> ra mắt dự kiến tháng tới — đối chiếu trực tiếp Opus 4.8 và GPT-5.5.</li>
+<li><strong>Thực thi EO Trump:</strong> NSA lập được benchmark mật khả thi khi đội kỹ thuật bị cắt? Lab nào tham gia "tự nguyện"?</li>
+<li><strong>Inference chip:</strong> Intel Crescent Island (cuối 2026), tiến độ Vera Rubin mùa thu, traction Taalas/d-Matrix/MatX trên cost-per-token.</li>
+<li><strong>Privacy ChatGPT Dreaming:</strong> phản ứng quản lý/người dùng khi "narrative dossier" tự động mở rộng free tier toàn cầu.</li>
+<li><strong>Agentic coding:</strong> Devin 89% code — chỉ báo toàn ngành? Theo dõi chất lượng/đảm bảo khi phụ thuộc agent tăng.</li>
+<li><strong>Nhịp ra model:</strong> Anthropic 41 ngày (Opus 4.7→4.8) — chu kỳ phát hành nén có thành chuẩn mới?</li>
+</ul>
+</div>
+
+<h2 id="delta">📊 Delta So Với Báo Cáo 19/05</h2>
+<table>
+<tr><th>Chủ đề</th><th>Trạng thái 19/05</th><th>Thay đổi 05/06</th></tr>
+<tr><td>Anthropic funding</td><td>"Đang chốt $30B tại $900B" (tin đồn FT)</td><td>✅ Chốt <strong>$65B tại $965B</strong>, vượt OpenAI, gần $1T</td></tr>
+<tr><td>Google I/O / Gemini</td><td>"Khai mạc, model chưa confirm"</td><td>✅ <strong>Gemini 3.5 Flash</strong> GA — Flash vượt flagship 3.1 Pro</td></tr>
+<tr><td>Open-weight race</td><td>Gemma 4, DeepSeek V4, Kimi K2.6</td><td>✅ MỚI: <strong>MiniMax M3</strong> (MSA, 1M context) + <strong>Nemotron 3 Ultra</strong> (550B)</td></tr>
+<tr><td>NVIDIA</td><td>Earnings 20/05, kỳ vọng $79B</td><td>✅ <strong>GTC Taipei</strong>: Vera Rubin full production, RTX Spark (AI PC)</td></tr>
+<tr><td>AI regulation</td><td>(chưa nổi bật)</td><td>✅ MỚI: <strong>EO Trump 02/06</strong> + OpenAI policy paper phản hồi</td></tr>
+<tr><td>Recursive/self-improving AI</td><td>Recursive Superintelligence $650M</td><td>✅ Hiện thực hóa sản phẩm: <strong>Devin viết 89% code Cognition</strong></td></tr>
+<tr><td>Reasoning/coding model</td><td>GPT-5.5, Claude Opus 4.7</td><td>✅ <strong>Claude Opus 4.8</strong> (SWE-Bench Pro 69.2%, fast mode rẻ 1/3)</td></tr>
+<tr><td>Inference optimization</td><td>(ngầm)</td><td>✅ Thành trend rõ: Intel Crescent Island, disaggregated inference</td></tr>
+<tr><td>Enterprise distribution</td><td>—</td><td>✅ MỚI: OpenAI models + Codex <strong>GA trên AWS Bedrock</strong></td></tr>
+<tr><td>AI life-sciences</td><td>—</td><td>✅ MỚI: <strong>GPT-Rosalind + Rosalind Biodefense</strong></td></tr>
+<tr><td>Memory/consumer</td><td>OpenAI thêm bank-account connections</td><td>✅ MỚI: <strong>ChatGPT "Dreaming"</strong> memory, mở free tier</td></tr>
+<tr><td>Musk vs OpenAI</td><td>Musk THUA (18/05)</td><td>➡️ Không có diễn biến mới trong cửa sổ (chờ kháng cáo)</td></tr>
+</table>
+
+<h2 id="links">🔗 Liên Kết Liên Ngành</h2>
+<div class="card">
+<ul>
+<li><strong>→ World Conflicts:</strong> EO Trump đặt benchmark cyber mật ở NSA + GPT-Rosalind biodefense → AI gắn an ninh quốc gia, cyber arms race, kiểm soát xuất khẩu.</li>
+<li><strong>→ VN News:</strong> Vốn AI khổng lồ (Anthropic $965B) + NVIDIA toàn-stack (Vera Rubin, RTX Spark) → nhu cầu bán dẫn/data center, FDI &amp; AI talent VN. OpenAI/Codex trên AWS → adoption doanh nghiệp khu vực.</li>
+<li><strong>→ IT Career:</strong> Devin viết 89% code + agentic coding vào production + Opus 4.8/Gemini Flash → củng cố narrative "nén entry-level, dồn về senior/AI-skill" (báo cáo it-career 05/06).</li>
+<li><strong>→ Sci-Tech:</strong> Inference chip war (Intel/Taalas/d-Matrix) + Vera Rubin → điện năng data center; GPT-Rosalind → drug discovery, genomics.</li>
+</ul>
+</div>
+
+<h2 id="khac">📋 Các Tin Khác Đáng Chú Ý</h2>
+<div class="other-news">
+<ul>
+<li><strong>Ramp gọi $750M tại $44B</strong> (04/06) — fintech quản lý chi tiêu, định giá gần gấp 3 trong 1 năm; tăng trưởng một phần nhờ doanh nghiệp tìm cách kiểm soát chi phí AI. <a href="https://techcrunch.com/2026/06/04/ramp-raises-750m-at-44b-valuation-as-investors-hunger-for-fintechs-with-an-ai-story/">(TechCrunch)</a> · <a href="https://www.cnbc.com/2026/06/04/ramp-valuation-funding-ai-spend.html">(CNBC)</a></li>
+<li><strong>CNBC: "Disrupted or dead"</strong> (01/06) — startup gọi vốn lần cuối 2021 mất TB ~68% giá trị; vốn dồn về AI. <a href="https://www.cnbc.com/2026/06/01/ai-startup-valuations-pre-chatgpt.html">(CNBC)</a></li>
+<li><strong>Microsoft Build 2026</strong> — nội bộ Microsoft đẩy developer dựng agentic AI tự động hóa workflow. <a href="https://www.microsoft.com/insidetrack/blog/microsoft-build-2026-empowering-our-developers-to-adopt-agentic-ai-at-microsoft/">(Microsoft)</a></li>
+<li><strong>UK AISI</strong> — đánh giá model có "phá hoại nghiên cứu an toàn" không: không thấy sabotage tự phát; refusal giảm rõ ở Mythos Preview/Opus 4.7. <a href="https://www.aisi.gov.uk/blog/evaluating-whether-ai-models-would-sabotage-ai-safety-research">(AISI)</a></li>
+<li><strong>Enterprise agentic adoption</strong> — Salesforce: TB 12 agent/tổ chức, dự kiến +67% trong 2 năm (báo cáo vendor, đọc theo hướng xu hướng). <a href="https://www.salesforce.com/news/stories/connectivity-report-announcement-2026/">(Salesforce)</a></li>
+</ul>
+</div>
+
+<h2 id="failsrc">⚠️ Nguồn Không Truy Cập Được</h2>
+<div class="card">
+<p>Không có nguồn Tier 1–2 nào bị fail trong lần quét này. Toàn bộ claim chính được xác minh chéo qua ≥2 nguồn độc lập (ví dụ: EO Trump xác nhận bởi CNBC + IBM + CFR + Ars Technica + Fortune; Anthropic $65B bởi CNBC + TechCrunch + Upstox).</p>
+<p><strong>Lưu ý chất lượng dữ liệu:</strong> Các benchmark do <strong>nhà phát hành tự công bố</strong> (MiniMax M3 59% SWE-Bench Pro; Claude Opus 4.8 69.2%; Gemini 3.5 Flash; NVIDIA Vera Rubin ~10x; số liệu inference chip 48x/90%) được đánh dấu <strong>MEDIUM confidence</strong> và chỉ dùng để chỉ hướng — chưa thay cho đánh giá độc lập (NIST/Artificial Analysis). Con số "Dreaming V3 giảm compute ~80%" từ nguồn thứ cấp — <strong>chưa kiểm chứng</strong>, không trích như fact.</p>
+</div>
+
+<p style="margin-top:2rem;font-size:.85rem;color:var(--muted)">Báo cáo tiếp theo: theo dõi Anthropic IPO timeline, Gemini 3.5 Pro, benchmark độc lập cho MiniMax M3/Nemotron 3 Ultra, thực thi EO Trump (NSA benchmark), và traction inference chip (Intel Crescent Island).</p>
+
+</div>
+</body>
+</html>

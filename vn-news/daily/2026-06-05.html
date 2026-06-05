@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tin Việt Nam — 05/06/2026</title>
+<style>
+:root{--bg:#0a0b10;--surface:#12141d;--surface2:#1a1d2a;--border:#2a2f42;--text:#e4e8f0;--muted:#8892a8;--blue:#5b9cf6;--purple:#a78bfa;--red:#f87171;--orange:#fb923c;--green:#4ade80;--yellow:#fbbf24;--gradient:linear-gradient(135deg,#5b9cf6,#a78bfa)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px}
+.container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.3rem}
+h2{font-size:1.4rem;font-weight:700;color:var(--blue);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+h3{font-size:1.15rem;font-weight:600;color:var(--text);margin:2rem 0 .8rem}
+h4{font-size:.95rem;font-weight:600;color:var(--purple);margin:1.2rem 0 .5rem}
+p{margin:.6rem 0}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+ul,ol{margin:.5rem 0 .5rem 1.5rem}li{margin:.3rem 0}
+.meta{font-size:.82rem;color:var(--muted);margin-bottom:2rem}
+.toc{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.toc h3{margin:0 0 .8rem;font-size:1rem;color:var(--purple)}
+.toc ol{margin:0 0 0 1.2rem}.toc li{margin:.4rem 0;font-size:.88rem}.toc a{color:var(--muted)}.toc a:hover{color:var(--blue)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.2rem 0}
+.badge{display:inline-block;font-size:.7rem;font-weight:600;padding:.2rem .6rem;border-radius:6px;margin-right:.4rem;text-transform:uppercase}
+.badge-red{background:rgba(248,113,113,.15);color:var(--red)}
+.badge-orange{background:rgba(251,146,60,.15);color:var(--orange)}
+.badge-green{background:rgba(74,222,128,.15);color:var(--green)}
+.badge-blue{background:rgba(91,156,246,.15);color:var(--blue)}
+.badge-purple{background:rgba(167,139,250,.15);color:var(--purple)}
+.badge-yellow{background:rgba(251,191,36,.15);color:var(--yellow)}
+.brief{background:linear-gradient(135deg,rgba(91,156,246,.08),rgba(167,139,250,.08));border:1px solid rgba(91,156,246,.2);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.brief ol{margin-left:1.2rem}.brief li{margin:.5rem 0;font-weight:500}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
+th,td{padding:.6rem .8rem;border:1px solid var(--border);text-align:left}
+th{background:var(--surface2);font-weight:600;color:var(--purple)}
+.url-list{font-size:.82rem;margin:.5rem 0}.url-list a{color:var(--muted);word-break:break-all}.url-list a:hover{color:var(--blue)}
+.other-news{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.other-news ul{margin:.5rem 0 0 1.2rem}.other-news li{margin:.4rem 0;font-size:.9rem}
+.topnav{position:sticky;top:0;z-index:100;background:rgba(18,20,29,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);margin:0 -1.5rem 1.5rem;padding:.6rem 1.5rem;display:flex;gap:.5rem;overflow-x:auto;white-space:nowrap}
+.topnav a{flex:0 0 auto;font-size:.76rem;color:var(--muted);padding:.35rem .7rem;border-radius:6px;background:var(--surface);border:1px solid var(--border);text-decoration:none;transition:all .15s}
+.topnav a:hover{color:var(--text);border-color:var(--blue)}
+h2[id],div[id],.brief[id]{scroll-margin-top:64px}
+@media(max-width:768px){.container{padding:1rem}h1{font-size:1.4rem}table{font-size:.78rem}.topnav{margin:0 -1rem 1rem;padding:.5rem 1rem}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<nav class="topnav">
+<a href="#brief">📌 Tóm tắt</a>
+<a href="#econ">📊 Bảng tín hiệu kinh tế</a>
+<a href="#s1">Nhập siêu kỷ lục $13.8 tỷ — lần đầu sau 10 năm</a>
+<a href="#s2">Mỹ đề xuất thuế bổ sung 10–12.5%, VN phản đối</a>
+<a href="#s3">FDI 5 tháng $24.81 tỷ (+34.9%), giải ngân cao nhất 5 năm</a>
+<a href="#s4">VN-Index rơi từ đỉnh 1,933 — 7 phiên giảm</a>
+<a href="#s5">CPI 5 tháng +4.31%, áp sát trần 4.5%</a>
+<a href="#s6">IIP +9.1%, bán lẻ +11%, khách quốc tế kỷ lục</a>
+<a href="#s7">FPT, Viettel gia nhập sovereign AI của NVIDIA</a>
+<a href="#s8">Quốc hội điều chỉnh chương trình lập pháp 2026</a>
+<a href="#s9">Lãi suất overnight vọt 11% rồi rơi về 6.54%</a>
+<a href="#s10">Chính quyền 2 cấp — rút ngắn 30–50% thủ tục</a>
+<a href="#other">📋 Tin khác</a>
+<a href="#crosslink">🔗 Liên kết quốc tế</a>
+</nav>
+
+<h1>🇻🇳 Báo Cáo Tin Việt Nam — 05/06/2026</h1>
+<p class="meta">Quét: 05/06/2026 09:30 ICT | Phạm vi: 29/05–05/06/2026 (7 ngày — giới hạn vì lần quét trước 19/05 cách >7 ngày) | Số tin: 10<br>Nguồn: Reuters, VnExpress, VietnamNet, VOV, VietnamPlus, BizHub VietnamNews, QĐND, Business Times, TechNode, Vietnam.vn, GSO/Bộ Tài chính, USTR, World Bank</p>
+
+<nav class="toc">
+<h3>📑 Mục lục</h3>
+<ol>
+<li><a href="#brief">Tóm tắt nhanh</a></li>
+<li><a href="#econ">Bảng Tín Hiệu Kinh Tế</a></li>
+<li><a href="#s1">Nhập siêu kỷ lục $13.8 tỷ</a></li>
+<li><a href="#s2">Mỹ đề xuất thuế bổ sung 10–12.5%</a></li>
+<li><a href="#s3">FDI 5 tháng $24.81 tỷ (+34.9%)</a></li>
+<li><a href="#s4">VN-Index rơi từ đỉnh 1,933</a></li>
+<li><a href="#s5">CPI 5 tháng +4.31%</a></li>
+<li><a href="#s6">IIP +9.1%, bán lẻ +11%, du lịch kỷ lục</a></li>
+<li><a href="#s7">FPT, Viettel & sovereign AI NVIDIA</a></li>
+<li><a href="#s8">Quốc hội điều chỉnh lập pháp 2026</a></li>
+<li><a href="#s9">Lãi suất overnight 11% → 6.54%</a></li>
+<li><a href="#s10">Chính quyền địa phương 2 cấp</a></li>
+<li><a href="#other">Các tin khác đáng chú ý</a></li>
+<li><a href="#crosslink">Liên kết quốc tế / liên ngành</a></li>
+</ol>
+</nav>
+
+<div class="brief" id="brief">
+<h3>📌 Tóm tắt nhanh</h3>
+<ol>
+<li>🔻 <strong>Nhập siêu kỷ lục $13.8 tỷ trong 5 tháng</strong> — lần đầu sau 10 năm xuất siêu (2016–2025); riêng tháng 5 thâm hụt $5.21 tỷ</li>
+<li>🇺🇸 <strong>Mỹ đề xuất thuế bổ sung 10–12.5%</strong> với 60 đối tác (gồm VN) vì cáo buộc lao động cưỡng bức — VN phản đối</li>
+<li>💰 <strong>FDI 5 tháng: đăng ký $24.81 tỷ (+34.9%)</strong>, giải ngân $9.75 tỷ — cao nhất 5 năm</li>
+<li>📉 <strong>VN-Index rơi từ đỉnh lịch sử 1,933 về ~1,820</strong> — 7 phiên giảm, khối ngoại bán ròng ~5,800 tỷ, hồi phục 04/06</li>
+<li>📈 <strong>CPI 5 tháng +4.31%</strong> — áp sát trần mục tiêu 4.5%; điện, nước, xăng, du lịch đẩy giá</li>
+<li>🏭 <strong>IIP 5 tháng +9.1%</strong> (cao nhất 4 năm), bán lẻ +11%, khách quốc tế kỷ lục 10.6 triệu</li>
+<li>🤖 <strong>FPT, Viettel gia nhập "sovereign AI" của NVIDIA</strong> — Viettel AI tinh chỉnh Nemotron 3</li>
+<li>💵 <strong>Lãi suất overnight liên NH vọt 11% (01/06) rồi rơi 6.54% (02/06)</strong> — thanh khoản căng</li>
+<li>⚖️ <strong>Quốc hội điều chỉnh chương trình lập pháp 2026</strong> — cân nhắc kỳ họp bất thường cho ~40 luật + 3 nghị quyết</li>
+<li>🏛️ <strong>Chính quyền địa phương 2 cấp gần 1 năm</strong> — rút ngắn 30–50% thời gian thủ tục</li>
+</ol>
+</div>
+
+<div class="card" id="econ">
+<h2 style="margin-top:0;border:none">📊 Bảng Tín Hiệu Kinh Tế</h2>
+<table>
+<tr><th>Chỉ số</th><th>Giá trị</th><th>Xu hướng</th><th>Ghi chú</th></tr>
+<tr><td>VN-Index (03/06)</td><td><strong>1,819.01</strong></td><td>🔻🔻</td><td>Phiên giảm thứ 7 liên tiếp (-0.41%)</td></tr>
+<tr><td>VN-Index (04/06)</td><td>1,831.5</td><td>🔺</td><td>+12.5 điểm — chấm dứt chuỗi giảm</td></tr>
+<tr><td>Đỉnh lịch sử (cuối 05)</td><td>1,933.11</td><td>🔺</td><td>Đỉnh mọi thời đại rồi điều chỉnh</td></tr>
+<tr><td>HNX-Index (03/06)</td><td>317.48</td><td>🔺</td><td>+0.9% — ngược chiều HOSE</td></tr>
+<tr><td>Khối ngoại</td><td>Bán ròng mạnh</td><td>🔻</td><td>~5,800 tỷ (04/06); ~12 phiên liên tiếp</td></tr>
+<tr><td>CPI tháng 5</td><td>+0.29% MoM / +5.6% YoY</td><td>🔺</td><td>Điện, nước, xăng, du lịch</td></tr>
+<tr><td>CPI bình quân 5 tháng</td><td><strong>+4.31% YoY</strong></td><td>🔺</td><td>Áp sát trần 4.5%; core +4.04%</td></tr>
+<tr><td>USD/VND NHNN (05/06)</td><td>25,145</td><td>➡️</td><td>+4 đồng; trần 26,402 / sàn 23,888</td></tr>
+<tr><td>FDI đăng ký 5 tháng</td><td><strong>$24.81 tỷ</strong></td><td>🔺🔺</td><td>+34.9% YoY</td></tr>
+<tr><td>FDI giải ngân 5 tháng</td><td>$9.75 tỷ</td><td>🔺</td><td>+9.6% — cao nhất 5 năm</td></tr>
+<tr><td>Xuất khẩu 5 tháng</td><td>$215.66 tỷ</td><td>🔺</td><td>+19.5% YoY</td></tr>
+<tr><td>Cán cân thương mại 5 tháng</td><td><strong>Nhập siêu $13.8 tỷ</strong></td><td>🔻🔻</td><td>Lần đầu sau 10 năm; T5: -$5.21 tỷ (kỷ lục)</td></tr>
+<tr><td>Tổng XNK 5 tháng</td><td>$445.12 tỷ</td><td>🔺</td><td>+25% YoY</td></tr>
+<tr><td>IIP tháng 5 / 5 tháng</td><td>+8.8% / +9.1%</td><td>🔺</td><td>5 tháng cao nhất 4 năm</td></tr>
+<tr><td>Khách quốc tế 5 tháng</td><td>10.6 triệu</td><td>🔺</td><td>+14.9% — kỷ lục</td></tr>
+<tr><td>Lãi suất overnight liên NH</td><td>11% (01/06) → 6.54% (02/06)</td><td>🔄</td><td>Thanh khoản hệ thống căng</td></tr>
+<tr><td>Xăng RON95-III (04/06)</td><td>24,150 VND/lít</td><td>➡️</td><td>Petrolimex; E5RON92 23,250; Diesel 27,650</td></tr>
+<tr><td>Dầu Brent / WTI</td><td>~$94.65 / ~$92.61</td><td>🔻</td><td>Hạ nhiệt sau căng thẳng Iran T5</td></tr>
+<tr><td>GDP 2026 (dự báo)</td><td>6.8% (WB) – 10% (Dragon Capital)</td><td>↔️</td><td>Mục tiêu CP: 2 con số; SSI 8.8%</td></tr>
+</table>
+</div>
+
+<h2 id="s1">1. 🔻 Nhập Siêu Kỷ Lục $13.8 Tỷ — Lần Đầu Việt Nam Nhập Siêu Sau 10 Năm</h2>
+<div class="card">
+<span class="badge badge-red">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<p>Cục Thống kê Quốc gia (NSO, Bộ Tài chính) công bố số liệu 5 tháng đầu 2026 sáng 03/06 — một bước ngoặt cấu trúc (structural shift — thay đổi mang tính nền tảng).</p>
+<table>
+<tr><th>Chỉ tiêu (5 tháng)</th><th>Giá trị</th><th>So cùng kỳ</th></tr>
+<tr><td>Tổng kim ngạch XNK</td><td>$445.12 tỷ</td><td>+25%</td></tr>
+<tr><td>Xuất khẩu</td><td>$215.66 tỷ</td><td>+19.5%</td></tr>
+<tr><td>Nhập khẩu</td><td>~$229.5 tỷ</td><td>+30.8%</td></tr>
+<tr><td>Cán cân thương mại</td><td><strong>Nhập siêu $13.8 tỷ</strong></td><td>(cùng kỳ 2025: xuất siêu $5.1 tỷ)</td></tr>
+</table>
+<p>Riêng tháng 5: kim ngạch $99.07 tỷ (+25.8% YoY), xuất khẩu $46.93 tỷ (+18%), nhập khẩu $52.14 tỷ (+33.8%) → <strong>nhập siêu $5.21 tỷ — mức thâm hụt tháng cao kỷ lục</strong>, vượt dự báo $3.98 tỷ của Bloomberg và mức $3.28 tỷ của tháng 4. Đây là <strong>lần đầu nhập siêu sau 10 năm xuất siêu liên tiếp (2016–2025)</strong>.</p>
+<h4>Diễn giải (Fact vs Analysis)</h4>
+<p><strong>Fact:</strong> Nhập khẩu tăng nhanh hơn xuất khẩu (30.8% vs 19.5%). <strong>Analysis:</strong> Cơ chế có thể đến từ (1) nhập máy móc/nguyên liệu phục vụ làn sóng FDI giải ngân kỷ lục — nhập siêu "tốt" cho năng lực sản xuất; và (2) "front-loading" — gom hàng trước nguy cơ thuế quan Mỹ. IIP +9.1% và FDI giải ngân $9.75 tỷ ủng hộ giả thuyết nhập tư liệu sản xuất, nhưng chưa đủ evidence để khẳng định nguyên nhân chủ đạo.</p>
+<h4>Tác động</h4>
+<p>Nhập siêu kéo dài → áp lực cầu USD, rủi ro tỷ giá nửa cuối năm. XK vẫn tăng mạnh (+19.5%) nên chưa phải dấu hiệu mất năng lực cạnh tranh. Bộ Công Thương cần theo dõi cơ cấu nhập khẩu và cân đối dự trữ ngoại hối.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.reuters.com/world/asia-pacific/vietnam-inflation-accelerates-may-trade-deficit-widens-2026-06-03/">Reuters</a> · <a href="https://vietnamnet.vn/en/vietnam-records-first-trade-deficit-in-10-years-as-imports-surge-2522600.html">VietnamNet</a> · <a href="https://en.vietnamplus.vn/trade-turnover-exceeds-445-billion-usd-in-five-months-post343922.vnp">VietnamPlus</a> · <a href="https://www.businesstimes.com.sg/international/asean/vietnam-posts-largest-trade-deficit-record-imports-surge">Business Times</a></p>
+</div>
+
+<h2 id="s2">2. 🇺🇸 Mỹ Đề Xuất Thuế Bổ Sung 10–12.5% Với 60 Đối Tác (Gồm VN) — Việt Nam Phản Đối</h2>
+<div class="card">
+<span class="badge badge-red">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>USTR đề xuất thuế bổ sung 10–12.5%</strong> lên ~60 quốc gia/vùng (gồm VN), với lý do chưa kiểm soát hiệu quả hàng hóa làm từ lao động cưỡng bức (forced labour)</li>
+<li>Mức thuế tùy đánh giá của Washington về biện pháp chống lao động cưỡng bức của từng nước</li>
+<li>Đây là nỗ lực Mỹ tái lập "tường thuế quan" sau khi Tòa Tối cao bác thuế IEEPA đầu 2026 (chuyển sang công cụ Section 301/232)</li>
+<li><strong>Phản ứng VN:</strong> khẳng định kết luận của USTR <strong>không phản ánh đúng nỗ lực thực tế</strong>, sẵn sàng trao đổi trên tinh thần Đối tác Chiến lược Toàn diện Việt–Mỹ</li>
+</ul>
+<h4>Phân tích chiến lược</h4>
+<p>Mỹ dùng vấn đề lao động cưỡng bức làm cơ sở pháp lý thay thế sau khi IEEPA bị vô hiệu — tái lập đòn bẩy thuế quan với rủi ro pháp lý thấp hơn. Mức 10–12.5% thấp hơn các mức "đối ứng" từng bị đe dọa năm 2025, nhưng vẫn tạo bất định cho dệt may, da giày, gỗ, điện tử — các ngành thâm dụng lao động phụ thuộc thị trường Mỹ. Bất định này cũng là động lực khiến DN nhập/sản xuất sớm (liên quan nhập siêu, Tin #1).</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://vietnamnet.vn/en/vietnam-responds-to-proposed-additional-us-tariffs-2522846.html">VietnamNet</a> · <a href="https://www.reuters.com/world/asia-pacific/vietnam-says-ustr-forced-labour-conclusion-does-not-reflect-its-efforts-2026-06-04/">Reuters</a> · <a href="https://www.cbsnews.com/news/trump-administration-tariffs-60-trading-partners-forced-labor-probes/">CBS News</a></p>
+</div>
+
+<h2 id="s3">3. 💰 FDI 5 Tháng Bùng Nổ: Đăng Ký $24.81 Tỷ (+34.9%), Giải Ngân Cao Nhất 5 Năm</h2>
+<div class="card">
+<span class="badge badge-red">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>FDI đăng ký:</strong> $24.81 tỷ — +34.9% YoY (đến 31/05)</li>
+<li><strong>FDI giải ngân:</strong> $9.75 tỷ — +9.6%, <strong>cao nhất 5 năm cho cùng kỳ</strong> (vài nguồn quốc tế: cao nhất ≥18 năm)</li>
+<li>Công nghiệp chế biến, chế tạo tiếp tục hút vốn ngoại lớn nhất</li>
+</ul>
+<h4>Phân tích chiến lược</h4>
+<p>Đặt cạnh nhập siêu (Tin #1), bức tranh nhất quán: VN đang ở pha mở rộng năng lực sản xuất — nhập máy móc/nguyên liệu phục vụ dự án FDI mới triển khai ("nhập siêu cho tăng trưởng"). Dòng vốn mạnh bất chấp đe dọa thuế quan Mỹ (Tin #2) cho thấy động lực China+1 và lợi thế chi phí/hạ tầng vẫn lấn át rủi ro chính sách thương mại trong ngắn hạn. FDI vào cũng là nguồn cung ngoại tệ bù đắp một phần áp lực nhập siêu.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://en.vietnamplus.vn/vietnam-attracts-nearly-35-more-fdi-in-first-five-months-post343917.vnp">VietnamPlus</a> · <a href="https://vov.vn/en/economy/five-month-fdi-attraction-hits-nearly-us25-billion-up-35-post1297433.vov">VOV</a> · <a href="https://bizhub.vietnamnews.vn/foreign-investment-inflow-in-jan%E2%80%93may-up-349-per-cent-year-on-year-post404869.html">BizHub VietnamNews</a> · <a href="https://en.qdnd.vn/economy/special-reports/vietnam-sustains-growth-momentum-in-first-five-months-bolstering-double-digit-target-591634">QĐND</a></p>
+</div>
+
+<h2 id="s4">4. 📉 VN-Index Rơi Từ Đỉnh Lịch Sử 1,933 — Chuỗi 7 Phiên Giảm, Khối Ngoại Bán Ròng</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li>Sau khi lập <strong>đỉnh lịch sử 1,933.11 điểm</strong> (cuối 05), VN-Index bước vào nhịp điều chỉnh</li>
+<li><strong>29/05:</strong> lùi về 1,850–1,860; khối ngoại bán ròng 12 phiên liên tiếp</li>
+<li><strong>01/06:</strong> -18.95 điểm (-1.02%) về 1,844.54 — thanh khoản cực thấp</li>
+<li><strong>03/06:</strong> -7.46 điểm về <strong>1,819.01 — phiên giảm thứ 7 liên tiếp</strong>; HNX ngược chiều +0.9% lên 317.48</li>
+<li><strong>04/06:</strong> +12.5 điểm lên <strong>1,831.5 — chấm dứt chuỗi 7 phiên giảm</strong>; nhưng khối ngoại vẫn bán ròng ~5,800 tỷ, dẫn dắt bởi ngân hàng (STB +6.51%, OCB, VIB, BID...)</li>
+</ul>
+<h4>Phân tích (Signal vs Noise)</h4>
+<p>Biến động đỉnh là short-term noise điển hình (chốt lời + thanh khoản thấp). Tín hiệu cấu trúc cần theo dõi là <strong>lực bán ròng dai dẳng của khối ngoại</strong> — dòng vốn ngoại chưa quay lại dù VN tiến gần nâng hạng (FTSE/MSCI). Nhịp hồi 04/06 do ngân hàng dẫn dắt trùng thời điểm lãi suất liên ngân hàng hạ nhiệt (Tin #9) — có thể liên quan, nhưng chưa đủ evidence khẳng định nhân quả.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.vietnam.vn/en/vn-index-thang-6-cho-dong-tien-tro-lai-sau-nhip-rung-lac-quanh-dinh-lich-su">Vietnam.vn (Báo Đầu Tư)</a> · <a href="https://www.vietnam.vn/en/infographic-vn-index-tiep-tuc-giam-phien-thu-7-lien-tiep-voi-muc-giam-7-46-diem-0-41">Vietnam.vn (03/06)</a> · <a href="https://www.vietnam.vn/en/chung-khoan-bat-tang-sau-7-phien-giam-lien-tiep">Vietnam.vn/Báo Tin Tức (04/06)</a></p>
+</div>
+
+<h2 id="s5">5. 📈 CPI Tháng 5 +0.29%, Lạm Phát 5 Tháng +4.31% — Áp Sát Trần Mục Tiêu</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>CPI tháng 5:</strong> +0.29% MoM; +5.6% YoY; +3.61% so tháng 12/2025</li>
+<li><strong>CPI bình quân 5 tháng:</strong> <strong>+4.31% YoY</strong> — áp sát trần mục tiêu ~4.5%</li>
+<li><strong>Lạm phát cơ bản:</strong> +4.04%</li>
+<li><strong>Động lực:</strong> giá điện, nước, xăng, vật liệu xây dựng, thuê nhà, dịch vụ du lịch (mùa nắng nóng)</li>
+</ul>
+<h4>Phân tích chiến lược</h4>
+<p>Lạm phát đã vượt 4% và áp sát trần — dư địa điều hành thu hẹp. Áp lực từ nhóm hành chính/cơ bản (điện, nước) nên khó hạ nhanh dù dầu thế giới đã giảm (Brent ~$94). Bài toán: vừa muốn hạ lãi suất hỗ trợ tăng trưởng 2 con số (Tin #6), vừa phải neo lạm phát dưới 4.5% — hai mục tiêu có phần xung đột.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://bizhub.vietnamnews.vn/pm-stresses-institutional-reform-as-key-to-double-digit-growth-post404897.html">BizHub VietnamNews</a> · <a href="https://english.vov.vn/en/rising-vietnam/economy-shows-resilience-as-vietnam-pursues-double-digit-growth-target-post1298004.vov">VOV</a> · <a href="https://www.vietnam.vn/en/chi-so-gia-tieu-dung-thang-5-tang-0-29">Vietnam.vn (GSO/PLVN)</a></p>
+</div>
+
+<h2 id="s6">6. 🏭 Tăng Trưởng Nội Tại Mạnh: IIP 5 Tháng +9.1%, Bán Lẻ +11%, Khách Quốc Tế Kỷ Lục</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>IIP:</strong> tháng 5 +8.8% YoY; 5 tháng +9.1% — <strong>cao nhất 4 năm (từ 2021)</strong>; chế biến chế tạo +9.5%, đóng góp 7.4 điểm %</li>
+<li><strong>Bán lẻ HH & DV tiêu dùng:</strong> +~11%</li>
+<li><strong>Khách quốc tế:</strong> 5 tháng <strong>10.6 triệu lượt (+14.9%)</strong> — kỷ lục; riêng T5 ~1.78 triệu (+16.5%)</li>
+</ul>
+<h4>Phân tích chiến lược</h4>
+<p>Bộ ba sản xuất – tiêu dùng – du lịch cùng tăng mạnh tạo nền cho mục tiêu tăng trưởng 2 con số (~10%). <strong>Reality check:</strong> dự báo bên ngoài thận trọng hơn — World Bank 6.8%, SSI 8.8%, Dragon Capital 10%. Khoảng cách giữa mục tiêu (10%) và dự báo độc lập (6.8–8.8%) cho thấy đây là mục tiêu tham vọng, phụ thuộc giải ngân đầu tư công và kiểm soát rủi ro thuế quan/lạm phát.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://en.qdnd.vn/economy/special-reports/vietnam-sustains-growth-momentum-in-first-five-months-bolstering-double-digit-target-591634">QĐND</a> · <a href="https://vietnamnet.vn/en/vn-sustains-growth-momentum-in-first-five-months-bolstering-double-digit-target-2522835.html">VietnamNet</a> · <a href="https://www.eurasiareview.com/02062026-vietnams-ambition-for-double-digit-growth-rationale-and-challenges-analysis/">Eurasia Review</a></p>
+</div>
+
+<h2 id="s7">7. 🤖 FPT, Viettel Gia Nhập "Sovereign AI" Của NVIDIA — Viettel AI Tinh Chỉnh Nemotron 3</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 7/10</span>
+<span class="badge badge-orange">PARTIALLY VERIFIED</span>
+<span class="badge badge-purple">Confidence MEDIUM</span>
+</div>
+<h4>Diễn biến</h4>
+<p>NVIDIA công bố đối tác trong chiến lược <strong>sovereign AI</strong> (AI chủ quyền — hạ tầng AI do quốc gia kiểm soát) khu vực, có hai ông lớn công nghệ VN:</p>
+<ul>
+<li><strong>Viettel AI</strong> đang tinh chỉnh (fine-tune) mô hình <strong>Nemotron 3 Super</strong> cho ứng dụng pháp lý quy mô dân số (population-scale) tại VN — có thể giúp Viettel thành nhà cung cấp dịch vụ AI + viễn thông</li>
+<li><strong>FPT</strong> mở rộng vai trò trong hệ sinh thái AI/bán dẫn (nối tiếp AI factory với NVIDIA và liên minh G42–FPT–Viet Thai $1 tỷ đầu 2026)</li>
+</ul>
+<h4>Phân tích chiến lược</h4>
+<p>VN dịch chuyển từ "công xưởng lắp ráp" sang xây dựng năng lực AI nội địa có chủ quyền dữ liệu. Dùng mô hình nền NVIDIA (Nemotron) thay vì tự huấn luyện là chiến lược nhanh nhưng tạo phụ thuộc chip/mô hình ngoại. <strong>Caveat:</strong> nguồn chính là TechNode (Tier 3 ngành); NVIDIA chưa cung cấp chi tiết — cần báo VN (GenK/ICTNews/VietTimes) hoặc thông cáo chính thức xác nhận. Giữ Confidence MEDIUM.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://technode.global/2026/06/03/vietnams-tech-giant-fpt-viettel-join-nvidias-sovereign-ai-push/">TechNode Global</a></p>
+</div>
+
+<h2 id="s8">8. ⚖️ Quốc Hội Điều Chỉnh Chương Trình Lập Pháp 2026 — Cân Nhắc Kỳ Họp Bất Thường</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li>Chủ tịch QH Trần Thanh Mẫn ký ban hành <strong>Nghị quyết 02/2026/UBTVQH16</strong> điều chỉnh chương trình lập pháp 2026, <strong>bổ sung 4 luật/nghị quyết</strong></li>
+<li>Kỳ họp thứ 2 dự kiến xem xét/thông qua <strong>43 dự án (40 luật + 3 nghị quyết)</strong>; ~85 văn bản cần hoàn thành trong 2026</li>
+<li>Các cơ quan <strong>kiến nghị tổ chức kỳ họp bất thường</strong> (dự kiến cuối 7 – đầu 8, ~20–25 ngày) để kịp thông qua luật cấp bách trước 01/3/2027</li>
+</ul>
+<h4>Phân tích chiến lược</h4>
+<p>Chủ tịch QH nêu định hướng chuyển tư duy lập pháp sang <strong>"kiến tạo phát triển, kiểm soát rủi ro, thúc đẩy đổi mới sáng tạo"</strong> — tín hiệu cải cách thể chế gắn với mục tiêu tăng trưởng. Ưu tiên: tháo gỡ chồng chéo luật đất đai/đầu tư/xây dựng/quy hoạch, cắt giảm thủ tục & điều kiện kinh doanh. <strong>Execution risk:</strong> khối lượng quá lớn trong thời gian ngắn → rủi ro chất lượng lập pháp và năng lực thực thi địa phương.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.vietnam.vn/en/chu-tich-quoc-hoi-tran-thanh-man-ky-ban-hanh-nghi-quyet-dieu-chinh-chuong-trinh-lap-phap-nam-2026">Vietnam.vn (VPQH)</a> · <a href="https://www.vietnam.vn/en/bo-sung-4-luat-nghi-quyet-vao-chuong-trinh-lap-phap-nam-2026">Vietnam.vn (NQ 02)</a> · <a href="https://www.vietnam.vn/en/kien-nghi-to-chuc-ky-hop-quoc-hoi-vao-thang-7-8-de-thong-qua-cac-luat-cap-bach">Vietnam.vn/TPO</a></p>
+</div>
+
+<h2 id="s9">9. 💵 Lãi Suất Overnight Liên Ngân Hàng Vọt 11% (01/06) Rồi Rơi Về 6.54% (02/06)</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>01/06:</strong> lãi suất qua đêm liên ngân hàng vọt lên <strong>11%/năm</strong> (+~4 điểm % so cuối tuần trước)</li>
+<li><strong>02/06:</strong> đảo chiều giảm mạnh — overnight về <strong>6.54%</strong>, 1 tuần 7.11%, 2 tuần 7.18%, 1 tháng 7.48%</li>
+<li>Huy động: Big4 niêm yết cao nhất ~7.4%/năm (02/06); TPBank nâng một số kỳ hạn lên kịch trần 4.75%/năm (04/06)</li>
+</ul>
+<h4>Phân tích chiến lược</h4>
+<p>Cú vọt 11% là tín hiệu thanh khoản hệ thống căng đầu tháng (mùa vụ + cầu vốn cao); hạ nhiệt nhanh cho thấy điều tiết thị trường mở kịp thời. Liên kết chéo: lãi suất dịu lại trùng nhịp hồi TTCK 04/06 (Tin #4) do nhóm ngân hàng dẫn dắt — có thể liên quan, cần thận trọng suy luận nhân quả. Mâu thuẫn: lạm phát áp sát trần (Tin #5) + thanh khoản căng → khó giảm sâu lãi suất.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://bizhub.vietnamnews.vn/overnight-rate-hits-11-per-cent-in-early-june-post404888.html">BizHub VietnamNews</a> · <a href="https://www.vietnam.vn/en/lai-suat-lien-ngan-hang-giam-manh-o-tat-ca-cac-ky-han">Vietnam.vn (NHNN)</a> · <a href="https://www.vietnam.vn/en/lai-suat-tien-dong-lien-ngan-hang-quay-dau-giam">Vietnam.vn</a></p>
+</div>
+
+<h2 id="s10">10. 🏛️ Mô Hình Chính Quyền Địa Phương 2 Cấp Sau Gần 1 Năm — Rút Ngắn 30–50% Thủ Tục</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-purple">Confidence MEDIUM-HIGH</span>
+</div>
+<h4>Diễn biến</h4>
+<ul>
+<li>Gần 1 năm vận hành mô hình <strong>chính quyền địa phương 2 cấp</strong> (bỏ cấp huyện, từ 01/7/2025)</li>
+<li>Tại Huế: xã/phường có 3 phòng chuyên môn + 1 Trung tâm Phục vụ hành chính công; số hóa giúp <strong>rút ngắn 30–50% thời gian xử lý</strong>; hài lòng người dân 90–100%</li>
+<li>Hà Nội cơ bản hoàn tất sắp xếp bộ máy, vận hành ổn định</li>
+<li><strong>Đánh giá độc lập (UNDP):</strong> đa số hoan nghênh, song có <strong>gián đoạn tạm thời</strong> khi tiếp cận dịch vụ giai đoạn chuyển tiếp</li>
+</ul>
+<h4>Phân tích chiến lược</h4>
+<p>Đây là cải cách cấu trúc lớn của bộ máy nhà nước — tinh gọn, tăng phân cấp cho cấp xã, đẩy số hóa hành chính. <strong>Reality check:</strong> các con số tích cực (30–50%, 90–100%) phần lớn từ báo cáo địa phương/nhà nước; UNDP ghi nhận gián đoạn thực tế → bức tranh chưa hoàn toàn đồng nhất. Giữ Confidence MEDIUM-HIGH.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.vietnam.vn/en/sau-mot-nam-van-hanh-mo-hinh-chinh-quyen-dia-phuong-hai-cap">Vietnam.vn (Hà Nội)</a> · <a href="https://www.vietnam.vn/en/loi-tam-huyet-cua-5-bi-thu-tinh-thanh-ve-chinh-quyen-dia-phuong-2-cap">Vietnam.vn (Huế)</a> · <a href="https://www.undp.org/vietnam/press-releases/stakeholder-experiences-inform-two-tier-government-reform">UNDP Việt Nam</a></p>
+</div>
+
+<h2 id="other">📋 Các Tin Khác Đáng Chú Ý</h2>
+<div class="other-news">
+<ul>
+<li><strong>Giá xăng dầu (cập nhật 04/06, Petrolimex):</strong> RON95-III 24,150 VND/lít; E5RON92 23,250; Diesel 0.05S-II 27,650; dầu hỏa 25,800. Brent ~$94.65, WTI ~$92.61 — hạ nhiệt sau căng thẳng Iran T5. <a href="https://index.vn/fuel-price-today">index.vn</a></li>
+<li><strong>Giá gas tháng 6 tăng:</strong> CP tháng 6 ở mức $790/tấn (+$15/tấn) → gas bán lẻ trong nước đồng loạt tăng. <a href="https://www.vietnam.vn/en/thoi-su-trua-htv-ngay-1-6-2026-gia-gas-thang-6-2026-dieu-chinh-tang">Vietnam.vn</a></li>
+<li><strong>Áp thấp nhiệt đới đầu tiên 2026 trên Biển Đông</strong> (đầu T6) — gió cấp 6, giật cấp 8, hướng Đông Bắc; ảnh hưởng phía Đông Bắc Biển Đông. <a href="https://www.vietnam.vn/en/bien-dong-xuat-hien-ap-thap-nhiet-doi-dau-tien-cua-nam-2026">Vietnam.vn</a></li>
+<li><strong>Tỷ giá trung tâm 05/06:</strong> 25,145 VND/USD (+4 đồng); USD thế giới giảm, trong nước nhích nhẹ. <a href="https://www.vietnam.vn/en/ty-gia-usd-hom-nay-5-6-2026-usd-the-gioi-giam-trong-nuoc-tang-4-dong">Vietnam.vn</a></li>
+<li><strong>BĐS:</strong> báo cáo khu vực nhận định thị trường nhà ở VN vào giai đoạn "cạnh tranh sinh tồn" khi giá có dấu hiệu ổn định (<em>chưa xác minh chéo từ nguồn VN</em>).</li>
+</ul>
+</div>
+
+<h2 id="crosslink">🔗 Liên Kết Quốc Tế / Liên Ngành</h2>
+<div class="card">
+<h4>🇺🇸 Thương mại Mỹ → VN</h4>
+<table>
+<tr><th>Yếu tố</th><th>Tác động VN</th></tr>
+<tr><td>USTR đề xuất thuế bổ sung 10–12.5% (lao động cưỡng bức)</td><td>Rủi ro cho dệt may, da giày, gỗ, điện tử XK sang Mỹ</td></tr>
+<tr><td>Tòa Tối cao Mỹ bác thuế IEEPA → chuyển Section 301/232</td><td>Bất định chính sách kéo dài; cần đàm phán song phương</td></tr>
+<tr><td>DN "gom hàng" trước thuế (front-loading)</td><td>Có thể góp phần nhập siêu kỷ lục tháng 5 (Tin #1)</td></tr>
+</table>
+<h4>🛢️ Trung Đông / Giá dầu → VN</h4>
+<table>
+<tr><th>Yếu tố</th><th>Tác động VN</th></tr>
+<tr><td>Brent hạ về ~$94 (từ vùng cao T5)</td><td>Giảm áp lực giá xăng & CPI nửa cuối năm</td></tr>
+<tr><td>Căng thẳng Trung Đông còn âm ỉ</td><td>Biến động tỷ giá USD/VND; rủi ro giá năng lượng</td></tr>
+</table>
+<h4>🤖 AI / Bán dẫn → VN (cross-link: AI News)</h4>
+<table>
+<tr><th>Yếu tố</th><th>Tác động VN</th></tr>
+<tr><td>NVIDIA mở rộng "sovereign AI" (Nemotron)</td><td>Viettel/FPT xây năng lực AI nội địa; phụ thuộc chip/mô hình ngoại</td></tr>
+<tr><td>Dòng FDI công nghệ cao + data center</td><td>Củng cố hệ sinh thái bán dẫn/AI, tạo việc làm kỹ năng cao</td></tr>
+</table>
+</div>
+
+<h2>⚠️ Nguồn không truy cập được</h2>
+<div class="card">
+<p>Không có nguồn Tier 1–2 nào bị fail trong kỳ quét. Một mục BĐS (báo khu vực) chưa được xác minh chéo từ nguồn VN nên được đánh dấu <em>chưa xác minh</em> và không đưa số liệu vào dashboard.</p>
+</div>
+
+<p style="margin-top:2rem;font-size:.85rem;color:var(--muted)">Báo cáo tiếp theo: theo dõi (1) quyết định cuối cùng của USTR và phản ứng chuỗi cung ứng; (2) nhập siêu tháng 6 + áp lực tỷ giá; (3) khối ngoại có dừng bán ròng; (4) CPI tháng 6 và điều hành lãi suất NHNN; (5) lịch kỳ họp bất thường Quốc hội (dự kiến cuối 7 – đầu 8).</p>
+
+</div>
+</body>
+</html>

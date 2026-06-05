@@ -10,17 +10,31 @@
 body{font-family:'Inter',-apple-system,BlinkMacSystemFont,sans-serif;background:var(--bg);color:var(--text);min-height:100vh}
 .layout{display:flex;min-height:100vh}
 nav{width:260px;background:var(--surface);border-right:1px solid var(--border);padding:1.5rem 0;display:flex;flex-direction:column;position:fixed;top:0;left:0;bottom:0;overflow-y:auto}
-nav .logo{padding:0 1.5rem;margin-bottom:2rem}
+nav .logo{padding:0 1.5rem;margin-bottom:1.5rem}
 nav .logo h1{font-size:1.1rem;font-weight:700;color:var(--text)}
 nav .logo p{font-size:.72rem;color:var(--muted);margin-top:.2rem}
-nav .section-label{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted);padding:0 1.5rem;margin:1.5rem 0 .5rem}
-nav a{display:flex;align-items:center;gap:.7rem;padding:.6rem 1.5rem;font-size:.85rem;color:var(--muted);text-decoration:none;transition:all .15s;border-left:3px solid transparent}
+/* Parent menu group */
+.group{margin-top:.4rem}
+.group-header{display:flex;align-items:center;justify-content:space-between;gap:.5rem;padding:.4rem 1.5rem;cursor:pointer;user-select:none}
+.group-header:hover{background:var(--surface2)}
+.group-label{font-size:.65rem;font-weight:600;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+.group-arrow{font-size:.7rem;color:var(--muted);transition:transform .25s ease;flex-shrink:0}
+.group.collapsed .group-arrow{transform:rotate(-90deg)}
+.group-items{overflow:hidden;max-height:600px;transition:max-height .28s ease}
+.group.collapsed .group-items{max-height:0}
+nav a{display:flex;align-items:center;gap:.7rem;padding:.55rem 1.5rem;font-size:.85rem;color:var(--muted);text-decoration:none;transition:background .15s,color .15s;border-left:3px solid transparent}
 nav a:hover{background:var(--surface2);color:var(--text)}
 nav a.active{background:var(--surface2);color:var(--text);border-left-color:var(--blue)}
 nav a .dot{width:8px;height:8px;border-radius:50%;flex-shrink:0}
 nav a .dot-ai{background:var(--blue)}
 nav a .dot-conflict{background:var(--red)}
 nav a .dot-vn{background:var(--teal)}
+nav a .dot-sci{background:var(--purple)}
+nav a .dot-bank{background:var(--orange)}
+nav a .dot-career{background:var(--teal)}
+nav a.sub{font-size:.78rem;padding-left:2.9rem;color:var(--muted)}
+nav a.empty{font-size:.78rem;padding-left:2.9rem;color:var(--muted);font-style:italic;cursor:default}
+nav a.empty:hover{background:transparent;color:var(--muted)}
 main{margin-left:260px;flex:1;display:flex;flex-direction:column}
 .topbar{padding:1rem 2rem;border-bottom:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;background:var(--surface)}
 .topbar h2{font-size:1rem;font-weight:600}
@@ -30,17 +44,15 @@ iframe{width:100%;height:calc(100vh - 52px);border:none;background:var(--bg)}
 .home{padding:3rem 2rem;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:calc(100vh - 52px)}
 .home h2{font-size:1.6rem;font-weight:700;margin-bottom:.5rem;background:linear-gradient(135deg,var(--blue),var(--purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .home p{color:var(--muted);font-size:.9rem;margin-bottom:2rem}
-.modules{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;width:100%;max-width:800px}
+.modules{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:1rem;width:100%;max-width:900px}
 .mod-card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;cursor:pointer;transition:all .2s}
 .mod-card:hover{border-color:var(--blue);transform:translateY(-2px)}
 .mod-card h3{font-size:1rem;margin-bottom:.3rem;display:flex;align-items:center;gap:.5rem}
 .mod-card p{font-size:.8rem;color:var(--muted)}
 .mod-card .date{font-size:.7rem;color:var(--blue);margin-top:.5rem}
 @media(max-width:768px){
-nav{width:100%;position:relative;border-right:none;border-bottom:1px solid var(--border);flex-direction:row;overflow-x:auto;padding:.8rem}
-nav .logo,.section-label{display:none}
-nav a{padding:.5rem 1rem;white-space:nowrap;border-left:none;border-bottom:2px solid transparent}
-nav a.active{border-bottom-color:var(--blue);border-left:none}
+nav{width:100%;position:relative;border-right:none;border-bottom:1px solid var(--border);flex-direction:column;overflow-x:auto;padding:.8rem 0}
+nav .logo{margin-bottom:.5rem}
 .layout{flex-direction:column}
 main{margin-left:0}
 }
@@ -53,19 +65,82 @@ main{margin-left:0}
 <h1>📊 News Aggregator</h1>
 <p>Hệ thống tổng hợp tin tức</p>
 </div>
-<div class="section-label">Trang chủ</div>
-<a href="#" onclick="showHome()" class="active" id="nav-home">🏠 Dashboard</a>
-<div class="section-label">AI & Công nghệ</div>
-<a href="#" onclick="loadPage('ai-news/daily/2026-05-19.html','AI News — 19/05','nav-ai')" id="nav-ai"><span class="dot dot-ai"></span>AI News (19/05)</a>
-<a href="#" onclick="loadPage('ai-news/daily/2026-05-14.html','AI News — 14/05','nav-ai-14')" id="nav-ai-14" style="font-size:.78rem;padding-left:2.5rem"><span style="color:var(--muted)">└ 14/05</span></a>
-<div class="section-label">Xung đột toàn cầu</div>
+
+<a href="#" onclick="showHome()" class="active" id="nav-home" style="border-left:none">🏠 Dashboard</a>
+
+<!-- AI & Công nghệ -->
+<div class="group" id="group-ai">
+<div class="group-header" onclick="toggleGroup('group-ai')">
+<span class="group-label">AI &amp; Công nghệ</span>
+<span class="group-arrow">▼</span>
+</div>
+<div class="group-items">
+<a href="#" onclick="loadPage('ai-news/daily/2026-06-05.html','AI News — 05/06','nav-ai')" id="nav-ai"><span class="dot dot-ai"></span>AI News (05/06)</a>
+<a href="#" onclick="loadPage('ai-news/daily/2026-05-19.html','AI News — 19/05','nav-ai-19')" class="sub" id="nav-ai-19">└ 19/05</a>
+<a href="#" onclick="loadPage('ai-news/daily/2026-05-14.html','AI News — 14/05','nav-ai-14')" class="sub" id="nav-ai-14">└ 14/05</a>
+</div>
+</div>
+
+<!-- Xung đột toàn cầu -->
+<div class="group" id="group-conflict">
+<div class="group-header" onclick="toggleGroup('group-conflict')">
+<span class="group-label">Xung đột toàn cầu</span>
+<span class="group-arrow">▼</span>
+</div>
+<div class="group-items">
 <a href="#" onclick="loadPage('world-conflicts/daily/2026-05-19.html','Xung Đột — 19/05','nav-conflict')" id="nav-conflict"><span class="dot dot-conflict"></span>Xung Đột (19/05)</a>
-<a href="#" onclick="loadPage('world-conflicts/daily/2026-05-14.html','Xung Đột — 14/05','nav-conflict-14')" id="nav-conflict-14" style="font-size:.78rem;padding-left:2.5rem"><span style="color:var(--muted)">└ 14/05</span></a>
-<div class="section-label">Việt Nam</div>
-<a href="#" onclick="loadPage('vn-news/daily/2026-05-19.html','Tin VN — 19/05','nav-vn')" id="nav-vn"><span class="dot dot-vn"></span>Tin VN (19/05)</a>
-<a href="#" onclick="loadPage('vn-news/daily/2026-05-14.html','Tin VN — 14/05','nav-vn-14')" id="nav-vn-14" style="font-size:.78rem;padding-left:2.5rem"><span style="color:var(--muted)">└ 14/05</span></a>
-<div class="section-label">Khoa học & Công nghệ</div>
-<a href="#" onclick="loadPage('sci-tech/daily/2026-05-19.html','Khoa Học & CN — 19/05','nav-sci')" id="nav-sci"><span class="dot" style="background:var(--purple)"></span>Khoa Học CN (19/05)</a>
+<a href="#" onclick="loadPage('world-conflicts/daily/2026-05-14.html','Xung Đột — 14/05','nav-conflict-14')" class="sub" id="nav-conflict-14">└ 14/05</a>
+</div>
+</div>
+
+<!-- Việt Nam -->
+<div class="group" id="group-vn">
+<div class="group-header" onclick="toggleGroup('group-vn')">
+<span class="group-label">Việt Nam</span>
+<span class="group-arrow">▼</span>
+</div>
+<div class="group-items">
+<a href="#" onclick="loadPage('vn-news/daily/2026-06-05.html','Tin VN — 05/06','nav-vn')" id="nav-vn"><span class="dot dot-vn"></span>Tin VN (05/06)</a>
+<a href="#" onclick="loadPage('vn-news/daily/2026-05-19.html','Tin VN — 19/05','nav-vn-19')" class="sub" id="nav-vn-19">└ 19/05</a>
+<a href="#" onclick="loadPage('vn-news/daily/2026-05-14.html','Tin VN — 14/05','nav-vn-14')" class="sub" id="nav-vn-14">└ 14/05</a>
+</div>
+</div>
+
+<!-- Khoa học & Công nghệ -->
+<div class="group" id="group-sci">
+<div class="group-header" onclick="toggleGroup('group-sci')">
+<span class="group-label">Khoa học &amp; Công nghệ</span>
+<span class="group-arrow">▼</span>
+</div>
+<div class="group-items">
+<a href="#" onclick="loadPage('sci-tech/daily/2026-06-05.html','Khoa Học &amp; CN — 05/06','nav-sci')" id="nav-sci"><span class="dot dot-sci"></span>Khoa Học CN (05/06)</a>
+<a href="#" onclick="loadPage('sci-tech/daily/2026-05-19.html','Khoa Học &amp; CN — 19/05','nav-sci-19')" class="sub" id="nav-sci-19">└ 19/05</a>
+<a href="#" onclick="loadPage('sci-tech/daily/2026-05-14.html','Khoa Học &amp; CN — 14/05','nav-sci-14')" class="sub" id="nav-sci-14">└ 14/05</a>
+</div>
+</div>
+
+<!-- Banking Tech -->
+<div class="group" id="group-bank">
+<div class="group-header" onclick="toggleGroup('group-bank')">
+<span class="group-label">Banking Tech</span>
+<span class="group-arrow">▼</span>
+</div>
+<div class="group-items">
+<a href="#" onclick="loadPage('banking-tech/daily/2026-06-05.html','Banking Tech — 05/06','nav-bank')" id="nav-bank"><span class="dot dot-bank"></span>Banking Tech (05/06)</a>
+</div>
+</div>
+
+<!-- IT Career -->
+<div class="group" id="group-career">
+<div class="group-header" onclick="toggleGroup('group-career')">
+<span class="group-label">IT Career</span>
+<span class="group-arrow">▼</span>
+</div>
+<div class="group-items">
+<a href="#" onclick="loadPage('it-career/daily/2026-06-05.html','IT Career — 05/06','nav-career')" id="nav-career"><span class="dot dot-career"></span>IT Career (05/06)</a>
+</div>
+</div>
+
 </nav>
 
 <main>
@@ -78,25 +153,35 @@ main{margin-left:0}
 <h2>News Aggregator</h2>
 <p>Chọn module bên trái hoặc click vào card bên dưới</p>
 <div class="modules">
-<div class="mod-card" onclick="loadPage('ai-news/daily/2026-05-19.html','AI News','nav-ai')">
-<h3><span class="icon">🤖</span> AI & Công Nghệ</h3>
+<div class="mod-card" onclick="loadPage('ai-news/daily/2026-06-05.html','AI News','nav-ai')">
+<h3><span class="icon">🤖</span> AI &amp; Công Nghệ</h3>
 <p>Model releases, benchmarks, agent systems, open-source LLM</p>
-<div class="date">📅 2026-05-19</div>
+<div class="date">📅 2026-06-05</div>
 </div>
 <div class="mod-card" onclick="loadPage('world-conflicts/daily/2026-05-19.html','Xung Đột Toàn Cầu','nav-conflict')">
 <h3><span class="icon">🌍</span> Xung Đột Toàn Cầu</h3>
 <p>Iran-Mỹ, Ukraine-Nga, Israel, TQ-Đài Loan, NATO</p>
 <div class="date">📅 2026-05-19</div>
 </div>
-<div class="mod-card" onclick="loadPage('vn-news/daily/2026-05-19.html','Tin Việt Nam','nav-vn')">
+<div class="mod-card" onclick="loadPage('vn-news/daily/2026-06-05.html','Tin Việt Nam','nav-vn')">
 <h3><span class="icon">🇻🇳</span> Tin Việt Nam</h3>
 <p>Công nghệ, kinh tế, chính sách, hạ tầng, ngân hàng, thời sự</p>
-<div class="date">📅 2026-05-19</div>
+<div class="date">📅 2026-06-05</div>
 </div>
-<div class="mod-card" onclick="loadPage('sci-tech/daily/2026-05-19.html','Khoa Học & Công Nghệ','nav-sci')">
-<h3><span class="icon">🔬</span> Khoa Học & Công Nghệ</h3>
+<div class="mod-card" onclick="loadPage('sci-tech/daily/2026-06-05.html','Khoa Học &amp; Công Nghệ','nav-sci')">
+<h3><span class="icon">🔬</span> Khoa Học &amp; Công Nghệ</h3>
 <p>Vật lý, y sinh, năng lượng, vũ trụ, quantum, vật liệu mới</p>
-<div class="date">📅 2026-05-19</div>
+<div class="date">📅 2026-06-05</div>
+</div>
+<div class="mod-card" onclick="loadPage('banking-tech/daily/2026-06-05.html','Banking Tech','nav-bank')">
+<h3><span class="icon">🏦</span> Banking Tech</h3>
+<p>Java web, Spring, microservices, AI trong nghiệp vụ ngân hàng</p>
+<div class="date">📅 2026-06-05</div>
+</div>
+<div class="mod-card" onclick="loadPage('it-career/daily/2026-06-05.html','IT Career','nav-career')">
+<h3><span class="icon">💼</span> IT Career</h3>
+<p>Tuyển dụng IT, review công ty, lương, thị trường lao động</p>
+<div class="date">📅 2026-06-05</div>
 </div>
 </div>
 </div>
@@ -108,10 +193,14 @@ main{margin-left:0}
 function loadPage(url, title, navId) {
   document.getElementById('content').innerHTML = '<iframe src="' + url + '"></iframe>';
   document.querySelectorAll('nav a').forEach(a => a.classList.remove('active'));
-  document.getElementById(navId).classList.add('active');
+  var el = document.getElementById(navId);
+  if (el) el.classList.add('active');
   document.getElementById('page-title').textContent = title;
 }
 function showHome() { location.reload(); }
+function toggleGroup(id) {
+  document.getElementById(id).classList.toggle('collapsed');
+}
 function updateClock() {
   document.getElementById('clock').textContent = new Date().toLocaleString('vi-VN',{weekday:'long',year:'numeric',month:'2-digit',day:'2-digit',hour:'2-digit',minute:'2-digit'});
 }

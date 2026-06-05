@@ -3,60 +3,456 @@ inclusion: auto
 globs: sci-tech/**
 ---
 
-# Science & Technology — Module Policy
+# Science & Technology — Research Intelligence Policy
 
-## Scope
-- Khoa học cơ bản: vật lý, hóa học, sinh học, thiên văn, khoa học trái đất
-- Công nghệ mới: vật liệu, năng lượng, y sinh, robotics, quantum computing, space tech
-- Nghiên cứu đột phá: paper quan trọng trên Nature, Science, Cell, PNAS
-- Phát minh / patent: công nghệ mới có tiềm năng thương mại hóa
-- Y học: vaccine, thuốc mới, liệu pháp gene, thiết bị y tế
-- Năng lượng: fusion, solar, battery, hydrogen, nuclear
-- Vũ trụ: SpaceX, NASA, ESA, CNSA, vệ tinh, khám phá hành tinh
-- Môi trường: biến đổi khí hậu, carbon capture, biodiversity
-- Công nghệ VN: nghiên cứu trong nước, sản phẩm công nghệ VN, startup deep-tech VN
+## Objective
 
-## Sources
+Tạo science & technology intelligence digest chất lượng cao bằng Tiếng Việt.
 
-### Quốc tế (Tier 1-2)
-- **Journals:** Nature, Science, Cell, The Lancet, PNAS, Physical Review Letters
-- **News:** MIT Technology Review, New Scientist, Scientific American, Ars Technica Science, Quanta Magazine
-- **Space:** SpaceNews, NASA.gov, ESA.int, SpaceX updates
-- **Energy:** Electrek, CleanTechnica, World Nuclear News
-- **General:** Reuters Science, BBC Science, Guardian Science, Phys.org, ScienceDaily
+Mục tiêu KHÔNG phải:
+- liệt kê paper
+- spam discovery
+- tóm tắt press release
+- kể headline khoa học
 
-### Việt Nam (Tier 2-3)
-- **Báo chí:** VnExpress Khoa học,24h.com.vn công nghệ thông tin - thời trang hi-tech, Tuổi Trẻ Khoa học, Thanh Niên Công nghệ, Dân Trí Khoa học
-- **Chuyên ngành:** Tạp chí Khoa học & Công nghệ VN, ICTNews, Tinhte Science
-- **Tổ chức:** Viện Hàn lâm KH&CN VN (VAST), Bộ KH&CN, NAFOSTED, VinAI, FPT AI
+Mục tiêu là:
+- giải thích breakthrough nào thực sự quan trọng
+- đánh giá khả năng thương mại hóa
+- phân tích tác động công nghệ dài hạn
+- phát hiện xu hướng khoa học chiến lược
+- kết nối nghiên cứu với industry và geopolitical impact
 
-## Entity tracking
-- Tổ chức: NASA, ESA, CERN, ITER, SpaceX, Blue Origin, DeepMind (science), Isomorphic Labs
-- VN: VAST, VinFuture, VinAI, FPT AI Center, Viettel High Tech, SHTP
-- Lĩnh vực: quantum computing, fusion energy, CRISPR/gene editing, mRNA, solid-state batteries
+Output phải đọc giống:
+- research intelligence report
+- scientific strategic briefing
+- technology transition analysis
 
-## Clustering
-- Gom theo: lĩnh vực (space/energy/biotech/materials/quantum), tổ chức, quốc gia
-- Track: breakthrough timeline, commercialization path, VN participation
+KHÔNG được đọc như:
+- RSS khoa học
+- press release summary
+- “wow science” content
+- headline dump
 
-## Actionable insights
-- Impact cho: researcher, startup deep-tech, investor (biotech/cleantech), policy maker
-- Ví dụ: công nghệ nào sắp thương mại hóa, VN có thể tham gia ở đâu trong chuỗi giá trị
+---
 
-## Ảnh hưởng liên ngành
-- Biotech → healthcare VN, pharmaceutical industry
-- Energy tech → chính sách năng lượng VN, data center power
-- Space tech → viễn thông, quan sát trái đất, nông nghiệp chính xác
-- Materials → sản xuất, bán dẫn, xây dựng
-- Quantum → cryptography, tài chính, logistics
+# Scope
 
-## Cross-module linkage (BẮT BUỘC)
-Khi tin khoa học có impact score ≥ 7, check tác động lên:
-- **AI News:** AI for science (AlphaFold, AI drug discovery), compute hardware
-- **VN News:** ứng dụng tại VN, chính sách KH&CN, FDI R&D
-- **World Conflicts:** công nghệ quân sự, cyber, năng lượng
+## Khoa học cơ bản
+- Physics
+- Chemistry
+- Biology
+- Astronomy
+- Earth science
+- Materials science
 
-## Language policy
-- Output: **Tiếng Việt** mặc định.
-- Thuật ngữ khoa học giữ nguyên tiếng Anh + giải thích VN lần đầu.
-- File: `YYYY-MM-DD.md` / `.html` (không suffix).
+## Công nghệ chiến lược
+- Quantum computing
+- Robotics
+- Space technology
+- Energy technology
+- Semiconductor
+- Biotechnology
+- Gene editing
+- AI for science
+- Advanced manufacturing
+
+## Y học
+- Vaccine
+- Drug discovery
+- CRISPR
+- mRNA
+- Cell therapy
+- Medical devices
+
+## Năng lượng
+- Fusion
+- Solar
+- Battery
+- Hydrogen
+- Nuclear
+- Grid technology
+
+## Space
+- NASA
+- ESA
+- CNSA
+- SpaceX
+- Satellite systems
+- Planetary exploration
+
+## Environment
+- Climate science
+- Carbon capture
+- Biodiversity
+- Water technology
+- Sustainable materials
+
+---
+
+# Sources
+
+## Tier 1 — Highest Scientific Reliability
+
+### Journals
+- Nature
+- Science
+- Cell
+- The Lancet
+- PNAS
+- Physical Review Letters
+
+### Institutions
+- NASA
+- ESA
+- CERN
+- NIH
+- WHO
+- DOE
+
+---
+
+## Tier 2 — Science Analysis & Industry
+
+- MIT Technology Review
+- Quanta Magazine
+- Scientific American
+- Ars Technica Science
+- New Scientist
+- Reuters Science
+
+---
+
+## Tier 3 — Supplemental
+
+- Phys.org
+- ScienceDaily
+- Electrek
+- CleanTechnica
+
+---
+
+## Vietnam Sources
+
+- VnExpress Khoa học
+- Tuổi Trẻ Khoa học
+- Bộ KH&CN
+- VAST
+- NAFOSTED
+- VinAI
+- FPT AI
+- Viettel High Tech
+
+---
+
+# Critical Distinction (RẤT QUAN TRỌNG)
+
+PHẢI phân biệt rõ:
+
+## Scientific Curiosity
+- nghiên cứu thú vị
+- concept mới
+- lab experiment
+
+## Engineering Breakthrough
+- giải quyết bottleneck thực tế
+- scalability improvement
+- manufacturing viability
+
+## Commercially Relevant Technology
+- có path ra thị trường
+- có economic value
+- có industrial adoption potential
+
+KHÔNG hype research curiosity thành industrial revolution.
+
+---
+
+# Research Skepticism Policy
+
+KHÔNG được:
+- tin tuyệt đối press release
+- extrapolate vô căn cứ
+- hype benchmark nhỏ
+
+PHẢI đánh giá:
+- sample size
+- reproducibility
+- peer review quality
+- real-world applicability
+- engineering constraints
+- economic feasibility
+
+Nếu có uncertainty:
+PHẢI ghi rõ.
+
+---
+
+# Technology Readiness Assessment
+
+Mỗi breakthrough PHẢI đánh giá:
+
+## TRL (Technology Readiness Level)
+
+- TRL 1–2 → concept / theory
+- TRL 3–4 → lab validation
+- TRL 5–6 → prototype / pilot
+- TRL 7–8 → near commercialization
+- TRL 9 → production deployment
+
+Phải giải thích:
+- còn thiếu gì để scale
+- bottleneck lớn nhất là gì
+- timeline thực tế
+
+---
+
+# Required Structure
+
+## [Research / Technology Title]
+
+### Situation Summary
+Viết 2–5 đoạn:
+- chuyện gì đã xảy ra
+- breakthrough nằm ở đâu
+- điều gì thực sự mới
+
+KHÔNG viết 1 dòng headline summary.
+
+---
+
+### Scientific Significance
+Giải thích:
+- discovery mới gì
+- khác gì research cũ
+- breakthrough thật hay incremental
+- có giải quyết bottleneck không
+
+---
+
+### Technical Analysis
+Phân tích:
+- architecture
+- material
+- mechanism
+- engineering challenge
+- scalability issue
+- manufacturing complexity
+- compute requirement
+- infrastructure dependency
+
+---
+
+### Commercialization Potential
+Đánh giá:
+- TRL level
+- commercialization path
+- cost challenge
+- adoption barrier
+- regulatory issue
+- supply chain requirement
+
+Nêu:
+- realistic timeline
+- hype vs reality
+
+---
+
+### Strategic Impact
+Phân tích tác động tới:
+- industry
+- startup ecosystem
+- quốc gia
+- military
+- healthcare
+- energy security
+- semiconductor ecosystem
+
+---
+
+### Long-Term Outlook
+Đánh giá:
+- công nghệ này có thể dẫn tới điều gì
+- ngành nào bị disrupt
+- risk
+- uncertainty
+- khả năng thất bại
+
+Không được prediction vô căn cứ.
+
+---
+
+# Cross-Research Synthesis
+
+Nếu nhiều research cùng chỉ về một xu hướng:
+KHÔNG tách thành nhiều tin nhỏ.
+
+Hãy tổng hợp thành narrative lớn.
+
+Ví dụ:
+- pin sodium-ion tiến bộ
+- solid-state battery tăng stability
+- grid storage giảm cost
+
+=> kết luận:
+"Ngành energy storage đang chuyển từ mật độ năng lượng sang economics và grid-scale deployment."
+
+---
+
+# Breakthrough Classification
+
+PHẢI phân loại:
+
+## Incremental Progress
+- cải tiến nhỏ
+- benchmark optimization
+- efficiency gain
+
+## Major Breakthrough
+- giải quyết bottleneck nền tảng
+- mở capability mới
+
+## Paradigm Shift
+- thay đổi hướng tiếp cận toàn ngành
+- tạo market mới
+- phá giới hạn cũ
+
+KHÔNG gọi mọi paper là “đột phá”.
+
+---
+
+# Signal vs Noise Policy
+
+ƯU TIÊN:
+- bottleneck breakthrough
+- manufacturing viability
+- commercialization path
+- infrastructure impact
+- scalability
+- strategic technology race
+
+KHÔNG ưu tiên:
+- paper hype
+- benchmark vanity
+- speculative press release
+- clickbait science
+
+---
+
+# Strategic Technology Tracking
+
+Theo dõi:
+- semiconductor race
+- fusion timeline
+- battery economics
+- biotech platform shift
+- AI for science
+- quantum advantage
+- space industrialization
+
+Track:
+- China vs US competition
+- supply chain control
+- rare earth dependency
+- compute infrastructure
+- scientific talent movement
+
+---
+
+# Actionable Insights
+
+## Cho Researcher
+- research direction nào nóng
+- bottleneck nào chưa giải quyết
+- funding trend
+
+## Cho Startup / Business
+- công nghệ nào gần commercialization
+- ngành nào sắp bị disrupt
+- infrastructure opportunity
+
+## Cho Investor
+- deep-tech trend
+- biotech
+- energy
+- semiconductor
+- space economy
+
+## Cho Policy
+- national competitiveness
+- strategic dependency
+- scientific sovereignty
+
+---
+
+# Cross-Module Linkage (BẮT BUỘC)
+
+Nếu impact score >= 7:
+
+## AI News
+- AI for science
+- drug discovery
+- materials discovery
+- compute demand
+- semiconductor requirement
+
+## VN News
+- ứng dụng tại VN
+- FDI R&D
+- manufacturing opportunity
+- education / workforce implication
+
+## World Conflicts
+- military application
+- energy security
+- cyber capability
+- semiconductor geopolitics
+
+---
+
+# Vietnam Deep-Tech Assessment
+
+Nếu có liên quan VN:
+PHẢI đánh giá:
+- VN đang ở đâu trong value chain
+- VN có competitive advantage gì
+- có cơ hội localization không
+- phụ thuộc nhập khẩu mức nào
+- có thể tham gia manufacturing hay chỉ consumption
+
+---
+
+# Writing Style
+
+PHẢI:
+- analytical
+- skeptical
+- strategic
+- dễ hiểu nhưng sâu
+- có narrative flow
+
+KHÔNG:
+- science hype
+- clickbait
+- oversimplification
+- headline spam
+- “miracle discovery” tone
+
+---
+
+# Critical Rule
+
+Ít research nhưng phân tích sâu
+tốt hơn rất nhiều
+so với spam paper summary.
+
+Mọi breakthrough phải trả lời được:
+
+1. Điều gì thực sự mới?
+2. Có scale được không?
+3. Có thương mại hóa được không?
+4. Bao lâu mới impact thực tế?
+5. Đây là signal hay chỉ noise?
+
+Nếu không trả lời được:
+- giảm priority
+- hoặc bỏ qua.

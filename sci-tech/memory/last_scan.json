@@ -1,9 +1,11 @@
 {
-  "last_scan_timestamp": "2026-05-19T10:00:00+07:00",
-  "last_scan_date": "2026-05-19",
+  "last_scan_timestamp": "2026-06-05T10:30:00+07:00",
+  "last_scan_date": "2026-06-05",
   "run_count": 1,
   "stories_found": 10,
-  "top_story": "SpaceX Starship V3 Flight 12 hoãn 24h (20/05) + Daraxonrasib ung thư tụy FDA expanded access + Nanoparticle Alzheimer reversal",
-  "summary": "SpaceX Starship V3 hoãn 19→20/05, Flight 12 đầu tiên sau 7 tháng, 408ft. Google I/O 2026 khai mạc: XR glasses, Deep Research Max. Daraxonrasib: thuốc ung thư tụy sống gấp đôi (13.2 vs 6 tháng), FDA expanded access. Nanoparticle therapy giảm 50-60% amyloid Alzheimer trong 1h (chuột). Catalyst không platinum cho hydrogen sạch (Washington U). LED bất khả thi Cambridge (molecular antennas). Vaccine sốt rét RTS,S giảm 13% tử vong trẻ em (Lancet). Kimchi probiotic loại nanoplastic. NVIDIA earnings 20/05. Cerebras CBRS +68%.",
-  "next_scan_priority": ["SpaceX Starship V3 Flight 12 launch result (20/05)", "Google I/O science announcements (19-20/05)", "NVIDIA earnings data center power implications (20/05)", "Daraxonrasib Phase 3 updates", "Isomorphic Labs clinical trial timeline"]
+  "top_story": "SpaceX Starship V3 Flight 12 bay được nhưng FAA grounds sau mishap Booster 19 + Microsoft Majorana 2 (qubit topo bền gấp 1.000 lần, mục tiêu lượng tử scalable 2029) + NVIDIA Isaac GR00T humanoid robot",
+  "summary": "Starship V3 Flight 12 (22/05) lên không gian, thả vệ tinh giả, reentry tốt nhưng Booster 19 mishap → FAA yêu cầu điều tra, grounded (27/05). Microsoft Majorana 2: qubit topo bền gấp 1.000x (tuổi thọ TB 20s), đổi nhôm sang chì, mục tiêu 2029 (còn hoài nghi). NVIDIA Isaac GR00T robot hình người tham chiếu mở (thân Unitree H2 Plus, tay Sharpa, Jetson Thor). Làn sóng fusion: Focused Energy $240M, Pacific Fusion 440GW/80ns, General Fusion IPO Nasdaq. ESO VLT đo từ trường 7 ngoại hành tinh (Nature Astronomy). EPFL laser femtosecond trên chip (Nature, 1.05nJ/147fs). Cụm pin natri NUS/LBNL/high-entropy chuyển sang grid-scale economics. Miễn dịch ung thư: mất MHC I khiến tế bào dễ bị CD4+ diệt qua ferroptosis (Nature Immunology). Obexelimab Phase III INDIGO. TP.HCM hút 6,6 tỷ USD FDI công nghệ.",
+  "next_scan_priority": ["Kết quả điều tra mishap Starship Flight 12 & lịch bay lại", "Peer-review độc lập Microsoft Majorana 2", "Dữ liệu chi tiết Phase III INDIGO (obexelimab)", "Pacific Fusion tiến triển net facility gain 2030", "Triển khai pin natri grid-scale & độ bền chu kỳ", "NVIDIA Isaac GR00T adoption + rủi ro chuỗi cung Unitree"],
+  "scan_window": "2026-05-29 00:00 - 2026-06-05 10:30 (7 ngày, cap)",
+  "entities_tracked": ["SpaceX Starship V3", "Microsoft Majorana 2", "NVIDIA Isaac GR00T / Unitree", "Focused Energy", "Pacific Fusion", "General Fusion", "ESO VLT", "EPFL Kippenberg", "NUS sodium battery", "Baylor MHC I/CD4+", "obexelimab", "TP.HCM FDI"]
 }

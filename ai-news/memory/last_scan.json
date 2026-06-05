@@ -1,9 +1,10 @@
 {
-  "last_scan_timestamp": "2026-05-19T10:00:00+07:00",
-  "last_scan_date": "2026-05-19",
+  "last_scan_timestamp": "2026-06-05T11:45:00+07:00",
+  "last_scan_date": "2026-06-05",
   "run_count": 1,
-  "stories_found": 10,
-  "top_story": "Musk thua kiện OpenAI (jury bác toàn bộ) + Anthropic vượt OpenAI valuation ($900B) + Trump-Xi summit kết thúc không đột phá về AI chips",
-  "summary": "Musk thua kiện OpenAI do hết thời hiệu. Trump-Xi kết thúc: chip controls không thảo luận, H200 vẫn treo. Anthropic chốt round $30B tại $900B (vượt OpenAI). Google I/O 2026 khai mạc: agentic era, Gemini mới, XR glasses. Cerebras CBRS +68% ngày đầu rồi pullback. NVIDIA earnings 20/05 ($79B kỳ vọng). Recursive Superintelligence $650M. Tháng 5 kỷ lục open-weight models. Microsoft ECHO open-source. SpaceX V3 hoãn 24h sang 20/05.",
-  "next_scan_priority": ["Google I/O 2026 keynote results (19/05 tối)", "NVIDIA Q1 FY27 earnings (20/05)", "SpaceX Starship V3 Flight 12 launch result (20/05)", "Anthropic $30B round close confirmation", "Musk appeal OpenAI"]
+  "stories_found": 12,
+  "top_story": "Anthropic chốt $65B tại $965B (vượt OpenAI, gần $1T) + Trump ký EO AI (review 30 ngày, benchmark mật NSA) + NVIDIA GTC Taipei (Vera Rubin full production, Nemotron 3 Ultra 550B open, RTX Spark)",
+  "summary": "Anthropic chốt Series H $65B tại $965B, vượt OpenAI, gần mốc nghìn tỷ trước IPO. Trump ký EO AI 02/06: review frontier model 30 ngày, NSA lập benchmark cyber mật, hợp tác tự nguyện. NVIDIA GTC Taipei @ Computex: Vera Rubin full production + DSX OS, Nemotron 3 Ultra (550B open MoE), RTX Spark đưa AI vào PC. MiniMax M3 open-weight (MSA sparse attention, 1M context, 59% SWE-Bench Pro). Claude Opus 4.8 (SWE-Bench Pro 69.2%, fast mode rẻ 1/3). GPT-Rosalind + Rosalind Biodefense. OpenAI models + Codex GA trên AWS Bedrock. Cognition (Devin) $1B tại $26B, Devin viết 89% code. ChatGPT Dreaming memory mở free tier. Inference chip war (Intel Crescent Island). Gemini 3.5 Flash vượt flagship cũ. OpenAI lệch pha Nhà Trắng về safety. Xu hướng lớn: inference economics là chiến trường chính.",
+  "next_scan_priority": ["Anthropic IPO timeline & định giá công khai", "Gemini 3.5 Pro release", "Benchmark độc lập (NIST/Artificial Analysis) cho MiniMax M3 & Nemotron 3 Ultra", "Thực thi EO Trump - NSA classified benchmark", "Inference chip traction: Intel Crescent Island, Taalas, d-Matrix", "Privacy ChatGPT Dreaming khi mở free tier toàn cầu"],
+  "entities_tracked": ["OpenAI", "Anthropic", "Google DeepMind", "NVIDIA", "Intel", "MiniMax", "Cognition", "Microsoft", "Amazon/AWS", "Ramp"]
 }

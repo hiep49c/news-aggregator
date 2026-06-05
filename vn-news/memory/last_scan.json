@@ -1,7 +1,10 @@
 {
-  "last_scan_timestamp": "2026-05-19T10:00:00+07:00",
-  "last_scan_date": "2026-05-19",
+  "last_scan_timestamp": "2026-06-05T09:30:00+07:00",
+  "last_scan_date": "2026-06-05",
   "run_count": 1,
-  "stories_found": 9,
-  "top_story": "VN-Index lập đỉnh lịch sử 1,927.94 (19/05). Giá xăng giảm từ 14/05. FDI chuyển sang đối tác chiến lược. Bắt 84 tấn quặng monazite phóng xạ xuất lậu. 9 trẻ đuối nước — Bộ Y tế chỉ thị khẩn cấp. Ebola giám sát tăng cường."
+  "stories_found": 10,
+  "top_story": "Nhập siêu kỷ lục $13.8 tỷ trong 5 tháng — lần đầu Việt Nam nhập siêu sau 10 năm xuất siêu (riêng T5: -$5.21 tỷ). Mỹ đề xuất thuế bổ sung 10-12.5% với 60 đối tác gồm VN (lao động cưỡng bức), VN phản đối. FDI 5 tháng đăng ký $24.81 tỷ (+34.9%), giải ngân $9.75 tỷ cao nhất 5 năm. VN-Index rơi từ đỉnh lịch sử 1,933 về ~1,820 (7 phiên giảm), khối ngoại bán ròng. CPI 5 tháng +4.31% áp sát trần 4.5%.",
+  "summary": "Kỳ 29/05-05/06/2026 (cap 7 ngày). 10 tin: nhập siêu kỷ lục, đe dọa thuế quan Mỹ, FDI bùng nổ, VN-Index điều chỉnh từ đỉnh 1,933, CPI 4.31%, IIP +9.1% & du lịch kỷ lục, sovereign AI FPT/Viettel-NVIDIA, điều chỉnh chương trình lập pháp QH, lãi suất overnight 11%->6.54%, chính quyền 2 cấp. Chủ đề lớn: bước ngoặt cấu trúc thương mại + bất định thuế quan Mỹ song hành dòng FDI mạnh.",
+  "next_scan_priority": "Quyết định cuối USTR về thuế lao động cưỡng bức & phản ứng chuỗi cung ứng; nhập siêu T6 + áp lực tỷ giá; khối ngoại có dừng bán ròng; CPI T6 & điều hành lãi suất NHNN; lịch kỳ họp bất thường Quốc hội (cuối 7-đầu 8).",
+  "entities_tracked": ["VN-Index", "USTR/Mỹ thuế quan", "FDI", "CPI/lạm phát", "Viettel", "FPT", "NVIDIA", "NHNN", "Quốc hội"]
 }
