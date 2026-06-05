@@ -1,9 +1,9 @@
 {
-  "last_scan_timestamp": "2026-05-19T10:00:00+07:00",
-  "last_scan_date": "2026-05-19",
+  "last_scan_timestamp": "2026-06-05T17:00:00+07:00",
+  "last_scan_date": "2026-06-05",
   "run_count": 1,
-  "conflicts_tracked": 8,
-  "highest_risk": "Iran-US (9.5/10 - Trump postponed scheduled attack), Ukraine-Russia (9.5/10 - 24 killed Kyiv + largest drone counterattack)",
-  "summary": "Trump hoãn tấn công Iran theo yêu cầu Gulf States — 'cơ hội tốt' cho deal hạt nhân. Trump-Xi summit kết thúc: Xi thắng ngoại giao, Trump ít thành quả. Nga tấn công Kyiv 24 chết. Ukraine phản công drone lớn nhất (600 drone vào Nga, 4 chết Moscow). Drone Nga bắn tàu TQ. Putin đến Bắc Kinh 19-20/05. Israel-Lebanon gia hạn ngừng bắn 45 ngày. Dầu biến động $90-111.",
-  "next_scan_priority": ["Putin-Xi summit results 20/05", "Iran deal progress or attack restart", "Ukraine drone war continuation", "Oil price direction post-Iran postponement", "Israel-Lebanon ceasefire compliance"]
+  "conflicts_tracked": 6,
+  "highest_risk": "Iran-US (9/10 CRITICAL - tên lửa vào Kuwait, đàm phán bế tắc, Hormuz đóng), Ukraine-Russia (8/10 HIGH - tấn công St. Petersburg + Nga không kích 23 chết)",
+  "summary": "Iran bắn tên lửa Kuwait/Bahrain 02/06, Mỹ đáp trả; deal sơ bộ 60 ngày (29/05) nhưng chưa ký chính thức. Hạ viện Mỹ lần đầu bỏ phiếu chấm dứt chiến tranh. Ukraine tấn công St. Petersburg 04/06, Zelensky sẵn sàng gặp Putin. Nga không kích quy mô lớn 02/06 (23 chết). Israel-Lebanon ký ngừng bắn nhưng Hezbollah từ chối. Dầu Brent $95-98, Hormuz đóng. Mỹ giảm cam kết NATO + mở rộng hạt nhân châu Âu. TQ tuần tra đông Đài Loan.",
+  "next_scan_priority": ["Iran deal - ký chính thức hay đổ vỡ?", "Hormuz mở lại hay tiếp tục đóng?", "Zelensky-Putin meeting timeline", "NATO 18/06 Brussels - phân bổ lực lượng mới", "Israel-Gaza truce enforcement", "Hezbollah response to Lebanon ceasefire"]
 }
