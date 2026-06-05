@@ -106,6 +106,83 @@ Mỗi báo cáo PHẢI có:
 
 ---
 
+# Hướng Dẫn Thu Thập Review & Tin Cộng Đồng (BẮT BUỘC mỗi lần quét)
+
+## Mục tiêu
+
+Mục "Review Công Ty & Tin Nổi Bật Từ Cộng Đồng" PHẢI có nội dung THỰC TẾ — không chỉ bảng điểm số. Người đọc muốn biết:
+- Mọi người đang NÓI GÌ bên ngoài (diễn đàn, review)
+- Tin tức nổi bật, drama, gossip có giá trị phân tích (layoff, lương, vụ bê bối)
+- Thông tin lương THỰC TẾ được chia sẻ (anonymous)
+- Review chi tiết (tích cực & tiêu cực) — pattern lặp lại, không chỉ điểm tổng
+
+## Nguồn BẮT BUỘC phải kiểm tra mỗi lần quét
+
+### Voz — Thread lương & nghề nghiệp
+- **Thread chính:** `voz.vn/t/thread-tong-hop-chia-se-ve-muc-luong-tai-cac-cong-ty-part-2.515355/` (kiểm tra các page MỚI NHẤT)
+- Nội dung cần thu thập:
+  - Mức lương được chia sẻ anonymous (ghi rõ: level, công ty, năm kinh nghiệm, gross/net)
+  - Tin layoff (ví dụ: Vin layoff, FPT cắt giảm...)
+  - Drama nổi bật (ví dụ: "em 2k3 là Team Lead T4, thử việc 2 tháng đã open job / bị sa thải" — phân tích: title inflation? culture fit? probe deeper)
+  - Xu hướng thảo luận nóng (OT, toxic culture, review công ty cụ thể)
+- Khi Voz không fetch được: ghi rõ "⚠️ Voz fetch fail — cần user cung cấp content" và liệt kê thread URL để user tự check
+
+### ITviec Reviews
+- Kiểm tra review MỚI (1-2 tuần gần nhất) cho các công ty lớn:
+  - FPT Software (2,062+ reviews)
+  - NEC Vietnam, GFT Technologies, CyberLogitec, Vitalify Asia
+  - NAB VN, Grab VN, VNG, VinAI
+  - Các công ty vừa được vinh danh VBIT (Vietnam Best IT Companies)
+- Thu thập: pattern tích cực/tiêu cực lặp lại, cỡ mẫu, highlight review gần nhất
+
+### Glassdoor / Indeed Vietnam
+- FPT Software, VNG, Grab, Momo, VNPay, Shopee VN
+- Focus: review từ senior/lead (nếu platform cho phép filter)
+
+### Facebook Groups
+- "Cộng đồng Java Việt Nam", "IT Salary Vietnam", "Tech Workers Vietnam"
+- Thu thập: tin tuyển dụng senior, chia sẻ lương, thảo luận layoff
+
+## Cấu trúc output BẮT BUỘC cho mục Review
+
+```
+### 3.1 Giải thưởng / Ranking (fact)
+- VBIT, Clutch, Glassdoor awards — dữ kiện kiểm chứng được
+
+### 3.2 Review chi tiết công ty cụ thể (opinion, ghi cỡ mẫu)
+- Pattern tích cực (lặp lại qua nhiều review)
+- Pattern tiêu cực (lặp lại qua nhiều review)
+- Đánh giá riêng cho SENIOR (career path, equity, decision autonomy)
+
+### 3.3 Tin nổi bật từ cộng đồng (opinion/gossip, Tier 4, LOW)
+- Các chủ đề HOT đang thảo luận (layoff, lương, drama)
+- Mức lương chia sẻ anonymous (bảng: level / công ty / gross-net / nguồn)
+- Vụ việc đáng chú ý (title inflation, layoff đột ngột, v.v.)
+- ⚠️ Ghi rõ: đây là opinion/chưa xác minh
+
+### 3.4 Equity/ESOP (nếu có thông tin mới)
+```
+
+## Ví dụ nội dung cần thu thập (reference từ Voz thread)
+
+Các dạng thông tin có giá trị từ thread lương Voz:
+1. **Lương chia sẻ:** "Senior Java 8 năm, [công ty X], gross 55tr, net ~42tr" → ghi vào bảng
+2. **Layoff:** "Vin đang cắt mạnh, team AI Research giảm 30%" → ghi + đánh dấu UNVERIFIED
+3. **Title inflation:** "Em 2k3 (sinh 2003) lên Team Lead T4 sau 2 tháng thử việc, đã open job mới" → phân tích: (a) thật sự bị sa thải? (b) tự nghỉ? (c) title inflation phổ biến ở outsourcing? → ghi rõ KHÔNG KẾT LUẬN, chỉ nêu phenomenon
+4. **Culture:** "FPT FSoft project X OT liên tục 3 tháng, senior cũng phải code tay" → pattern
+5. **So sánh:** "NAB vs Grab vs VNG: NAB comp cao nhất nhưng pressure lớn" → tổng hợp debate
+
+## Nguyên tắc khi thu thập từ diễn đàn
+
+- KHÔNG copy nguyên văn (vi phạm privacy + copyright)
+- Paraphrase + tổng hợp pattern
+- ẨN DANH: không nêu username, không nêu thông tin cá nhân
+- GHI RÕ: "Nguồn: Voz thread lương, page ~1363, 06/2026" (hoặc tương tự)
+- ĐÁNH DẤU: Confidence LOW, Tier 4, chưa cross-check
+- NẾU có claim lớn (layoff hàng loạt, lương đặc biệt cao/thấp): cố cross-check qua nguồn Tier 2 (VnExpress, VietnamNet) trước khi trình bày như xu hướng
+
+---
+
 # Persona Context
 
 Người đọc module này là:
