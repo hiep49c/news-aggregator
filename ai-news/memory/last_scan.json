@@ -1,10 +1,10 @@
 {
-  "last_scan_timestamp": "2026-06-05T11:45:00+07:00",
-  "last_scan_date": "2026-06-05",
+  "last_scan_timestamp": "2026-06-19T10:00:00+07:00",
+  "last_scan_date": "2026-06-19",
   "run_count": 1,
-  "stories_found": 12,
-  "top_story": "Anthropic chốt $65B tại $965B (vượt OpenAI, gần $1T) + Trump ký EO AI (review 30 ngày, benchmark mật NSA) + NVIDIA GTC Taipei (Vera Rubin full production, Nemotron 3 Ultra 550B open, RTX Spark)",
-  "summary": "Anthropic chốt Series H $65B tại $965B, vượt OpenAI, gần mốc nghìn tỷ trước IPO. Trump ký EO AI 02/06: review frontier model 30 ngày, NSA lập benchmark cyber mật, hợp tác tự nguyện. NVIDIA GTC Taipei @ Computex: Vera Rubin full production + DSX OS, Nemotron 3 Ultra (550B open MoE), RTX Spark đưa AI vào PC. MiniMax M3 open-weight (MSA sparse attention, 1M context, 59% SWE-Bench Pro). Claude Opus 4.8 (SWE-Bench Pro 69.2%, fast mode rẻ 1/3). GPT-Rosalind + Rosalind Biodefense. OpenAI models + Codex GA trên AWS Bedrock. Cognition (Devin) $1B tại $26B, Devin viết 89% code. ChatGPT Dreaming memory mở free tier. Inference chip war (Intel Crescent Island). Gemini 3.5 Flash vượt flagship cũ. OpenAI lệch pha Nhà Trắng về safety. Xu hướng lớn: inference economics là chiến trường chính.",
-  "next_scan_priority": ["Anthropic IPO timeline & định giá công khai", "Gemini 3.5 Pro release", "Benchmark độc lập (NIST/Artificial Analysis) cho MiniMax M3 & Nemotron 3 Ultra", "Thực thi EO Trump - NSA classified benchmark", "Inference chip traction: Intel Crescent Island, Taalas, d-Matrix", "Privacy ChatGPT Dreaming khi mở free tier toàn cầu"],
-  "entities_tracked": ["OpenAI", "Anthropic", "Google DeepMind", "NVIDIA", "Intel", "MiniMax", "Cognition", "Microsoft", "Amazon/AWS", "Ramp"]
+  "stories_found": 10,
+  "top_story": "Claude Fable 5 ra mắt (09/06) rồi bị US Commerce Dept đình chỉ bằng export control (12/06) — lần đầu tiên chính phủ Mỹ tắt model AI đang chạy. G7 Évian (17/06): 3 CEO cảnh báo AGI 1-5 năm, đề xuất 'trusted partners'. Prometheus (Bezos) gọi $12B/$41B cho Physical AI.",
+  "summary": "Tuần 12-19/06 bị chi phối bởi geopolitics: Claude Fable 5 (Mythos-class) ra mắt 09/06 rồi bị Commerce Dept đình chỉ bằng export control 12/06 — tiền lệ áp export control lên model AI thay vì chip. G7 Évian 17/06: Amodei/Hassabis/Altman cảnh báo AGI 1-5 năm, đề xuất liên minh 'trusted partners'. Prometheus (Bezos) gọi $12B/$41B cho physical AI. Apple WWDC26: Siri AI xây lại trên Gemini ($1B/năm). OpenAI mua Ona (Codex agent dài hạn), retire GPT-5.2, cân nhắc giảm giá. GPT-5.6 cận kề (Polymarket 83% tuần 22-28/06). Odyssey (world model) $310M/$1.45B. Narrative shift: từ inference economics sang AI model access = vũ khí địa chính trị.",
+  "next_scan_priority": ["GPT-5.6 release (Polymarket 83% tuần 22-28/06)", "Fable 5 restoration — timeline và điều kiện", "Gemini 3.5 Pro GA (hứa June — sắp hết tháng)", "G7 trusted partners platform — cơ chế thực tế", "OpenAI price cuts — mức giảm và timing", "Anthropic IPO S-1 review — Fable ban ảnh hưởng?", "Export control expansion — GPT-5.6 có bị áp tương tự?", "Prometheus demo/paper"],
+  "entities_tracked": ["OpenAI", "Anthropic", "Google DeepMind", "NVIDIA", "Apple", "Prometheus", "Odyssey", "Amazon/AWS", "US Commerce Dept", "G7"]
 }

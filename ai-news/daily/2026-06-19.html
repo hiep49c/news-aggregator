@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tin AI — 19/06/2026</title>
+<style>
+:root{--bg:#0a0b10;--surface:#12141d;--surface2:#1a1d2a;--border:#2a2f42;--text:#e4e8f0;--muted:#8892a8;--blue:#5b9cf6;--purple:#a78bfa;--red:#f87171;--orange:#fb923c;--green:#4ade80;--yellow:#fbbf24;--gradient:linear-gradient(135deg,#5b9cf6,#a78bfa)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px}
+.container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.3rem}
+h2{font-size:1.4rem;font-weight:700;color:var(--blue);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+h3{font-size:1.15rem;font-weight:600;color:var(--text);margin:2rem 0 .8rem}
+h4{font-size:.95rem;font-weight:600;color:var(--purple);margin:1.2rem 0 .5rem}
+p{margin:.6rem 0}
+a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+ul,ol{margin:.5rem 0 .5rem 1.5rem}li{margin:.3rem 0}
+.meta{font-size:.82rem;color:var(--muted);margin-bottom:2rem}
+.topnav{position:sticky;top:0;z-index:100;background:rgba(18,20,29,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);margin:0 -1.5rem 1.5rem;padding:.6rem 1.5rem;display:flex;gap:.5rem;overflow-x:auto;white-space:nowrap}
+.topnav a{flex:0 0 auto;font-size:.76rem;color:var(--muted);padding:.35rem .7rem;border-radius:6px;background:var(--surface);border:1px solid var(--border);text-decoration:none;transition:all .15s}
+.topnav a:hover{color:var(--text);border-color:var(--blue)}
+h2[id],div[id],.brief[id]{scroll-margin-top:64px}
+</style>
+<style>
+@media(max-width:768px){.topnav{margin:0 -1rem 1rem;padding:.5rem 1rem}}
+.toc{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.toc h3{margin:0 0 .8rem;font-size:1rem;color:var(--purple)}
+.toc ol{margin:0 0 0 1.2rem}.toc li{margin:.4rem 0;font-size:.88rem}.toc a{color:var(--muted)}.toc a:hover{color:var(--blue)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.2rem 0}
+.badge{display:inline-block;font-size:.7rem;font-weight:600;padding:.2rem .6rem;border-radius:6px;margin-right:.4rem;text-transform:uppercase}
+.badge-red{background:rgba(248,113,113,.15);color:var(--red)}
+.badge-orange{background:rgba(251,146,60,.15);color:var(--orange)}
+.badge-green{background:rgba(74,222,128,.15);color:var(--green)}
+.badge-blue{background:rgba(91,156,246,.15);color:var(--blue)}
+.badge-purple{background:rgba(167,139,250,.15);color:var(--purple)}
+.badge-yellow{background:rgba(251,191,36,.15);color:var(--yellow)}
+.brief{background:linear-gradient(135deg,rgba(91,156,246,.08),rgba(167,139,250,.08));border:1px solid rgba(91,156,246,.2);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.brief ol{margin-left:1.2rem}.brief li{margin:.5rem 0;font-weight:500}
+.warn{background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.25);border-radius:12px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.9rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
+th,td{padding:.6rem .8rem;border:1px solid var(--border);text-align:left}
+th{background:var(--surface2);font-weight:600;color:var(--purple)}
+.url-list{font-size:.82rem;margin:.5rem 0}.url-list a{color:var(--muted);word-break:break-all}.url-list a:hover{color:var(--blue)}
+@media(max-width:768px){.container{padding:1rem}h1{font-size:1.4rem}table{font-size:.78rem}}
+</style>
+</head>
+<body>
+<div class="container">
+
+<nav class="topnav">
+<a href="#brief">📌 Tóm tắt nhanh — 10 tin AI nổi bật 12-19/06</a>
+<a href="#fable">1. Claude Fable 5 — ra mắt rồi bị đình chỉ</a>
+<a href="#g7">2. G7 Évian — CEO AI cảnh báo lãnh đạo</a>
+<a href="#prometheus">3. Prometheus $12B — Physical AI</a>
+<a href="#apple">4. Apple Siri AI — WWDC26</a>
+<a href="#ona">5. OpenAI mua Ona</a>
+<a href="#price">6. GPT-5.2 retired + price war</a>
+<a href="#gpt56">7. GPT-5.6 cận kề</a>
+<a href="#odyssey">8. Odyssey $310M — world models</a>
+<a href="#export">9. Export control AI mới</a>
+<a href="#anthropic-arc">10. Anthropic paradox S-1 → ban</a>
+<a href="#meta">🧭 Meta Trends</a>
+<a href="#watch">🔭 Watchlist</a>
+<a href="#delta">📊 Delta vs 05/06</a>
+<a href="#links">🔗 Liên kết liên ngành</a>
+<a href="#failsrc">⚠️ Nguồn fail</a>
+</nav>
+
+<h1>📊 Báo Cáo Tin Tức AI — 19/06/2026</h1>
+<p class="meta">Quét: 19/06/2026 10:00 ICT | Phạm vi: 12/06–19/06/2026 (7 ngày) | Lần quét: 1 | Số tin chính: 10<br>Nguồn: CNBC, TechCrunch, Forbes, The Verge, AP, Reuters, Ars Technica, Anthropic, OpenAI, Apple, BusinessWire, SiliconAngle, TechTimes, PCMag, InfoWorld, National Law Review, Straits Times, Fortune</p>
+
+<div class="warn">
+⚠️ <strong>Tuần đặc biệt:</strong> Sự kiện export control Fable 5 (12/06) chi phối toàn ngành. Nhiều tin trong tuần liên quan trực tiếp hoặc gián tiếp đến chuỗi sự kiện này.<br>
+⚠️ <strong>GPT-5.6:</strong> Chưa có official announcement — thông tin từ prediction market + logs. Confidence MEDIUM.
+</div>
+
+<nav class="toc">
+<h3>📑 Mục lục</h3>
+<ol>
+<li><a href="#brief">Tóm tắt nhanh</a></li>
+<li><a href="#fable">Claude Fable 5 — launch + suspension</a></li>
+<li><a href="#g7">G7 Évian — AI CEOs cảnh báo</a></li>
+<li><a href="#prometheus">Prometheus $12B (Bezos)</a></li>
+<li><a href="#apple">Apple Siri AI — WWDC26</a></li>
+<li><a href="#ona">OpenAI mua Ona</a></li>
+<li><a href="#price">GPT-5.2 retired + price war signal</a></li>
+<li><a href="#gpt56">GPT-5.6 cận kề</a></li>
+<li><a href="#odyssey">Odyssey $310M</a></li>
+<li><a href="#export">Export control AI mới</a></li>
+<li><a href="#anthropic-arc">Anthropic paradox</a></li>
+<li><a href="#meta">Meta Trends</a></li>
+<li><a href="#watch">Strategic Watchlist</a></li>
+<li><a href="#delta">Delta so với 05/06</a></li>
+<li><a href="#links">Liên kết liên ngành</a></li>
+<li><a href="#failsrc">⚠️ Nguồn không truy cập được</a></li>
+</ol>
+</nav>
+
+<div class="brief" id="brief">
+<h3>📌 Tóm tắt nhanh</h3>
+<ol>
+<li>🔴 <strong>Claude Fable 5 ra mắt rồi bị đình chỉ</strong> — Mythos-class đầu tiên cho public (09/06), Commerce Dept buộc tắt vì export control (12/06), vẫn offline tới 19/06</li>
+<li>🔴 <strong>G7 Évian: CEO AI cảnh báo lãnh đạo</strong> — Amodei "1-2 năm AGI", Hassabis "3-5 năm", đề xuất liên minh US-led + "trusted partners" (17/06)</li>
+<li>🔴 <strong>Prometheus (Bezos) $12B tại $41B</strong> — Physical AI / "artificial general engineer" cho thiết kế công nghiệp (11/06)</li>
+<li>🟠 <strong>Apple WWDC26: Siri AI</strong> — xây lại từ đầu trên Gemini ($1B/năm), tích hợp iOS 27/macOS 27 (08/06)</li>
+<li>🟠 <strong>OpenAI mua Ona (Gitpod)</strong> — cloud sandbox cho Codex agent chạy dài hạn (11/06)</li>
+<li>🟠 <strong>OpenAI retire GPT-5.2 + cân nhắc giảm giá</strong> — WSJ: price war với Anthropic trước IPO (11-12/06)</li>
+<li>🟠 <strong>GPT-5.6 cận kề</strong> — Polymarket 83% ra 22-28/06, Pro variant, "meaningful leap" (15-18/06)</li>
+<li>🟡 <strong>Odyssey $310M tại $1.45B</strong> — world model, Amazon/AMD/GV/IQT (17/06)</li>
+<li>🟡 <strong>Export control AI: paradigm shift</strong> — từ chip sang model, châu Âu chủ quyền AI (12-17/06)</li>
+<li>🟡 <strong>Anthropic paradox</strong> — S-1 → Fable launch → ban → G7 lobbying (01-17/06)</li>
+</ol>
+</div>
+
+<h2 id="fable">1. 🔥 Claude Fable 5 Ra Mắt Rồi Bị Chính Phủ Mỹ Đình Chỉ — Export Control Đánh Trực Tiếp Vào Model</h2>
+<div class="card">
+<span class="badge badge-red">Impact 10/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 09/06 (ra mắt) → 12/06 (đình chỉ) → đang tranh chấp · <strong>Category:</strong> Models / Export Control / Regulation</p>
+<h4>Bối cảnh</h4>
+<p>Anthropic vừa chốt $65B/$965B và file S-1 mật. Ngày 09/06 phát hành Claude Fable 5 — model Mythos-class đầu tiên cho công chúng (vượt Opus). Chỉ 3 ngày sau mọi thứ thay đổi.</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>09/06:</strong> Fable 5 GA — $10/$50 per 1M token, context 1M, adaptive thinking, vượt Opus 4.8</li>
+<li><strong>12/06:</strong> US Commerce Dept ra lệnh export control khẩn cấp — đình chỉ access cho <strong>mọi foreign national</strong> (kể cả trong Mỹ). Anthropic tắt cho <strong>tất cả</strong> vì không phân biệt kịp</li>
+<li><strong>Lần đầu tiên:</strong> Export Control Reform Act 2018 áp trực tiếp lên <strong>model AI</strong> thay vì hardware</li>
+<li><strong>13-19/06:</strong> Anthropic đấu tranh khôi phục — The Verge: "spent the week fighting White House". Fable vẫn offline</li>
+</ul>
+<h4>Phân tích</h4>
+<p><strong>Sự kiện lịch sử:</strong> lần đầu chính phủ Mỹ tắt model AI đang chạy. Tiền lệ pháp lý: export control mở rộng từ chip sang software. Paradox: Anthropic kêu gọi regulation → bị chính regulation đánh. Commerce Dept viện dẫn rủi ro jailbreak bypass safety classifiers.</p>
+<h4>Tác động</h4>
+<p>Anthropic: IPO timeline bị ảnh hưởng. Enterprise toàn cầu: model bất kỳ có thể bị "tắt" → risk mới. Châu Âu: kích hoạt khủng hoảng chủ quyền AI. OpenAI/Google: competitive window ngắn hạn.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.anthropic.com/news/claude-fable-5-mythos-5">Anthropic</a> · <a href="https://techcrunch.com/2026/06/12/anthropics-safety-warnings-may-have-just-backfired-the-government-has-pulled-the-plug-on-its-most-powerful-ai/">TechCrunch</a> · <a href="https://www.cnbc.com/2026/06/12/anthropic-disables-access-to-fable-5-and-mythos-5-to-comply-with-government-directive.html">CNBC</a> · <a href="https://natlawreview.com/article/ai-company-anthropic-suspends-access-claude-fable-5-claude-mythos-5-following-us">NatLawReview</a> · <a href="https://www.pcmag.com/news/the-us-government-banned-anthropics-fable-5-ai-i-tried-it-before-it-disappeared">PCMag</a></p>
+</div>
+</div>
+
+<h2 id="g7">2. 🔥 G7 Évian: CEO AI Cảnh Báo Lãnh Đạo — AGI 1-2 Năm, Liên Minh "Trusted Partners"</h2>
+<div class="card">
+<span class="badge badge-red">Impact 9/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 15-17/06/2026 · <strong>Category:</strong> AI Governance / Geopolitics / Safety</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Amodei:</strong> AI vượt năng lực con người ở hầu hết lĩnh vực trong <strong>1-2 năm</strong></li>
+<li><strong>Hassabis:</strong> ước tính <strong>3-5 năm</strong></li>
+<li><strong>Altman:</strong> "astonishing power" trong <strong>1-2 năm</strong></li>
+<li><strong>Đề xuất:</strong> liên minh AI do Mỹ dẫn dắt + cơ chế "trusted partners" chia sẻ frontier model cho đồng minh</li>
+<li><strong>Macron:</strong> cảnh báo Mỹ có thể "turn off the switch", tuyên bố lập platform trong 1 tháng</li>
+</ul>
+<h4>Phân tích</h4>
+<p>Ba CEO lớn nhất đồng thuận timeline AGI trước nguyên thủ G7 — đây là <strong>input vào quyết sách</strong>, không còn là hype. Amodei ngồi đối diện Trump — người vừa tắt model của anh ta 5 ngày trước. "Trusted partners" tương tự Five Eyes cho intelligence.</p>
+<h4>Tác động</h4>
+<p>Khung quản trị AI toàn cầu mới đang hình thành. EU tăng tốc sovereign AI. Enterprise cần multi-vendor strategy.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.cnbc.com/2026/06/17/g7-trump-ai-tech-leaders-openai-anthropic-google.html">CNBC</a> · <a href="https://apnews.com/article/g7-france-ai-sovereignty-7d783c6de4356962e338b8b8563d48ea">AP</a> · <a href="https://techround.co.uk/news/ai-bosses-told-the-g7-not-to-trust-them-why-is-their-cry-for-help-so-terrifying/">TechRound</a> · <a href="https://www.straitstimes.com/world/europe/g7-leaders-discuss-trusted-partners-access-for-cutting-edge-us-ai-models-sources-say">Straits Times</a> · <a href="https://www.thenationalnews.com/news/europe/2026/06/17/g7-pitches-trusted-partnership-to-ai-chiefs-in-a-bid-for-frontier-model-sharing/">The National</a></p>
+</div>
+</div>
+
+<h2 id="prometheus">3. 🔥 Prometheus (Bezos) Gọi $12B Tại $41B — Physical AI</h2>
+<div class="card">
+<span class="badge badge-red">Impact 9/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 11/06/2026 · <strong>Category:</strong> Funding / Physical AI / Industrial</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Series B $12B</strong> tại $41B — JPMorgan, Goldman Sachs, BlackRock dẫn dắt</li>
+<li>"Artificial general engineer" — AI tự động hóa thiết kế hệ thống vật lý (jet engine, drug compound)</li>
+<li>Tổng vốn >$18B — đồng sáng lập Jeff Bezos + Vik Bajaj (cựu Verily)</li>
+</ul>
+<h4>Phân tích</h4>
+<p>Physical AI là frontier đầu tư tiếp theo sau language models. $12B Series B cho startup ~6 tháng (post-stealth) là kỷ lục. Dàn nhà đầu tư institutional = tương tự Anthropic — AI startup thành institutional asset.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://techcrunch.com/2026/06/11/jeff-bezoss-prometheus-raises-12b-to-build-an-artificial-general-engineer-for-the-physical-world/">TechCrunch</a> · <a href="http://axios.com/2026/06/11/prometheus-bezos-industrial-ai">Axios</a> · <a href="https://www.techtimes.com/articles/318330/20260613/prometheus-ai-startup-bezos-raises-12-billion-41-billion-valuation.htm">TechTimes</a> · <a href="https://finance.yahoo.com/technology/ai/articles/jeff-bezos-ai-startup-prometheus-003015346.html">Yahoo Finance</a></p>
+</div>
+</div>
+
+<h2 id="apple">4. 🟠 Apple WWDC26: Siri AI Xây Lại — Chạy Trên Gemini $1B/Năm</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 08/06/2026 · <strong>Category:</strong> Product / Consumer AI</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Siri AI:</strong> xây lại hoàn toàn, rebrand, trung tâm iOS 27/macOS Golden Gate</li>
+<li>Chạy trên custom <strong>1.2T-param Gemini model</strong>, license ~$1B/năm từ Google</li>
+<li>Conversational depth + tích hợp toàn hệ thống + standalone app</li>
+<li>Apple Intelligence mở rộng: writing tools, productivity, contextual assistance</li>
+</ul>
+<h4>Phân tích</h4>
+<p>Apple chọn "mua hơn xây" ở tầng model — xác nhận model-as-commodity. Google vừa là competitor vừa là supplier. 2B+ devices sẽ có frontier AI = mass market adoption.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.apple.com/newsroom/2026/06/apple-unveils-next-generation-of-apple-intelligence-siri-ai-and-more/">Apple</a> · <a href="https://www.macrumors.com/2026/06/08/apple-announces-siri-ai/">MacRumors</a> · <a href="https://techcrunch.com/2026/06/09/wwdc-2026-everything-announced-on-siri-ai-os-27-apple-intelligence-and-more/">TechCrunch</a> · <a href="https://mashable.com/tech/everything-announced-at-wwdc-2026">Mashable</a></p>
+</div>
+</div>
+
+<h2 id="ona">5. 🟠 OpenAI Mua Lại Ona (Gitpod) — Cloud Sandbox Cho Agent Dài Hạn</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 11/06/2026 · <strong>Category:</strong> M&A / AI Agents / Infrastructure</p>
+<h4>Diễn biến</h4>
+<ul>
+<li>OpenAI mua <strong>Ona</strong> (Gitpod GmbH) — startup Đức 79 người</li>
+<li>Cho phép Codex agent chạy trong cloud sandbox <strong>ngay cả khi developer offline</strong></li>
+<li>Nâng cấp Codex từ "short task" lên "long-running agent" — lưu mỗi 10 phút</li>
+</ul>
+<h4>Phân tích</h4>
+<p>Agentic infrastructure: enterprise cần agent chạy autonomous + governance + sandboxing. So sánh: Cognition (Devin) tự xây — OpenAI chọn mua. Tăng khoảng cách với GitHub Copilot.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://openai.com/index/openai-to-acquire-ona/">OpenAI</a> · <a href="https://www.cnbc.com/2026/06/11/open-ai-ona-acquisition-codex.html">CNBC</a> · <a href="https://www.infoworld.com/article/4184648/openai-buys-ona-to-help-rein-in-ai-agents.html">InfoWorld</a> · <a href="https://siliconangle.com/2026/06/11/openai-acquires-ai-agent-orchestration-startup-ona/">SiliconAngle</a></p>
+</div>
+</div>
+
+<h2 id="price">6. 🟠 OpenAI Retire GPT-5.2 + Cân Nhắc Giảm Giá Lớn — Price War Trước IPO</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-purple">Confidence HIGH (retire) / MEDIUM (price cut)</span>
+<p><strong>Ngày:</strong> 11-12/06/2026 · <strong>Category:</strong> Models / Pricing / Competition</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>12/06:</strong> GPT-5.2 (Instant, Thinking, Pro) retired — auto-migrate sang GPT-5.5</li>
+<li><strong>WSJ (11/06):</strong> OpenAI cân nhắc <strong>giảm giá token đáng kể</strong> nếu Anthropic giảm trước</li>
+<li>Altman: "steep costs" là "huge issue" cho adoption</li>
+<li>Cả OpenAI + Anthropic chuẩn bị IPO → cần volume growth</li>
+</ul>
+<h4>Phân tích</h4>
+<p>Inference economics từ "tối ưu cost" chuyển sang "list price war" thực tế. Retire GPT-5.2 sớm = dọn dẹp SKU, chuẩn bị GPT-5.6.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.techtimes.com/articles/318345/20260613/openai-retires-gpt-52-moves-everyone-gpt-55-what-changes-chatgpt-users-developers.htm">TechTimes</a> · <a href="https://www.cnbc.com/amp/2026/06/11/openai-mulls-slashing-prices-ahead-of-competition-from-anthropic-wsj.html">CNBC/WSJ</a> · <a href="https://www.straitstimes.com/business/companies-markets/chatgpt-maker-openai-considering-drastic-price-cuts-anticipating-war-with-anthropic-wsj">Straits Times</a></p>
+</div>
+</div>
+
+<h2 id="gpt56">7. 🟠 GPT-5.6 Cận Kề Phát Hành — Polymarket 83%, Late June</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-yellow">PARTIALLY VERIFIED</span>
+<span class="badge badge-purple">Confidence MEDIUM</span>
+<p><strong>Ngày:</strong> 15-18/06/2026 · <strong>Category:</strong> Models / Reasoning / Upcoming</p>
+<h4>Diễn biến</h4>
+<ul>
+<li>Model identifier trong Codex logs; codenames "Kindle" / "Kepler"</li>
+<li><strong>Polymarket:</strong> $960K bet, 83% xác suất ra 22-28/06</li>
+<li>GPT-5.6 Pro variant: cần nhiều compute hơn — reasoning phức tạp</li>
+<li>Chief scientist (OpenAI): "meaningful leap"</li>
+<li><strong>Chưa có:</strong> official announcement, system card, pricing</li>
+</ul>
+<h4>Phân tích</h4>
+<p>Nếu đúng timeline, GPT-5.6 ra khi Fable 5 offline → competitive window đặc biệt cho OpenAI. Lưu ý: thông tin từ prediction market + secondary sources — strong signal nhưng chưa confirmed.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.techtimes.com/articles/318492/20260616/gpt-56-openai-chief-scientist-calls-it-meaningful-leap-june-launch-nears.htm">TechTimes</a> · <a href="https://cryptobriefing.com/openai-gpt-5-6-pro-release/">CryptoBriefing</a> · <a href="https://www.testingcatalog.com/openai-prepares-gpt-5-6-models-for-the-upcoming-release/">TestingCatalog</a></p>
+</div>
+</div>
+
+<h2 id="odyssey">8. 🟡 Odyssey Gọi $310M Tại $1.45B — World Model / AI Simulation</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 17/06/2026 · <strong>Category:</strong> Funding / World Models / Physical AI</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>Series B $310M</strong> tại $1.45B — Natural Capital dẫn; Amazon, AMD Ventures, GV, EQT, IQT</li>
+<li>Founders: Oliver Cameron + Jeff Hawke (cựu self-driving Cruise/Waymo)</li>
+<li>Hợp tác AWS cho chip ML chuyên dụng; IQT (quỹ CIA) tham gia</li>
+</ul>
+<h4>Phân tích</h4>
+<p>World models (mô phỏng thế giới vật lý) đang nóng: cùng cluster Prometheus. IQT = defense use case. Physical AI là frontier đầu tư mới.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.businesswire.com/news/home/20260617490386/en/Odyssey-Raises-$310-Million-to-Accelerate-World-Simulation">BusinessWire</a> · <a href="https://techcrunch.com/2026/06/17/world-model-maker-odyssey-nabs-1-45b-valuation-backed-by-amazon-and-other-big-names/">TechCrunch</a> · <a href="https://siliconangle.com/2026/06/17/odyssey-raises-310m-1-45b-valuation-transform-ai-model-simulation/">SiliconAngle</a></p>
+</div>
+</div>
+
+<h2 id="export">9. 🟡 Export Control AI: Paradigm Shift — Từ Chip Sang Model</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 12-17/06/2026 · <strong>Category:</strong> Regulation / Export Control / Geopolitics</p>
+<h4>Diễn biến</h4>
+<ul>
+<li><strong>12/06:</strong> Lần đầu Export Control Reform Act 2018 áp lên model AI (không phải hardware)</li>
+<li><strong>UK:</strong> phủ nhận tìm "carve-out" riêng — mọi đồng minh bị ảnh hưởng</li>
+<li><strong>VivaTech Paris:</strong> EU Commission tuyên bố tech sovereignty package</li>
+<li><strong>G7 (17/06):</strong> "trusted partners" platform lập trong 1 tháng</li>
+</ul>
+<h4>Phân tích</h4>
+<p>Paradigm shift: từ "kiểm soát hardware" sang "kiểm soát software/model capability". Model access = geopolitical leverage. Incentive mạnh cho sovereign AI + open-source (DeepSeek, Qwen không bị export control).</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.techtimes.com/articles/318611/20260618/europe-ai-sovereignty-crisis-g7-offers-platform-kill-switch-fears-grow.htm">TechTimes</a> · <a href="https://cryptobriefing.com/uk-denies-us-ai-export-controls-carve-out/">CryptoBriefing</a> · <a href="https://www.cnbc.com/2026/06/17/anthropic-ai-regulation-trump.html">CNBC</a></p>
+</div>
+</div>
+
+<h2 id="anthropic-arc">10. 🟡 Anthropic: Paradox S-1 → Fable Launch → Ban → G7 Lobbying</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 01/06 → 09/06 → 12/06 → 17/06 · <strong>Category:</strong> Funding / IPO / Strategy</p>
+<h4>Diễn biến (narrative arc)</h4>
+<ul>
+<li><strong>01/06:</strong> File S-1 mật — bước đầu hướng IPO, đi trước OpenAI</li>
+<li><strong>05/06:</strong> Kêu gọi Congress bắt buộc DNA screening + mandatory AI evaluations</li>
+<li><strong>09/06:</strong> Ra Fable 5 — model mạnh nhất, "too dangerous" warning song hành</li>
+<li><strong>12/06:</strong> Chính phủ buộc tắt — paradox: bị chính cơ chế mình kêu gọi đánh</li>
+<li><strong>17/06:</strong> Amodei tại G7 kêu gọi "resist temptation to splinter"</li>
+</ul>
+<h4>Phân tích</h4>
+<p>Case study: công ty safety-first xây model mạnh nhất → kêu gọi regulation → bị regulation đánh → vận động tháo gỡ. IPO narrative bị impact: model flagship offline + revenue gián đoạn.</p>
+<div class="url-list">
+<p>Nguồn: <a href="https://www.anthropic.com/news/confidential-draft-s1-sec">Anthropic</a> · <a href="https://www.cnbc.com/2026/06/01/anthropic-ipo-s1-prospectus.html">CNBC</a> · <a href="https://techcrunch.com/2026/06/09/anthropic-released-claude-fable-5-its-most-powerful-model-publicly-days-after-warning-ai-is-getting-too-dangerous/">TechCrunch</a></p>
+</div>
+</div>
+
+<h2 id="meta">🧭 Meta Trends</h2>
+<div class="card">
+<ol>
+<li><strong>Export control mở rộng từ chip sang model</strong> — "AI as a controlled good". Model access = công cụ địa chính trị. Structural shift lớn nhất tuần.</li>
+<li><strong>Physical AI / World Models là frontier đầu tư tiếp theo.</strong> Prometheus ($12B) + Odyssey ($310M) + NVIDIA Omniverse. Sau language → physics simulation.</li>
+<li><strong>Cuộc chiến giá inference bước vào "list price war".</strong> OpenAI xem xét giảm giá token trực tiếp. Cả hai chuẩn bị IPO → volume growth qua giảm giá.</li>
+<li><strong>Model-as-commodity: Apple license Gemini $1B/năm.</strong> AI model = utility layer mua/bán giữa platform giants.</li>
+<li><strong>Timeline AGI hội tụ 1-5 năm</strong> (3 CEO tại G7). Input vào quyết sách chứ không chỉ prediction.</li>
+</ol>
+</div>
+
+<h2 id="watch">🔭 Strategic Watchlist</h2>
+<div class="card">
+<ul>
+<li>Fable 5 restoration — timeline? điều kiện?</li>
+<li>GPT-5.6 release tuần 22-28/06</li>
+<li>Gemini 3.5 Pro GA — đã hứa "June"</li>
+<li>G7 "trusted partners" platform — cơ chế thực tế?</li>
+<li>OpenAI price cuts — mức giảm + timing</li>
+<li>Anthropic IPO — Fable ban ảnh hưởng S-1?</li>
+<li>Export control: GPT-5.6 có bị áp tương tự?</li>
+<li>Prometheus demo/product khi nào?</li>
+</ul>
+</div>
+
+<h2 id="delta">📊 Delta So Với 05/06</h2>
+<table>
+<tr><th>Chủ đề</th><th>05/06</th><th>19/06</th><th>Δ</th></tr>
+<tr><td>Anthropic</td><td>$965B, S-1, Opus 4.8</td><td>Fable 5 launch + export ban</td><td>⬆️⬆️ Escalation</td></tr>
+<tr><td>AI regulation</td><td>EO Trump (tự nguyện, 30 ngày)</td><td>Export control tắt model + G7 trusted partners</td><td>⬆️⬆️ Paradigm shift</td></tr>
+<tr><td>OpenAI</td><td>Codex GA AWS, Rosalind</td><td>Retire 5.2, mua Ona, price war, GPT-5.6</td><td>⬆️ Momentum</td></tr>
+<tr><td>Inference economics</td><td>Trend analysis</td><td>"List price war" thực tế</td><td>⬆️ Escalation</td></tr>
+<tr><td>Physical AI</td><td>Không có</td><td>Prometheus $12B + Odyssey $310M</td><td>🆕 Frontier mới</td></tr>
+<tr><td>Apple/Consumer AI</td><td>Không có</td><td>Siri AI on Gemini — WWDC26</td><td>🆕</td></tr>
+<tr><td>G7/Geopolitics</td><td>Không có</td><td>AGI timeline warning + trusted partners</td><td>🆕 Critical</td></tr>
+</table>
+<p><strong>Narrative shift:</strong> Từ "inference economics là chiến trường" sang "AI model access là vũ khí địa chính trị + price war". Geopolitics chi phối ngành AI tuần này hơn technical progress.</p>
+
+<h2 id="links">🔗 Liên Kết Liên Ngành</h2>
+<div class="card">
+<ul>
+<li><strong>AI → World Conflicts:</strong> Export control Fable 5 ↔ trade war; G7 trusted partners ↔ khối quân sự; AI cyber ↔ an ninh quốc gia</li>
+<li><strong>AI → VN News:</strong> Apple Siri AI (chuỗi cung ứng VN); Physical AI (FDI manufacturing); Sovereign AI → cơ hội AI labs VN/ASEAN</li>
+<li><strong>AI → Sci-Tech:</strong> Prometheus (materials science, drug design); Odyssey (autonomous vehicle simulation)</li>
+</ul>
+</div>
+
+<h2 id="failsrc">⚠️ Nguồn Không Truy Cập Được</h2>
+<div class="card">
+<ul>
+<li>Forbes — một số bài paywall (cross-check qua CNBC/TechCrunch)</li>
+<li>The Verge — tracker page chỉ headline (chi tiết qua nguồn khác)</li>
+<li>Anthropic Fable 5 page — "currently unavailable" (confirm model offline)</li>
+</ul>
+</div>
+
+</div>
+</body>
+</html>
