@@ -1,10 +1,10 @@
 {
-  "last_scan_timestamp": "2026-06-05T09:30:00+07:00",
-  "last_scan_date": "2026-06-05",
+  "last_scan_timestamp": "2026-06-19T10:00:00+07:00",
+  "last_scan_date": "2026-06-19",
   "run_count": 1,
   "stories_found": 10,
-  "top_story": "Nhập siêu kỷ lục $13.8 tỷ trong 5 tháng — lần đầu Việt Nam nhập siêu sau 10 năm xuất siêu (riêng T5: -$5.21 tỷ). Mỹ đề xuất thuế bổ sung 10-12.5% với 60 đối tác gồm VN (lao động cưỡng bức), VN phản đối. FDI 5 tháng đăng ký $24.81 tỷ (+34.9%), giải ngân $9.75 tỷ cao nhất 5 năm. VN-Index rơi từ đỉnh lịch sử 1,933 về ~1,820 (7 phiên giảm), khối ngoại bán ròng. CPI 5 tháng +4.31% áp sát trần 4.5%.",
-  "summary": "Kỳ 29/05-05/06/2026 (cap 7 ngày). 10 tin: nhập siêu kỷ lục, đe dọa thuế quan Mỹ, FDI bùng nổ, VN-Index điều chỉnh từ đỉnh 1,933, CPI 4.31%, IIP +9.1% & du lịch kỷ lục, sovereign AI FPT/Viettel-NVIDIA, điều chỉnh chương trình lập pháp QH, lãi suất overnight 11%->6.54%, chính quyền 2 cấp. Chủ đề lớn: bước ngoặt cấu trúc thương mại + bất định thuế quan Mỹ song hành dòng FDI mạnh.",
-  "next_scan_priority": "Quyết định cuối USTR về thuế lao động cưỡng bức & phản ứng chuỗi cung ứng; nhập siêu T6 + áp lực tỷ giá; khối ngoại có dừng bán ròng; CPI T6 & điều hành lãi suất NHNN; lịch kỳ họp bất thường Quốc hội (cuối 7-đầu 8).",
-  "entities_tracked": ["VN-Index", "USTR/Mỹ thuế quan", "FDI", "CPI/lạm phát", "Viettel", "FPT", "NVIDIA", "NHNN", "Quốc hội"]
+  "top_story": "Thỏa thuận hòa bình Mỹ-Iran (14-17/06) mở lại Hormuz → dầu Brent giảm >11% về $79-80/thùng → giảm đồng thời CPI, nhập siêu, chi phí sản xuất VN. Nghị quyết 10 Bộ Chính trị chuyển đổi chiến lược FDI ($200-300 tỷ 2026-2030, chọn lọc bán dẫn/AI). Cắt 56 ngành KDĐK (-28%). Samsung $1.5 tỷ chip plant Thái Nguyên.",
+  "summary": "Kỳ 12/06-19/06/2026 (7 ngày). 10 tin: hòa bình Mỹ-Iran → dầu giảm sốc, Nghị quyết 10 FDI chiến lược, GDP mục tiêu 10% giữ nguyên, VN-Index hồi 1791→1830 (khối ngoại mua ròng $160M rồi bán lại), lãi suất huy động leo thang 7.2-7.4%, cắt 56 ngành KDĐK, QH 171 ưu tiên lập pháp + PPA, Samsung $1.5 tỷ chip, xăng giảm mạnh, cuộc đua vốn. Chủ đề: hòa bình giải áp năng lượng + cải cách thể chế tăng tốc + FDI semiconductor.",
+  "next_scan_priority": "Đàm phán chi tiết Mỹ-Iran 60 ngày & Hormuz ổn định; CPI tháng 6 (dầu giảm có kéo lạm phát xuống?); GDP Q2; VN-Index vượt 1850 hay rơi 1790; văn bản hướng dẫn Nghị quyết 10; Samsung timeline 11/2027; kỳ họp bất thường QH 7-8; quyết định cuối USTR thuế lao động cưỡng bức.",
+  "entities_tracked": ["VN-Index", "NHNN", "Samsung", "FPT", "Viettel", "G42", "USTR", "Nghị quyết 10", "Bộ Chính trị", "Quốc hội khóa 16", "Hormuz", "Brent", "CPI", "FDI"]
 }

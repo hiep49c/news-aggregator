@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Khoa Học & Công Nghệ — 19/06/2026</title>
+<style>
+:root{--bg:#0a0b10;--surface:#12141d;--surface2:#1a1d2a;--border:#2a2f42;--text:#e4e8f0;--muted:#8892a8;--blue:#5b9cf6;--purple:#a78bfa;--red:#f87171;--orange:#fb923c;--green:#4ade80;--yellow:#fbbf24;--gradient:linear-gradient(135deg,#5b9cf6,#a78bfa)}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Inter',-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;background:var(--bg);color:var(--text);line-height:1.7;font-size:15px}
+.container{max-width:1100px;margin:0 auto;padding:2rem 1.5rem}
+h1{font-size:1.8rem;font-weight:800;background:var(--gradient);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:.3rem}
+h2{font-size:1.4rem;font-weight:700;color:var(--blue);margin:2.5rem 0 1rem;padding-bottom:.5rem;border-bottom:1px solid var(--border)}
+h3{font-size:1.15rem;font-weight:600;color:var(--text);margin:2rem 0 .8rem}
+h4{font-size:.95rem;font-weight:600;color:var(--purple);margin:1.2rem 0 .5rem}
+p{margin:.6rem 0}a{color:var(--blue);text-decoration:none}a:hover{text-decoration:underline}
+ul,ol{margin:.5rem 0 .5rem 1.5rem}li{margin:.3rem 0}
+.meta{font-size:.82rem;color:var(--muted);margin-bottom:2rem}
+.topnav{position:sticky;top:0;z-index:100;background:rgba(18,20,29,.95);backdrop-filter:blur(6px);border-bottom:1px solid var(--border);margin:0 -1.5rem 1.5rem;padding:.6rem 1.5rem;display:flex;gap:.5rem;overflow-x:auto;white-space:nowrap}
+.topnav a{flex:0 0 auto;font-size:.76rem;color:var(--muted);padding:.35rem .7rem;border-radius:6px;background:var(--surface);border:1px solid var(--border);text-decoration:none;transition:all .15s}
+.topnav a:hover{color:var(--text);border-color:var(--blue)}
+h2[id],div[id],.brief[id]{scroll-margin-top:64px}
+@media(max-width:768px){.topnav{margin:0 -1rem 1rem;padding:.5rem 1rem}.container{padding:1rem}h1{font-size:1.4rem}table{font-size:.78rem}}
+.toc{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.toc h3{margin:0 0 .8rem;font-size:1rem;color:var(--purple)}
+.toc ol{margin:0 0 0 1.2rem}.toc li{margin:.4rem 0;font-size:.88rem}.toc a{color:var(--muted)}.toc a:hover{color:var(--blue)}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:1.5rem;margin:1.2rem 0}
+.badge{display:inline-block;font-size:.7rem;font-weight:600;padding:.2rem .6rem;border-radius:6px;margin-right:.4rem;text-transform:uppercase}
+.badge-red{background:rgba(248,113,113,.15);color:var(--red)}
+.badge-orange{background:rgba(251,146,60,.15);color:var(--orange)}
+.badge-green{background:rgba(74,222,128,.15);color:var(--green)}
+.badge-blue{background:rgba(91,156,246,.15);color:var(--blue)}
+.badge-purple{background:rgba(167,139,250,.15);color:var(--purple)}
+.badge-yellow{background:rgba(251,191,36,.15);color:var(--yellow)}
+.brief{background:linear-gradient(135deg,rgba(91,156,246,.08),rgba(167,139,250,.08));border:1px solid rgba(91,156,246,.2);border-radius:12px;padding:1.5rem;margin:1.5rem 0}
+.brief ol{margin-left:1.2rem}.brief li{margin:.5rem 0;font-weight:500}
+.warn{background:rgba(251,191,36,.08);border:1px solid rgba(251,191,36,.25);border-radius:12px;padding:1rem 1.2rem;margin:1.2rem 0;font-size:.9rem}
+table{width:100%;border-collapse:collapse;margin:1rem 0;font-size:.88rem}
+th,td{padding:.6rem .8rem;border:1px solid var(--border);text-align:left}
+th{background:var(--surface2);font-weight:600;color:var(--purple)}
+.url-list{font-size:.82rem;margin:.5rem 0}.url-list a{color:var(--muted);word-break:break-all}.url-list a:hover{color:var(--blue)}
+</style>
+</head>
+<body>
+<div class="container">
+
+<nav class="topnav">
+<a href="#brief">📌 Tóm tắt nhanh</a>
+<a href="#spacex">1. SpaceX IPO $75B</a>
+<a href="#helion">2. Helion Fusion License</a>
+<a href="#quantum">3. AWS/QuEra Libra 2028</a>
+<a href="#crispr">4. CRISPR Phase III</a>
+<a href="#battery">5. Solid-State Road Test</a>
+<a href="#regen">6. Mammal Regeneration</a>
+<a href="#robot">7. Hyundai/Boston Dynamics</a>
+<a href="#starship">8. Starship Flight 13</a>
+<a href="#doe">9. DOE Fusion Roadmap</a>
+<a href="#pfas">10. PFAS UV Breakdown</a>
+<a href="#meta">🧭 Meta Trends</a>
+<a href="#delta">📊 Delta</a>
+</nav>
+
+<h1>📊 Báo Cáo Khoa Học & Công Nghệ — 19/06/2026</h1>
+<p class="meta">Quét: 19/06/2026 11:00 ICT | Phạm vi: 12/06–19/06/2026 (7 ngày) | Lần quét: 1 | Số tin chính: 10<br>Nguồn: Nature, Science, Ars Technica, CNBC, TechCrunch, Reuters, Forbes, Electrek, GeekWire, CBS News, BusinessWire, GlobeNewsWire, ScienceDaily, Phys.org, MedicalXpress, New Scientist, World Nuclear News</p>
+
+<nav class="toc">
+<h3>📑 Mục lục</h3>
+<ol>
+<li><a href="#brief">Tóm tắt nhanh</a></li>
+<li><a href="#spacex">SpaceX IPO lớn nhất lịch sử</a></li>
+<li><a href="#helion">Helion fusion license đầu tiên thế giới</a></li>
+<li><a href="#quantum">AWS + QuEra Libra — quantum fault-tolerant 2028</a></li>
+<li><a href="#crispr">CRISPR in vivo Phase III thành công</a></li>
+<li><a href="#battery">Pin solid-state road test thực tế</a></li>
+<li><a href="#regen">Tái sinh mô ở động vật có vú</a></li>
+<li><a href="#robot">Hyundai mua toàn bộ Boston Dynamics</a></li>
+<li><a href="#starship">Starship Flight 13 timeline</a></li>
+<li><a href="#doe">DOE Fusion Roadmap</a></li>
+<li><a href="#pfas">PFAS UV breakdown</a></li>
+<li><a href="#meta">Meta Trends</a></li>
+<li><a href="#delta">Delta so với 05/06</a></li>
+</ol>
+</nav>
+
+<div class="brief" id="brief">
+<h3>📌 Tóm tắt nhanh — 10 tin Sci-Tech nổi bật 12-19/06</h3>
+<ol>
+<li>🔴 <strong>SpaceX IPO lớn nhất lịch sử</strong> — $75B huy động, đóng $161 (+19%), vốn hóa >$2.1T, Musk trở thành trillionaire (12/06)</li>
+<li>🔴 <strong>Helion đạt giấy phép fusion đầu tiên thế giới</strong> — 2 license từ Washington DOH cho nhà máy Orion (16/06)</li>
+<li>🔴 <strong>AWS + QuEra: Libra fault-tolerant quantum 2028</strong> — 256+ logical qubit, error rate 10⁻⁶ (15/06)</li>
+<li>🟠 <strong>CRISPR in vivo Phase III thành công</strong> — lonvo-z giảm 87% cơn, 62% hoàn toàn không cơn (13/06)</li>
+<li>🟠 <strong>Pin solid-state chạy trên đường</strong> — Factorial/Stellantis Dodge Charger, 375 Wh/kg (11/06)</li>
+<li>🟠 <strong>Tái sinh mô ở mammals</strong> — FGF2+BMP2 tạo blastema, tái sinh xương/khớp (17/06)</li>
+<li>🟠 <strong>Hyundai mua toàn bộ Boston Dynamics</strong> — $325M, Atlas vào nhà máy 2028 (19/06)</li>
+<li>🟡 <strong>Starship Flight 13 ~1 tháng</strong> — Shotwell confirm, monthly cadence (18/06)</li>
+<li>🟡 <strong>DOE Fusion Roadmap finalized</strong> — mid-2030s commercial target (09/06)</li>
+<li>🟡 <strong>PFAS phá hủy bằng UV</strong> — hydrogen radical mechanism không cần hóa chất (16/06)</li>
+</ol>
+</div>
+
+<h2 id="spacex">1. 🚀 SpaceX IPO Lớn Nhất Lịch Sử — $75 Tỷ, Vốn Hóa $2.1 Nghìn Tỷ</h2>
+<div class="card">
+<span class="badge badge-red">Impact 9/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 12/06/2026 · <strong>Category:</strong> Space / IPO / Technology</p>
+
+<h4>Bối cảnh</h4>
+<p>SpaceX — công ty hàng không vũ trụ do Elon Musk thành lập năm 2002 — đã phát triển từ startup gần phá sản đến vị thế thống trị phóng vệ tinh toàn cầu (>60% thị phần). Vận hành Starlink (7.000+ vệ tinh, $12-15B doanh thu/năm), Falcon 9, và đang phát triển Starship — tên lửa lớn nhất từng chế tạo. Quyết định IPO đánh dấu thay đổi chiến lược: nhu cầu thanh khoản nhân viên + vốn cho Starship V3 và Mars infrastructure.</p>
+
+<h4>Diễn biến</h4>
+<p>Ngày 11/06, SpaceX công bố giá IPO $135/cp — huy động $75 tỷ, lớn nhất mọi thời đại (vượt Saudi Aramco $25.6B năm 2019). Ngày 12/06, SPCX giao dịch trên Nasdaq: mở cửa ~$150, đóng $161.11 (+19%), khối lượng >500 triệu cp. Vốn hóa đạt $2.1 nghìn tỷ. Musk (42% cp) trở thành trillionaire đầu tiên. Cùng sáng, SpaceX phóng Starlink 10-54 thành công. Ngày 15/06 tiếp tục tăng ~20%.</p>
+
+<h4>Phân tích</h4>
+<p>IPO cung cấp nguồn vốn cho Starship V3, Starlink Gen 2, và Mars. Tạo tiền lệ cho deep-tech/space IPO wave. So sánh: Saudi Aramco ($25.6B) → SpaceX gấp 3x. Rủi ro: Starship grounded (FAA), áp lực profitability thị trường công khai, cạnh tranh Trung Quốc. Với $2.1T vốn hóa, SpaceX là space infrastructure monopoly — impact geopolitical.</p>
+
+<h4>Tác động</h4>
+<p>Mở cửa cho IPO wave space-tech. Retail investors lần đầu sở hữu SpaceX. Mỹ có công ty vũ trụ >$2T. VN: Starlink đang xin phép — IPO tăng áp lực cạnh tranh lên Viettel Satellite.</p>
+
+<div class="url-list">
+<p>Nguồn: <a href="https://www.cnbc.com/2026/06/12/spacex-ipo-spcx-live-updates.html">CNBC</a> · <a href="https://techcrunch.com/2026/06/12/spacex-ipo-closes-up-19-and-delivers-the-worlds-first-trillionaire/">TechCrunch</a> · <a href="https://www.cbsnews.com/news/spacex-stock-price-ipo-spcx-initial-public-offering/">CBS News</a> · <a href="https://www.forbes.com/sites/tylerroush/2026/06/12/spacex-will-trade-today-after-largest-ipo-ever-live-updates/">Forbes</a></p>
+</div>
+</div>
+
+<h2 id="helion">2. ⚡ Helion Đạt Giấy Phép Fusion Đầu Tiên Thế Giới — Nhà Máy Orion</h2>
+<div class="card">
+<span class="badge badge-red">Impact 9/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 16/06/2026 · <strong>Category:</strong> Fusion Energy / Regulation / Milestone</p>
+
+<h4>Bối cảnh</h4>
+<p>Năng lượng nhiệt hạch (fusion) — kết hợp hạt nhân nhẹ giải phóng năng lượng — là giấc mơ từ 1950s. Helion Energy (đầu tư bởi Sam Altman, hợp đồng Microsoft) theo đuổi field-reversed configuration (FRC), trực tiếp chuyển năng lượng thành điện không cần turbine. Nhà máy Orion tại Malaga, WA động thổ 2025. Mục tiêu: cung cấp điện cho Microsoft năm 2028. Trước 16/06, không công ty fusion nào có giấy phép vận hành thương mại.</p>
+
+<h4>Diễn biến</h4>
+<p>Ngày 16/06, Helion trở thành công ty đầu tiên thế giới nhận đủ giấy phép xây dựng và vận hành nhà máy fusion. Washington DOH cấp: (1) Radioactive Materials License — cho phép sử dụng tritium; (2) Radioactive Air Emissions License — cho phép phát thải kiểm soát. Đây là operational license, không phải research permit.</p>
+
+<h4>Phân tích</h4>
+<p>Paradigm shift: ITER ($25B, chính phủ) là research. Helion là tư nhân, qua commercial licensing. Timing: DOE Roadmap (09/06) + Helion license (16/06) — ngành fusion accelerating. Skepticism: license ≠ net energy gain. Helion chưa public Q>1 demo. FRC approach chưa peer-reviewed thuyết phục. Timeline 2028 cực aggressive. TRL: 5-6.</p>
+
+<h4>Tác động</h4>
+<p>Tiền lệ pháp lý cho mọi startup fusion. De-risk fusion investment. Mỹ dẫn đầu regulatory framework. Nếu deliver, giải quyết bottleneck năng lượng AI data centers.</p>
+
+<div class="url-list">
+<p>Nguồn: <a href="https://www.helionenergy.com/newsroom/helion-clears-key-regulatory-milestone-on-the-path-to-building-and-operating-the-worlds-first-fusion-power-plant">Helion Official</a> · <a href="https://www.geekwire.com/2026/helion-secures-worlds-first-regulatory-licenses-for-fusion-power-plant-being-built-in-washington/">GeekWire</a> · <a href="https://www.world-nuclear-news.org/articles/fusion-plant-clears-regulatory-milestone">World Nuclear News</a> · <a href="https://thenextweb.com/news/helion-first-fusion-power-plant-licences">The Next Web</a></p>
+</div>
+</div>
+
+<h2 id="quantum">3. 🔮 AWS + QuEra Libra — Quantum Fault-Tolerant Trên Cloud 2028</h2>
+<div class="card">
+<span class="badge badge-red">Impact 9/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 15-17/06/2026 · <strong>Category:</strong> Quantum Computing / Cloud / Infrastructure</p>
+
+<h4>Bối cảnh</h4>
+<p>Quantum computing bị giới hạn bởi "noise problem" — qubit nhạy cảm, lỗi nhanh hơn sửa. Quantum error correction (QEC) dùng nhiều qubit vật lý tạo logical qubit bền hơn. QuEra (Boston, Harvard/MIT founders) dùng neutral atom approach — Rydberg atoms bẫy bằng laser, scale dễ hơn superconducting. Hệ thống tốt nhất hiện tại: <10 logical qubits hiệu quả.</p>
+
+<h4>Diễn biến</h4>
+<p>Ngày 15/06, QuEra + AWS công bố Libra — máy tính lượng tử fault-tolerant đầu tiên, lên Amazon Braket 2028. Specs: 256+ error-corrected logical qubits, error rate 10⁻⁶, "Megaquop-scale" (~1 triệu phép tính logic đáng tin cậy). Ngày 17/06, Amazon SVP Peter DeSantis nói trên CNBC: quantum "commercially useful" trong 5-7 năm, sau đó Moore's Law-like growth. Ars Technica (18/06) phân tích: một số quantum supremacy claims bị classical algorithms đuổi kịp.</p>
+
+<h4>Phân tích</h4>
+<p>256 logical qubits @ 10⁻⁶ = ngưỡng cho quantum chemistry (drug/materials simulation). Neutral atom scale nhanh hơn (optical tweezer arrays, Harvard demo >1000 physical qubits). Caution: 256 qubits ≠ giải mọi thứ (cryptography cần millions). "Megaquop" là thuật ngữ QuEra, chưa standardized. Classical algorithms đang tiến song song.</p>
+
+<h4>Tác động</h4>
+<p>Drug discovery, materials design, financial optimization. AWS vs Google vs IBM quantum-as-a-service race. An ninh mạng: timeline rút ngắn nhưng chưa threat encryption hiện tại.</p>
+
+<div class="url-list">
+<p>Nguồn: <a href="https://www.prnewswire.com/news-releases/quera-announces-2028-fault-tolerant-quantum-computer-and-expanded-multi-year-strategic-collaboration-with-aws-302799818.html">QuEra PR</a> · <a href="https://arstechnica.com/science/2026/06/amazon-quera-promise-useful-quantum-error-correction-by-2028/">Ars Technica</a> · <a href="https://www.cnbc.com/2026/06/17/amazon-quantum-computing-timeline.html">CNBC</a> · <a href="https://www.newscientist.com/article/2530326-are-useful-and-error-free-quantum-computers-only-two-years-away/">New Scientist</a></p>
+</div>
+</div>
+
+<h2 id="crispr">4. 🧬 CRISPR In Vivo Phase III Thành Công — Lonvo-z Giảm 87% Cơn Phù Mạch</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 13/06/2026 · <strong>Category:</strong> Biotech / Gene Therapy / Clinical Trial</p>
+
+<h4>Bối cảnh</h4>
+<p>CRISPR in vivo — tiêm trực tiếp vào cơ thể chỉnh sửa gen tại chỗ — là bước tiến vọt so với ex vivo (Casgevy, $2.2M/lần, phức tạp). Intellia Therapeutics dùng lipid nanoparticle đưa CRISPR vào gan, tắt gen KLKB1 gây phù mạch di truyền (HAE). HAE ảnh hưởng ~1/50.000 người, có thể tử vong nếu sưng thanh quản. Hiện cần thuốc dự phòng suốt đời ($400K/năm).</p>
+
+<h4>Diễn biến</h4>
+<p>Ngày 13/06, Intellia công bố HAELO — Phase III đầu tiên CRISPR in vivo hoàn thành thành công. 80 bệnh nhân, randomized, double-blind. Primary endpoint: giảm 87% cơn/tháng vs placebo (p<0.0001). Key secondary: 62% hoàn toàn không cơn + không thuốc trong 6 tháng (vs 11% placebo, p<0.0001). An toàn tốt, không biến cố nghiêm trọng liên quan thuốc. Amsterdam UMC: "genuine efficacy and safety".</p>
+
+<h4>Phân tích</h4>
+<p>Platform validation: LNP delivery cho in vivo CRISPR works at Phase III scale. Pipeline Intellia (CTX310 cholesterol, CTX320 lipid) cùng platform → accelerated. One-shot cure vs thuốc suốt đời = paradigm shift cho economics y tế. TRL 7-8, filing expected 2027. Giới hạn: bệnh hiếm, long-term durability chưa rõ, LNP hiện chỉ hiệu quả đến gan.</p>
+
+<div class="url-list">
+<p>Nguồn: <a href="https://www.globenewswire.com/news-release/2026/06/13/3311378/0/en/Intellia-Therapeutics-Reports-Additional-Positive-Phase-3-Results-for-Lonvoguran-Ziclumeran-lonvo-z-in-Patients-with-Hereditary-Angioedema.html">GlobeNewsWire/Intellia</a> · <a href="https://www.biospace.com/press-releases/intellia-therapeutics-reports-additional-positive-phase-3-results-for-lonvoguran-ziclumeran-lonvo-z-in-patients-with-hereditary-angioedema">BioSpace</a> · <a href="https://medicalxpress.com/news/2026-06-vivo-crispr-therapy-successfully-hereditary.html">MedicalXpress</a> · <a href="https://www.eurekalert.org/news-releases/1131680">EurekAlert</a></p>
+</div>
+</div>
+
+<h2 id="battery">5. 🔋 Pin Solid-State Lần Đầu Chạy Trên Đường — Stellantis/Factorial Dodge Charger</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 11/06/2026 · <strong>Category:</strong> Battery / EV / Energy Storage</p>
+
+<h4>Bối cảnh</h4>
+<p>Pin solid-state thay electrolyte lỏng bằng chất dẫn ion rắn: mật độ cao hơn (>400 Wh/kg vs 250-300), sạc nhanh hơn, an toàn hơn. Hơn thập kỷ bị giới hạn trong lab (interface resistance, cracking, chi phí). Factorial Energy dùng FEST — polymer/ceramic hybrid, sản xuất trên dây chuyền lithium-ion hiện có (retrofit).</p>
+
+<h4>Diễn biến</h4>
+<p>Ngày 11/06, Stellantis + Factorial công bố tích hợp pin FEST vào Dodge Charger Daytona và bắt đầu road testing tại Mỹ — lần đầu solid-state trên đường công cộng. Specs: 375 Wh/kg, sạc 15→90% trong 18 phút, hoạt động -30°C đến 45°C. Mercedes trước đó test EQS với 106 Factorial cell: 745 dặm (1.200 km)/lần sạc. Factorial vừa IPO Nasdaq (FAC). BYD tuyên bố solid-state sản xuất hạn chế 2027.</p>
+
+<h4>Phân tích</h4>
+<p>TRL jump 5-6 → 7 (system demo in operational environment). 745 dặm + sạc 18 phút = xóa range anxiety hoàn toàn. Factorial lợi thế: retrofit dây chuyền = chi phí thấp hơn. Nếu cost parity ($80/kWh), EV rẻ hơn ICE. Cuộc đua: Toyota, Samsung SDI, KAIST (Nature Energy 40% gain), BYD. Giới hạn: road test ≠ production (2-3 năm nữa), chi phí chưa công bố, cycle life thực tế chưa rõ.</p>
+
+<div class="url-list">
+<p>Nguồn: <a href="https://www.media.stellantis.com/uk-en/corporate/press/stellantis-and-factorial-integrate-advanced-solid-state-battery-into-stellantis-development-vehicle-and-launch-road-testing">Stellantis Official</a> · <a href="https://electrek.co/2026/06/11/solid-state-batteries-now-powering-evs-in-real-world/">Electrek</a> · <a href="https://newatlas.com/automotive/stellantis-factorial-solid-state-batteries-road-test-usa/">New Atlas</a> · <a href="https://electrek.co/2026/06/08/solid-state-ev-battery-maker-joins-nasdaq-after-745-mi-range-test/">Electrek (Factorial IPO)</a></p>
+</div>
+</div>
+
+<h2 id="regen">6. 🦎 Tái Sinh Mô Ở Động Vật Có Vú — FGF2+BMP2 Kích Hoạt Blastema</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 8/10</span>
+<span class="badge badge-yellow">PARTIALLY VERIFIED</span>
+<span class="badge badge-purple">Confidence MEDIUM-HIGH</span>
+<p><strong>Ngày:</strong> 17/06/2026 · <strong>Category:</strong> Biology / Regenerative Medicine / Research</p>
+
+<h4>Bối cảnh</h4>
+<p>Kỳ nhông mọc lại chân nhờ blastema — khối tế bào gốc đa năng tại vết thương. Mammals lành bằng sẹo, không tái sinh. Câu hỏi lớn: gen tái sinh bị mất hay chỉ bị tắt? FGF2, BMP2 đều đã FDA-approved cho ứng dụng khác.</p>
+
+<h4>Diễn biến</h4>
+<p>Ngày 17/06, ScienceDaily + nhiều nguồn đưa tin Texas A&M: hai protein FGF2 + BMP2 tiêm theo trình tự vào chuột sau cắt ngón → hình thành cấu trúc giống blastema (lần đầu ở mammal) → tái sinh xương, khớp, dây chằng. Kết luận: khả năng tái tạo bị "suppressed", không phải bị mất — có thể override bằng signal đúng.</p>
+
+<h4>Phân tích</h4>
+<p>Blastema ở mammal = event chưa từng ghi nhận. Proof of concept rằng regeneration machinery vẫn trong genome. FGF2/BMP2 đã FDA-approved → regulatory path ngắn hơn. Giới hạn: chuột ≠ người, tái sinh "imperfect", chưa rõ áp dụng cho mô mềm, clinical translation 10-15 năm. TRL 2-3.</p>
+
+<div class="url-list">
+<p>Nguồn: <a href="https://www.sciencedaily.com/news/top/science/">ScienceDaily (17/06)</a> · <a href="https://www.techtimes.com/articles/318644/20260618/mammal-tissue-regeneration-activated-fgf2-bmp2-override-scarring-mice.htm">TechTimes</a> · <a href="https://www.sciencetimes.com/articles/61952/20260618/humans-may-have-hidden-regenerative-powers-scientists-discover-bone-tissue-regrowth.htm">ScienceTimes</a></p>
+</div>
+</div>
+
+<h2 id="robot">7. 🤖 Hyundai Mua Toàn Bộ Boston Dynamics — Atlas Vào Nhà Máy</h2>
+<div class="card">
+<span class="badge badge-orange">Impact 7/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 19/06/2026 · <strong>Category:</strong> Robotics / M&A / Manufacturing</p>
+
+<h4>Bối cảnh</h4>
+<p>Boston Dynamics (1992, MIT) — robot vận động hàng đầu thế giới. Hyundai mua 80% (2021, $1.1B). Atlas thế hệ điện sản xuất 2026, sold out. CBS/60 Minutes (15/06): Atlas thử nghiệm tại nhà máy Hyundai Georgia — xoay 360°, nâng 50kg, thay pin <3 phút, sim-to-real learning.</p>
+
+<h4>Diễn biến</h4>
+<p>Ngày 19/06, Reuters: Hyundai mua 9.65% còn lại từ SoftBank với $325M → sở hữu 100% Boston Dynamics. Board meeting 22/06. SoftBank exercise put option (thỏa thuận từ 2021). Atlas deployment Metaplant Georgia từ 2028 — sorting parts, sau đó assembly.</p>
+
+<h4>Phân tích</h4>
+<p>Full ownership = toàn quyền tích hợp BD vào manufacturing ecosystem. Tổng đầu tư $1.4B+. Cuộc đua: Tesla Optimus ($20K target), Figure AI, Unitree H2 ($16K). BD lợi thế: decades R&D + Hyundai manufacturing expertise + captive use case. Vẫn single-task, >$100K/unit, deployment 2028 là realistic nhưng limited scope.</p>
+
+<div class="url-list">
+<p>Nguồn: <a href="https://www.reuters.com/legal/transactional/hyundai-buy-softbanks-remaining-stake-boston-dynamics-325-mln-newspaper-says-2026-06-19/">Reuters</a> · <a href="https://www.cbsnews.com/news/boston-dynamics-ai-powered-humanoid-robot-learning-factory-work-60-minutes-transcript/">CBS News/60 Minutes</a> · <a href="https://cbsnews.com/news/how-boston-dynamics-upgraded-atlas-robot-and-whats-next-60-minutes/">CBS (Atlas upgrade)</a></p>
+</div>
+</div>
+
+<h2 id="starship">8. 🚀 Starship Flight 13 Dự Kiến ~1 Tháng — Monthly Cadence</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-yellow">PARTIALLY VERIFIED</span>
+<span class="badge badge-purple">Confidence MEDIUM</span>
+<p><strong>Ngày:</strong> 18/06/2026 · <strong>Category:</strong> Space / Launch / SpaceX</p>
+
+<h4>Diễn biến</h4>
+<p>CEO Gwynne Shotwell xác nhận Flight 13 trong ~1 tháng, bay hàng tháng sau đó. FAA đang hoàn tất review Booster 19 mishap (Flight 12, 22/05). Flight 12 thành công về upper stage (reentry + splashdown Ấn Độ Dương) nhưng booster rơi cứng. Monthly cadence nếu đạt = paradigm shift cho payload capacity (100-150 tấn/flight). Starlink V3 cần Starship — backlog tăng. IPO tạo delivery pressure.</p>
+
+<div class="url-list">
+<p>Nguồn: <a href="https://behindtheblack.com/behind-the-black/points-of-information/gwynne-shotwell-starship-flight-13-in-about-a-month-flights-monthly-thereafter/">Behind the Black</a> · <a href="https://spaceflightnow.com/2026/05/27/faa-requires-spacex-led-mishap-investigation-before-resumption-of-starship-launches/">Spaceflight Now</a></p>
+</div>
+</div>
+
+<h2 id="doe">9. ⚛️ DOE Fusion Roadmap Finalized — Mid-2030s Commercial Target</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 09/06/2026 · <strong>Category:</strong> Energy Policy / Fusion / Government</p>
+
+<h4>Diễn biến</h4>
+<p>DOE phát hành Fusion Science and Technology Roadmap bản hoàn thiện (09/06). Input từ 800+ nhà khoa học/kỹ sư. Tích hợp 5 trụ cột: khoa học, công nghệ, hạ tầng, nhân lực, thương mại hóa vào unified framework. Mục tiêu: pilot plants + điện fusion thương mại mid-2030s. Timing: DOE Roadmap (09/06) → Helion license (16/06) — policy backing cho sector. US approach: private-sector-driven, nhanh hơn ITER.</p>
+
+<div class="url-list">
+<p>Nguồn: <a href="https://www.energy.gov/articles/energy-department-releases-finalized-fusion-science-and-technology-roadmap-accelerate">DOE Official</a> · <a href="https://www.ans.org/news/article-8112/does-latest-fusion-strategy-aims-for-commercial-energy-by-the-2030s/">ANS Nuclear Newswire</a></p>
+</div>
+</div>
+
+<h2 id="pfas">10. 🧪 Phá Hủy PFAS Bằng UV — Hydrogen Radical Mechanism</h2>
+<div class="card">
+<span class="badge badge-yellow">Impact 6/10</span>
+<span class="badge badge-green">VERIFIED</span>
+<span class="badge badge-blue">Confidence HIGH</span>
+<p><strong>Ngày:</strong> 16/06/2026 · <strong>Category:</strong> Environment / Chemistry / Water Treatment</p>
+
+<h4>Diễn biến</h4>
+<p>Đại học Aarhus (Đan Mạch) đăng trên Environmental Science & Technology: UV cường độ cao tạo hydrogen radicals (H•) từ nước, phá liên kết C-F trong PFAS — không cần hóa chất bổ sung. Phát hiện key: H• là tác nhân chính (không phải hydroxyl radical như giả thuyết cũ). Hiểu cơ chế = tối ưu reactor design (wavelength, intensity, flow). So sánh: photocatalyst (cần chất xúc tác đặc biệt) — UV/H• chỉ cần nước + UV. TRL 3, cần pilot plant validation.</p>
+
+<div class="url-list">
+<p>Nguồn: <a href="https://www.sciencedaily.com/news/matter_energy/materials_science/">ScienceDaily (16/06)</a> · <a href="https://phys.org/news/2026-05-insight-chemicals.html">Phys.org</a> · <a href="https://www.eurekalert.org/news-releases/1126756">EurekAlert</a> · <a href="https://news.ssbcrack.com/new-study-reveals-how-hydrogen-radicals-can-help-break-down-pfas-pollution/">SSBCrack</a></p>
+</div>
+</div>
+
+<h2 id="meta">🧭 Meta Trends — Xu Hướng Lớn 12-19/06/2026</h2>
+<div class="card">
+<ol>
+<li><strong>Fusion từ "promise" sang "operational milestones"</strong> — DOE Roadmap + Helion first-ever license. Private sector deliver milestones mà government projects chưa đạt.</li>
+<li><strong>Deep-tech IPO wave</strong> — SpaceX ($75B), Factorial (Nasdaq). Thị trường công khai mở cho frontier tech.</li>
+<li><strong>"One-shot cures" validation</strong> — CRISPR in vivo Phase III + regeneration breakthrough. Y học dịch chuyển từ quản lý → chữa khỏi.</li>
+<li><strong>Solid-state battery từ lab ra đường</strong> — Factorial road test + BYD/Toyota 2027-28. Commercialization window 2027-2029.</li>
+<li><strong>Quantum timeline hội tụ 2028-2031</strong> — QuEra (2028), Amazon (5-7y), Microsoft (2029). Concretizing.</li>
+<li><strong>Humanoid robots: demo → deployment</strong> — Atlas factory + Hyundai full ownership. 2026 = năm humanoid enter manufacturing.</li>
+</ol>
+</div>
+
+<h2 id="delta">📊 Delta So Với 05/06/2026</h2>
+<table>
+<tr><th>Chủ đề</th><th>05/06</th><th>19/06</th><th>Δ</th></tr>
+<tr><td>SpaceX</td><td>Flight 12 + FAA grounded</td><td>IPO $75B + Flight 13 ~1 tháng</td><td>⬆️⬆️ Paradigm shift</td></tr>
+<tr><td>Fusion</td><td>Focused Energy $240M</td><td>Helion license + DOE Roadmap</td><td>⬆️⬆️ Milestone</td></tr>
+<tr><td>Quantum</td><td>Majorana 2 (controversial)</td><td>QuEra Libra 256 qubits 2028</td><td>⬆️ Concrete</td></tr>
+<tr><td>Battery</td><td>Sodium-ion cluster</td><td>Solid-state road test</td><td>⬆️ TRL jump</td></tr>
+<tr><td>Biotech</td><td>Obexelimab Phase III</td><td>CRISPR in vivo Phase III success</td><td>⬆️ Platform</td></tr>
+<tr><td>Robotics</td><td>NVIDIA GR00T reference</td><td>Hyundai 100% BD + Atlas factory</td><td>⬆️ Commercial</td></tr>
+<tr><td>Regeneration</td><td>—</td><td>FGF2+BMP2 blastema mammals</td><td>🆕</td></tr>
+</table>
+<p><strong>Narrative shift:</strong> Từ "frontier research + investment" sang "operational milestones + commercialization". Tuần của "making it real".</p>
+
+<h2>🔗 Liên Kết Liên Ngành</h2>
+<div class="card">
+<ul>
+<li><strong>Sci-Tech → AI News:</strong> SpaceX space data centers; Quantum → AI training; Solid-state → AI DC power density</li>
+<li><strong>Sci-Tech → VN News:</strong> Starlink VN licensing; Humanoids → VN manufacturing labor; Batteries → VinFast</li>
+<li><strong>Sci-Tech → World Conflicts:</strong> Fusion → energy independence; Quantum → national security; SpaceX → space military</li>
+</ul>
+</div>
+
+<h2>⚠️ Nguồn Không Truy Cập Được</h2>
+<div class="card">
+<ul>
+<li>Nature primary paper (Texas A&M regeneration) — chỉ có secondary reporting</li>
+<li>Forbes một số bài paywall — cross-check qua CBS, Reuters, TechCrunch</li>
+<li>CNBC video transcript restricted — sử dụng snippets từ aggregators</li>
+</ul>
+</div>
+
+</div>
+</body>
+</html>

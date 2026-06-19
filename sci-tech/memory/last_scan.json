@@ -1,11 +1,32 @@
 {
-  "last_scan_timestamp": "2026-06-05T10:30:00+07:00",
-  "last_scan_date": "2026-06-05",
+  "last_scan_timestamp": "2026-06-19T11:00:00+07:00",
+  "last_scan_date": "2026-06-19",
   "run_count": 1,
   "stories_found": 10,
-  "top_story": "SpaceX Starship V3 Flight 12 bay được nhưng FAA grounds sau mishap Booster 19 + Microsoft Majorana 2 (qubit topo bền gấp 1.000 lần, mục tiêu lượng tử scalable 2029) + NVIDIA Isaac GR00T humanoid robot",
-  "summary": "Starship V3 Flight 12 (22/05) lên không gian, thả vệ tinh giả, reentry tốt nhưng Booster 19 mishap → FAA yêu cầu điều tra, grounded (27/05). Microsoft Majorana 2: qubit topo bền gấp 1.000x (tuổi thọ TB 20s), đổi nhôm sang chì, mục tiêu 2029 (còn hoài nghi). NVIDIA Isaac GR00T robot hình người tham chiếu mở (thân Unitree H2 Plus, tay Sharpa, Jetson Thor). Làn sóng fusion: Focused Energy $240M, Pacific Fusion 440GW/80ns, General Fusion IPO Nasdaq. ESO VLT đo từ trường 7 ngoại hành tinh (Nature Astronomy). EPFL laser femtosecond trên chip (Nature, 1.05nJ/147fs). Cụm pin natri NUS/LBNL/high-entropy chuyển sang grid-scale economics. Miễn dịch ung thư: mất MHC I khiến tế bào dễ bị CD4+ diệt qua ferroptosis (Nature Immunology). Obexelimab Phase III INDIGO. TP.HCM hút 6,6 tỷ USD FDI công nghệ.",
-  "next_scan_priority": ["Kết quả điều tra mishap Starship Flight 12 & lịch bay lại", "Peer-review độc lập Microsoft Majorana 2", "Dữ liệu chi tiết Phase III INDIGO (obexelimab)", "Pacific Fusion tiến triển net facility gain 2030", "Triển khai pin natri grid-scale & độ bền chu kỳ", "NVIDIA Isaac GR00T adoption + rủi ro chuỗi cung Unitree"],
-  "scan_window": "2026-05-29 00:00 - 2026-06-05 10:30 (7 ngày, cap)",
-  "entities_tracked": ["SpaceX Starship V3", "Microsoft Majorana 2", "NVIDIA Isaac GR00T / Unitree", "Focused Energy", "Pacific Fusion", "General Fusion", "ESO VLT", "EPFL Kippenberg", "NUS sodium battery", "Baylor MHC I/CD4+", "obexelimab", "TP.HCM FDI"]
+  "top_story": "SpaceX IPO $75B lớn nhất lịch sử (vốn hóa $2.1T, Musk trillionaire) + Helion đạt giấy phép fusion thương mại đầu tiên thế giới (Washington DOH, nhà máy Orion) + AWS/QuEra Libra quantum fault-tolerant 256 logical qubits 2028",
+  "summary": "SpaceX IPO $75B/SPCX Nasdaq +19% ngày đầu/$2.1T vốn hóa (12/06). Helion nhận 2 license fusion đầu tiên thế giới (16/06). QuEra+AWS Libra 256+ logical qubits/10⁻⁶ error/2028 (15/06). Intellia lonvo-z CRISPR in vivo Phase III: -87% cơn phù mạch/62% hoàn toàn không cơn (13/06). Stellantis/Factorial solid-state battery road test Dodge Charger 375Wh/kg (11/06). Texas A&M FGF2+BMP2 blastema ở chuột — tái sinh xương/khớp/dây chằng (17/06). Hyundai mua 100% Boston Dynamics $325M (19/06). Starship Flight 13 ~1 tháng (Shotwell). DOE Fusion Roadmap finalized mid-2030s (09/06). PFAS breakdown UV hydrogen radical mechanism (16/06).",
+  "next_scan_priority": [
+    "Helion net energy gain demonstration",
+    "Starship Flight 13 launch + FAA clearance",
+    "Intellia lonvo-z FDA filing timeline",
+    "QuEra Libra prototype benchmark progress",
+    "Factorial/Stellantis road test results 6-12 months",
+    "SpaceX post-IPO strategy + Starlink V3",
+    "Hyundai board approval Boston Dynamics 22/06",
+    "BYD solid-state production timeline 2027",
+    "Texas A&M regeneration independent replication"
+  ],
+  "scan_window": "2026-06-12 00:00 - 2026-06-19 11:00 (7 ngày, cap)",
+  "entities_tracked": [
+    "SpaceX SPCX IPO",
+    "Helion Energy Orion",
+    "QuEra Libra AWS",
+    "Intellia lonvo-z CRISPR",
+    "Factorial Energy FEST Stellantis",
+    "Texas A&M FGF2 BMP2 regeneration",
+    "Boston Dynamics Atlas Hyundai",
+    "DOE Fusion Roadmap",
+    "Aarhus PFAS UV",
+    "Peter DeSantis Amazon quantum"
+  ]
 }
