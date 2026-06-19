@@ -19,9 +19,13 @@ Skill này thực thi sau mỗi scan session hoàn thành, cập nhật `index.h
 ## Cách update
 
 ### Sidebar links + Module cards
-- Tìm tất cả `loadPage('...')` calls trong `index.html`.
+- Tìm tất cả `loadPage('...')` calls trong `index.html` — CẢ SIDEBAR LẪN MODULE CARDS.
 - Thay path file thành ngày mới nhất có file `.html` tồn tại cho module đó.
 - Cập nhật text ngày hiển thị trên card (`📅 YYYY-MM-DD`).
+- **BẮT BUỘC:** Cập nhật ĐỒNG THỜI cả hai nơi:
+  1. **Sidebar nav links** (trong `<div class="group-items">`) — link chính + sub-links archive
+  2. **Module cards** (trong `<div class="modules">`) — onclick path + `<div class="date">` text
+- Nếu chỉ update sidebar mà quên cards (hoặc ngược lại) = BUG. Phải update CẢ HAI.
 
 ### Logic xác định file mới nhất
 - Scan `{module}/daily/` → tìm file `.html` có ngày lớn nhất (YYYY-MM-DD sort).
