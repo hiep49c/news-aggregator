@@ -65,14 +65,15 @@ KHÔNG được đọc như:
 
 ## News
 - Reuters Tech
-- Bloomberg Tech
+- Bloomberg Tech (snippet only — paywall)
 - CNBC Tech
-- Ars Technica
 - TechCrunch
-- Wired
 - The Verge
 - MIT Technology Review
-- The Information
+- SiliconAngle
+- The Decoder
+- PCMag
+- Engadget
 
 ## Research
 - arXiv

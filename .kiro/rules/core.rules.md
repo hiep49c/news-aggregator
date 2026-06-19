@@ -266,13 +266,23 @@ PHẢI cross-check.
 - Tránh single-source bias
 
 ## Source Health
-- timeout/paywall/unavailable → ghi rõ
-- fallback nguồn khác
-- không retry vô hạn
+- timeout/paywall/unavailable → BỎ QUA nguồn đó, KHÔNG ghi vào báo cáo
+- fallback nguồn khác CÓ THỂ truy cập được
+- không retry vô hạn (tối đa 2 lần)
+- **LOẠI BỎ khỏi danh sách nguồn** các trang thường xuyên bị block/paywall khi fetch:
+  - Forbes (paywall thường xuyên)
+  - Washington Post (paywall)
+  - The Information (paywall)
+  - Financial Times full articles (paywall)
+  - Independent UK (paywall)
+  - Ars Technica (block fetch thường xuyên)
+- **KHÔNG CẦN section "⚠️ Nguồn không truy cập được" trong báo cáo** — nếu nguồn không đọc được thì đơn giản là không dùng, không cần liệt kê
+- Chỉ dùng nguồn THỰC SỰ đọc được nội dung (qua snippet search hoặc web_fetch thành công)
 
 ## Failed Fetch
 - không hallucinate từ headline
 - không đoán nội dung article
+- **NẾU chỉ có snippet từ search mà không fetch được full article**: có thể dùng thông tin từ snippet NẾU được cross-check bởi ≥1 nguồn khác đọc được đầy đủ. Ghi rõ "xác minh qua snippet + cross-check [nguồn khác]"
 
 ---
 
@@ -288,6 +298,66 @@ PHẢI cross-check.
 KHÔNG xem:
 - URL khác
 = thông tin khác.
+
+---
+
+# Cross-Module Deduplication (BẮT BUỘC)
+
+## Nguyên tắc: Mỗi tin chỉ được phân tích SÂU ở MỘT module duy nhất
+
+Khi một sự kiện liên quan nhiều module (ví dụ: Iran deal ảnh hưởng cả world-conflicts, vn-news, ai-news), chỉ MỘT module được phân tích đầy đủ. Các module khác chỉ NHẮC NGẮN (1-2 câu) ở section "Liên kết liên ngành" và trỏ về module chính.
+
+## Quy tắc phân bổ (module nào "sở hữu" tin nào):
+
+| Sự kiện | Module SỞ HỮU (phân tích sâu) | Các module khác (chỉ NHẮC + link) |
+|---------|-------------------------------|-----------------------------------|
+| Chiến tranh, ngừng bắn, xung đột quân sự | **world-conflicts** | vn-news (tác động VN), ai-news (nếu liên quan AI/cyber) |
+| Giá dầu, Hormuz, năng lượng toàn cầu | **world-conflicts** | vn-news (tác động xăng/CPI VN) |
+| Model AI mới, benchmark, funding AI startup | **ai-news** | java-ai-tech (nếu liên quan Java/enterprise) |
+| Spring, Quarkus, JDK, Java framework | **java-ai-tech** | — |
+| AI trong banking/enterprise/agentic enterprise | **java-ai-tech** | ai-news (nếu có tin riêng về model/funding) |
+| AI regulation (EU AI Act, SR 26-2, FSB) | **java-ai-tech** (cho banking) hoặc **ai-news** (cho toàn ngành) | world-conflicts (nếu liên quan export control/địa chính trị) |
+| Export control AI (Fable 5 ban, chip ban) | **ai-news** | world-conflicts (khía cạnh địa chính trị), java-ai-tech (tác động enterprise) |
+| Kinh tế VN, chính sách, CPI, VN-Index, FDI | **vn-news** | — |
+| Samsung chip plant VN, FDI bán dẫn VN | **vn-news** (tin kinh tế/FDI) | vn-senior-jobs (tác động việc làm) |
+| Việc làm IT VN, lương, review công ty | **vn-senior-jobs** | — |
+| SpaceX IPO, Starship, fusion, quantum | **sci-tech** | ai-news (nếu liên quan AI) |
+| SpaceX mua Cursor (AI coding tool) | **ai-news** hoặc **java-ai-tech** | sci-tech (chỉ nhắc ngắn) |
+| Drug discovery, CRISPR, medical | **sci-tech** | — |
+
+## Cách thực hiện:
+
+1. **Module sở hữu:** Viết phân tích đầy đủ (500-1000+ từ) theo depth rules.
+2. **Module liên quan:** Chỉ viết 2-3 câu tóm tắt tại section "🔗 Liên kết liên ngành" theo format:
+   ```
+   **→ [module-name]:** [Tóm tắt 1-2 câu] (xem chi tiết tại [module] ngày [date])
+   ```
+3. **TUYỆT ĐỐI KHÔNG:** Copy nguyên tin từ module này sang module khác. Nếu 2 module cùng viết 500+ từ về cùng 1 sự kiện = BUG.
+
+## Ví dụ đúng:
+
+**world-conflicts/2026-06-19.md:** Phân tích đầy đủ 1000+ từ về "Iran-Mỹ ký MOU 14 điểm"
+
+**vn-news/2026-06-19.md:** Section "Liên kết quốc tế":
+> **→ World Conflicts:** Thỏa thuận hòa bình Mỹ-Iran ký 17/06 — Hormuz mở lại, Brent giảm từ $95 về $77. Chi tiết xem world-conflicts ngày 19/06. **Tác động VN:** Xăng dầu giảm mạnh, CPI kỳ vọng hạ nhiệt, nhập siêu thu hẹp.
+
+**ai-news/2026-06-19.md:** Section "Liên kết liên ngành":
+> **→ World Conflicts:** Export control Fable 5 liên quan trực tiếp đến Iran deal framework — xem world-conflicts ngày 19/06 cho bối cảnh địa chính trị.
+
+## Ví dụ SAI (trùng lặp):
+
+- world-conflicts viết 1000 từ về "Dầu Brent sụp giá" VÀ vn-news CŨNG viết 800 từ về "Dầu Brent sụp giá" → SAI. vn-news chỉ nên viết về "Tác động giá dầu giảm lên CPI/xăng VN" (góc VN) và reference world-conflicts cho bối cảnh toàn cầu.
+- ai-news viết 800 từ về "SpaceX mua Cursor" VÀ java-ai-tech CŨNG viết 800 từ về "SpaceX mua Cursor" → SAI. Chỉ MỘT module viết sâu (java-ai-tech vì liên quan coding tools cho developer). ai-news nhắc ngắn ở "Tin khác" hoặc "Liên kết liên ngành".
+
+## Khi nào ĐƯỢC phân tích cùng sự kiện ở 2 module:
+
+CHỈ khi góc phân tích HOÀN TOÀN KHÁC:
+- world-conflicts viết về **chiến lược quân sự/ngoại giao** của Iran deal
+- vn-news viết về **tác động kinh tế vĩ mô VN cụ thể** (CPI, VN-Index, xăng dầu, FDI) — đây là phân tích GÓC VN, không lặp bối cảnh/diễn biến Iran deal
+
+Trong trường hợp này:
+- world-conflicts: bối cảnh + diễn biến + phân tích chiến lược (1000+ từ)
+- vn-news: chỉ "Tác động cho VN" (300-500 từ), reference world-conflicts cho bối cảnh, KHÔNG lặp diễn biến
 
 ---
 

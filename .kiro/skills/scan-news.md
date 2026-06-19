@@ -104,7 +104,8 @@ Khi user trigger scan 2+ lần trong cùng ngày:
 
 ### Fetch partial failure
 - Nếu ≥ 50% nguồn Tier 1+2 fail → abort scan, giữ nguyên state cũ, báo user.
-- Nếu < 50% fail → tiếp tục với nguồn còn lại, ghi danh sách nguồn fail ở cuối report ("⚠️ Nguồn không truy cập được").
+- Nếu < 50% fail → tiếp tục với nguồn còn lại. **KHÔNG liệt kê nguồn fail trong báo cáo** — đơn giản không dùng nguồn đó.
+- **KHÔNG CẦN section "⚠️ Nguồn không truy cập được" trong output** — loại bỏ hoàn toàn section này khỏi báo cáo. Chỉ dùng nguồn đọc được.
 
 ### Analyze error / AI generation fail
 - KHÔNG update memory.
