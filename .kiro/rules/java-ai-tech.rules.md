@@ -113,3 +113,23 @@ Mỗi tin chính phải có: Tóm tắt → Điểm mới → Phân tích → �
 # Critical Rule
 
 Ưu tiên phân tích sâu và liên kết sự kiện hơn số lượng tin. Ít tin nhưng sâu tốt hơn nhiều tin hời hợt. Tuân thủ tuyệt đối `core.rules.md` và `memory.rules.md`.
+
+---
+
+# Depth Policy (BẮT BUỘC)
+
+## Độ dài tối thiểu
+
+| Impact | Tối thiểu | Yêu cầu |
+|--------|----------|----------|
+| 9–10 | 1000+ từ | Bối cảnh đầy đủ, diễn biến chi tiết, phân tích cơ chế, tác động đa chiều, kịch bản |
+| 7–8 | 500+ từ | Bối cảnh + diễn biến + phân tích + tác động thực tế |
+| 5–6 | 200+ từ | Ngắn gọn nhưng đủ context |
+
+## Quy tắc
+
+- Viết dạng ĐOẠN VĂN có narrative flow — KHÔNG chỉ bullet
+- Người đọc PHẢI hiểu được tin chỉ từ báo cáo, KHÔNG cần mở link nguồn
+- Mỗi tin phải có: Bối cảnh (WHY/context) → Diễn biến (WHAT) → Phân tích (SO WHAT/cơ chế) → Tác động (FOR WHOM)
+- Giải thích thuật ngữ đầy đủ — đối tượng là Java dev 12+ năm nhưng không chuyên ngành tin đó
+- CẤM: viết 5 bullets cho tin Impact 8, bỏ bối cảnh, copy headline không phân tích

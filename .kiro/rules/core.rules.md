@@ -643,13 +643,27 @@ KHÔNG trộn các horizon với nhau.
 ## Multi-Scale Output (BẮT BUỘC)
 
 ### 1. Ultra Brief
-3–5 dòng cực ngắn.
+3–5 dòng cực ngắn — CHỈ dùng để scan nhanh, KHÔNG phải nội dung chính.
 
 ### 2. Executive Summary
-5–15 ý quan trọng nhất.
+5–15 ý quan trọng nhất — mỗi ý PHẢI có 2-3 câu giải thích (không chỉ 1 dòng headline).
 
-### 3. Full Analysis
-Phân tích chi tiết.
+### 3. Full Analysis (NỘI DUNG CHÍNH — PHẢI CHI TIẾT)
+Phân tích chi tiết — đây là phần người đọc THỰC SỰ ĐỌC. Quy tắc:
+- Mỗi tin Impact 7+ PHẢI có TỐI THIỂU 500 từ phân tích
+- Mỗi tin Impact 8+ PHẢI có TỐI THIỂU 800 từ
+- Mỗi tin Impact 9+ PHẢI có TỐI THIỂU 1000 từ
+- Viết dạng ĐOẠN VĂN (paragraphs) có narrative flow, KHÔNG chỉ bullet rời rạc
+- Bullet chỉ dùng cho liệt kê dữ kiện ngắn, KHÔNG dùng làm format chính
+- PHẢI có đoạn "Bối cảnh" giải thích WHY trước khi vào WHAT
+- PHẢI có đoạn "Phân tích" giải thích cơ chế, động lực, so sánh
+- PHẢI có đoạn "Tác động thực tế" nêu rõ ảnh hưởng đo lường được
+
+### Cấm tuyệt đối trong Full Analysis:
+- Viết 1-2 dòng cho tin Impact 7+ (quá ngắn, vô nghĩa)
+- Chỉ liệt kê bullet không có đoạn phân tích
+- Copy headline rồi thêm 1 câu nhận xét (đây KHÔNG phải phân tích)
+- Bỏ qua bối cảnh (viết WHAT mà không có WHY/SO WHAT)
 
 ---
 
@@ -672,12 +686,29 @@ Phân tích chi tiết.
 
 ## Major topics
 - 800–3000+ từ
+- PHẢI có đủ ngữ cảnh để người đọc KHÔNG cần mở link mới hiểu chuyện gì xảy ra
+- Mỗi tin quan trọng (Impact 7+) PHẢI viết TỐI THIỂU 500 từ, lý tưởng 800–1500 từ
+- Viết như đang giải thích cho đồng nghiệp senior: đủ bối cảnh, đủ chi tiết kỹ thuật, đủ phân tích
 
 ## Minor topics
 - 200–500 từ
 
+## QUAN TRỌNG — Quy tắc "Đọc hiểu không cần click link"
+- Người đọc PHẢI hiểu được toàn bộ tin chỉ từ báo cáo, KHÔNG cần mở link nguồn
+- Mỗi tin PHẢI có:
+  1. BỐI CẢNH đầy đủ (chuyện gì xảy ra trước đó, tại sao tin này quan trọng)
+  2. DIỄN BIẾN chi tiết (ai làm gì, khi nào, ở đâu, con số cụ thể)
+  3. GIẢI THÍCH cơ chế (TẠI SAO chuyện này xảy ra, động lực các bên)
+  4. TÁC ĐỘNG cụ thể (ảnh hưởng ai, thay đổi gì, số liệu nếu có)
+  5. Ý NGHĨA dài hạn (xu hướng, kịch bản, điều cần theo dõi)
+- KHÔNG viết kiểu bullet rời rạc thiếu ngữ cảnh
+- KHÔNG viết kiểu headline dump (chỉ liệt kê sự kiện không giải thích)
+- KHÔNG giả định người đọc đã biết bối cảnh — luôn cung cấp đủ context
+
 Tránh:
-- report dài nhưng low-signal.
+- report dài nhưng low-signal
+- bullet spam không có narrative flow
+- tóm tắt quá ngắn khiến người đọc không nắm được thông tin
 
 ---
 

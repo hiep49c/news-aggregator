@@ -443,6 +443,20 @@ KHÔNG:
 
 Ít research nhưng phân tích sâu
 tốt hơn rất nhiều
+so với spam paper title.
+
+---
+
+# Depth Policy (BẮT BUỘC)
+
+| Impact | Tối thiểu | Yêu cầu |
+|--------|----------|----------|
+| 9–10 | 1000+ từ | Bối cảnh khoa học đầy đủ, diễn biến, phân tích ý nghĩa, tác động, giới hạn |
+| 7–8 | 500+ từ | Bối cảnh + giải thích + tác động |
+| 5–6 | 200+ từ | Ngắn nhưng đủ context |
+
+Viết dạng ĐOẠN VĂN. Giải thích ĐỦ để đọc hiểu không cần mở link. PHẢI có: Bối cảnh → Phát hiện/Sự kiện → Ý nghĩa → Giới hạn/Cần xác minh. CẤM viết 5 bullets cho tin Impact 8.
+tốt hơn rất nhiều
 so với spam paper summary.
 
 Mọi breakthrough phải trả lời được:

@@ -205,3 +205,23 @@ Tin tức và phân tích phải **phù hợp và hữu ích** cho profile này.
 # Critical Rule
 
 Ưu tiên phân tích xu hướng và độ tin cậy của review hơn số lượng tin. Chỉ lấy thông tin phù hợp senior+ VN. Tuân thủ tuyệt đối `core.rules.md` và `memory.rules.md`.
+
+---
+
+# Depth Policy (BẮT BUỘC)
+
+## Độ dài tối thiểu
+
+| Impact | Tối thiểu | Yêu cầu |
+|--------|----------|----------|
+| 9–10 | 1000+ từ | Bối cảnh + diễn biến chi tiết + phân tích + tác động cho senior VN + khuyến nghị |
+| 7–8 | 500+ từ | Đủ context + phân tích + tác động cụ thể |
+| 5–6 | 200+ từ | Ngắn nhưng đủ ý |
+
+## Quy tắc
+
+- Viết dạng ĐOẠN VĂN — KHÔNG chỉ bảng số liệu rời rạc
+- Người đọc (senior Java dev 37 tuổi) PHẢI hiểu rõ tin chỉ từ báo cáo
+- Mục Review PHẢI có NỘI DUNG THỰC (pattern review, tin forum, chia sẻ lương) — KHÔNG chỉ bảng điểm
+- Mỗi tin phải trả lời: "Điều này ảnh hưởng gì tới TÔI (senior Java VN)?"
+- CẤM: chỉ liệt kê số liệu không có giải thích/phân tích, bỏ context, bullet spam

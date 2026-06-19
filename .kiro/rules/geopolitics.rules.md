@@ -420,3 +420,31 @@ Mọi tactical event phải trả lời được:
 Nếu không trả lời được:
 - giảm priority
 - hoặc bỏ qua.
+
+
+---
+
+# Depth Policy (BẮT BUỘC)
+
+## Độ dài tối thiểu mỗi tin chính
+
+| Impact | Độ dài tối thiểu | Yêu cầu |
+|--------|-----------------|----------|
+| 9–10 | 1000+ từ | Bối cảnh đầy đủ + diễn biến timeline + phân tích chiến lược đa đoạn + tác động kinh tế/địa chính trị + kịch bản |
+| 7–8 | 500+ từ | Bối cảnh + diễn biến chi tiết + phân tích + tác động |
+| 5–6 | 200+ từ | Ngắn gọn nhưng đủ context |
+
+## Quy tắc viết chi tiết
+
+- Viết dạng ĐOẠN VĂN (paragraphs) có narrative flow — KHÔNG chỉ bullet rời rạc
+- Mỗi tin PHẢI giải thích ĐỦ để người đọc hiểu mà KHÔNG CẦN MỞ LINK NGUỒN
+- PHẢI có đoạn "Bối cảnh" cho MỌI TIN: chuyện gì xảy ra trước, tại sao quan trọng, đặt vào bức tranh lớn
+- PHẢI giải thích CƠ CHẾ: tại sao quốc gia/bên hành động như vậy, logic chiến lược
+- PHẢI nêu TÁC ĐỘNG CỤ THỂ: không nói "ảnh hưởng lớn" mà phải nêu ảnh hưởng GÌ cho AI, dầu, CPI, VN
+- Timeline rõ ràng: ngày, giờ, trình tự sự kiện
+
+## CẤM:
+- Viết tin Impact 9 chỉ bằng 5 bullets (quá ngắn, đọc không hiểu)
+- Bỏ bối cảnh (reader không biết WHY/context)
+- Copy headline rồi thêm 1 câu
+- Bullet spam toàn bộ phần Full Analysis

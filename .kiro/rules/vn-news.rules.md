@@ -444,6 +444,20 @@ KHÔNG:
 # Critical Rule
 
 Ít tin nhưng phân tích sâu
+tốt hơn rất nhiều
+so với spam headline.
+
+---
+
+# Depth Policy (BẮT BUỘC)
+
+| Impact | Tối thiểu | Yêu cầu |
+|--------|----------|----------|
+| 9–10 | 1000+ từ | Bối cảnh + diễn biến + phân tích kinh tế/chính sách + tác động VN cụ thể |
+| 7–8 | 500+ từ | Bối cảnh + diễn biến + tác động |
+| 5–6 | 200+ từ | Ngắn nhưng đủ context |
+
+Viết dạng ĐOẠN VĂN. Người đọc PHẢI hiểu đủ chỉ từ báo cáo. PHẢI có: Bối cảnh → Diễn biến chi tiết (số liệu, ngày, nguồn) → Phân tích (tại sao, cơ chế) → Tác động thực tế (cho kinh tế VN, doanh nghiệp, người dân). CẤM bullet spam cho tin Impact 7+.
 tốt hơn nhiều
 so với spam headline.
 

@@ -127,10 +127,52 @@ Ví dụ cross-link:
 
 ## Output budget (soft caps)
 
-Để tránh report phình khó đọc:
-- Tóm tắt nhanh / Ultra Brief: ≤ 10 bullets
-- Executive Summary: ≤ 15 items
+Để tránh report phình khó đọc NHƯNG VẪN ĐẢM BẢO CHI TIẾT:
+- Tóm tắt nhanh / Ultra Brief: ≤ 10 bullets (mỗi bullet 1-2 câu)
+- Executive Summary: ≤ 15 items (mỗi item 2-3 câu giải thích, KHÔNG chỉ headline)
 - Số story chính phân tích sâu: 8–12 (không bao giờ > 16 trừ khi user request)
-- Tin nhỏ gộp vào section "Các tin khác đáng chú ý" dạng bullet list
+- Tin nhỏ gộp vào section "Các tin khác đáng chú ý" dạng bullet list (mỗi bullet vẫn 2-3 câu)
+
+## YÊU CẦU ĐỘ DÀI TỐI THIỂU (BẮT BUỘC)
+
+Mỗi tin CHÍNH (impact 7+) trong Full Analysis PHẢI đạt:
+- **Impact 9-10:** Tối thiểu 1000 từ — đủ bối cảnh, diễn biến chi tiết, phân tích sâu, tác động đa chiều
+- **Impact 7-8:** Tối thiểu 500 từ — đủ để người đọc hiểu rõ mà không cần mở link
+- **Impact 5-6:** Tối thiểu 200 từ — ngắn gọn nhưng đủ context
+
+### Format cho mỗi tin chính:
+
+```
+## [Số]. [Icon] [Tiêu đề mô tả đầy đủ — không viết tắt]
+
+### Bối cảnh
+2-4 câu giải thích: chuyện gì xảy ra trước, tại sao tin này quan trọng, đặt vào context lớn hơn.
+
+### Diễn biến chi tiết
+3-8 đoạn: AI làm gì, khi nào, ở đâu, con số cụ thể, trích dẫn quan trọng, timeline.
+Viết dạng ĐOẠN VĂN có narrative flow. Bullet chỉ cho dữ kiện ngắn.
+
+### Phân tích
+2-4 đoạn: TẠI SAO chuyện này xảy ra? Cơ chế? Động lực các bên? So sánh với quá khứ? 
+Tách rõ: Fact (đã xác minh) vs Analysis (nhận định có evidence).
+
+### Tác động thực tế
+2-3 đoạn: Ảnh hưởng ai? Developer? Enterprise? Người dùng? Thay đổi gì measurable?
+Nêu cụ thể — không nói chung chung "ảnh hưởng lớn".
+
+### Đánh giá
+- Impact Score: X/10
+- Verification / Confidence
+- Điều cần theo dõi tiếp
+
+### Nguồn
+- Link clickable
+```
+
+### TUYỆT ĐỐI KHÔNG ĐƯỢC:
+- Viết tin Impact 9 chỉ bằng 5-10 bullet points rời rạc
+- Bỏ qua phần "Bối cảnh" (reader không hiểu WHY)
+- Bỏ qua phần "Phân tích" (reader chỉ biết WHAT không biết SO WHAT)
+- Viết Executive Summary chỉ bằng headline 1 dòng
 
 Vượt cap → ưu tiên stories có impact score cao nhất + delta lớn nhất.

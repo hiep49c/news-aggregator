@@ -189,13 +189,21 @@ Ví dụ:
 # Depth Policy
 
 Mỗi tin quan trọng:
-- tối thiểu 300–800 từ
-- phải có phân tích
-- phải có context lịch sử nếu cần
+- tối thiểu 500–1500 từ (Impact 7-8: 500 từ, Impact 9+: 1000+ từ)
+- PHẢI có phân tích đa đoạn (paragraphs), không chỉ bullet
+- PHẢI có context lịch sử đầy đủ — người đọc không cần mở link mới hiểu
+- PHẢI giải thích CƠ CHẾ (tại sao công ty làm vậy, động lực kinh tế/chiến lược)
+- PHẢI nêu tác động CỤ THỂ (cho developer, startup, enterprise — không nói chung chung)
 
-Tin nhỏ:
-- có thể ngắn hơn
-- nhưng vẫn phải giải thích ý nghĩa
+Tin nhỏ (Impact 5-6):
+- 200–400 từ
+- vẫn phải giải thích ý nghĩa, không chỉ nêu sự kiện
+
+## Cấm:
+- Viết tin Impact 9 chỉ bằng 5-10 bullets rời rạc
+- Bỏ phần bối cảnh (reader không hiểu WHY)  
+- Copy headline rồi thêm 1 câu comment
+- Bullet spam thay cho paragraph analysis
 
 ---
 
