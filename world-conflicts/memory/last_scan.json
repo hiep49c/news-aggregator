@@ -1,9 +1,10 @@
 {
-  "last_scan_timestamp": "2026-06-05T17:00:00+07:00",
-  "last_scan_date": "2026-06-05",
+  "last_scan_timestamp": "2026-06-19T10:00:00+07:00",
+  "last_scan_date": "2026-06-19",
   "run_count": 1,
-  "conflicts_tracked": 6,
-  "highest_risk": "Iran-US (9/10 CRITICAL - tên lửa vào Kuwait, đàm phán bế tắc, Hormuz đóng), Ukraine-Russia (8/10 HIGH - tấn công St. Petersburg + Nga không kích 23 chết)",
-  "summary": "Iran bắn tên lửa Kuwait/Bahrain 02/06, Mỹ đáp trả; deal sơ bộ 60 ngày (29/05) nhưng chưa ký chính thức. Hạ viện Mỹ lần đầu bỏ phiếu chấm dứt chiến tranh. Ukraine tấn công St. Petersburg 04/06, Zelensky sẵn sàng gặp Putin. Nga không kích quy mô lớn 02/06 (23 chết). Israel-Lebanon ký ngừng bắn nhưng Hezbollah từ chối. Dầu Brent $95-98, Hormuz đóng. Mỹ giảm cam kết NATO + mở rộng hạt nhân châu Âu. TQ tuần tra đông Đài Loan.",
-  "next_scan_priority": ["Iran deal - ký chính thức hay đổ vỡ?", "Hormuz mở lại hay tiếp tục đóng?", "Zelensky-Putin meeting timeline", "NATO 18/06 Brussels - phân bổ lực lượng mới", "Israel-Gaza truce enforcement", "Hezbollah response to Lebanon ceasefire"]
+  "stories_found": 10,
+  "conflicts_tracked": 7,
+  "highest_risk": "Iran-US (10/10 — MOU ký nhưng 60 ngày uncertain), Ukraine-Russia (9/10 — largest Moscow attack + NATO review), NATO (9/10 — Hegseth 6-month review, structural change)",
+  "summary": "Iran-Mỹ ký MOU 14 điểm (17/06): chấm dứt chiến tranh, mở Hormuz, Iran giảm uranium đổi dỡ cấm vận. Dầu Brent giảm từ $95+ xuống $77. Ukraine tấn công drone lớn nhất vào Moscow (18/06) — nhà máy lọc dầu Kapotnya bốc cháy, sản lượng dầu Nga -10%. NATO: Hegseth công bố review 6 tháng lực lượng Mỹ châu Âu, đe rút quân, đòi 5% GDP. G7 Évian: Trump gặp Zelensky, hứa ép Nga. Gaza: 1.000 chết trong ceasefire, Phase 2 bế tắc. Lebanon: giao tranh bất chấp deal. Ukraine cải cách QĐ lịch sử (lương x3). TQ chuyển chiến thuật ĐL sang cô lập ngoại giao. Ấn Độ-Pakistan: PoK + water war.",
+  "next_scan_priority": ["Iran deal Geneva signing 19/06 — thực thi?", "Hormuz mở thực sự?", "60 ngày deal — final hay collapse?", "Russia retaliation Moscow refinery", "NATO review outcome", "Ukraine peace framework cụ thể", "Israel-Lebanon tuân thủ?", "OPEC+ reaction", "GPT-5.6 + AI export control impact"]
 }
